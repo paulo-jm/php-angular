@@ -1,0 +1,36 @@
+version: '3'
+services:
+  back-end:
+    build: .
+    depends_on:
+      - db_mysql
+    links:
+      - db_mysql:db_mysql
+    ports:
+      - "8110:80"
+    volumes:
+      - ./back-end:/var/www
+  db_mysql:
+    image: mysql:5.7
+    container_name: assistence_db_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=assisten_sistema
+      - MYSQL_USER=assisten
+      - MYSQL_PASSWORD=assisten
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: assistence_phpmyadmin
+    depends_on:
+      - db_mysql
+    links: 
+      - db_mysql:db_mysql
+    ports:
+      - 8120:80
+    environment:
+      MYSQL_USER: assisten
+      MYSQL_PASSWORD: assisten
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: db_mysql
+    restart: always

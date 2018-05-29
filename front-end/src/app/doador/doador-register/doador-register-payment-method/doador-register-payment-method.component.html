@@ -1,0 +1,42 @@
+<div class="row">
+  <h4 class="col">Meios de Pagamento</h4>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="float-right">
+      <button (click)="addPaymentMethod()" mat-raised-button color="accent">Novo metodo de pagamento</button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+
+    <div *ngIf="!formGroup?.controls?.paymentMethods?.controls?.length > 0">Não existe meios de pagamentos cadastrados.</div>
+
+    <table *ngIf="formGroup?.controls?.paymentMethods?.controls?.length > 0" class="mat-table col">
+      <thead>
+        <tr class="mat-header-row">
+          <th class="mat-header-cell"> Nome metodo pagamento </th>
+          <th class="mat-header-cell"> Tipo Pagamento </th>
+          <th class="mat-header-cell"> Opções </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="mat-row" *ngFor="let item of formGroup.controls.paymentMethods.controls; let i = index">
+          <td class="mat-cell">{{item.controls.paymentMethodName.value}}</td>
+          <td class="mat-cell">{{item.controls.paymentMethodType.value.paymentMethodTypeName}}</td>
+          <td class="mat-cell">
+            <button mat-icon-button (click)="updatePaymentMethod(i)">
+              <mat-icon>pageview</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deletePaymentMethod(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

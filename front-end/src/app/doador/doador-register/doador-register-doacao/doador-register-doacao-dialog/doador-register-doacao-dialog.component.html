@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Doação</h1>
+<div mat-dialog-content [formGroup]="formGroup">
+
+  <div class="row">
+    <mat-form-field class="col-4">
+      <input formControlName="periodicty" matInput placeholder="Periodocidade doação">
+    </mat-form-field>
+
+
+    <mat-form-field class="col-4">
+        <mat-select formControlName="paymentMethod" placeholder="Meio de pagamento" [compareWith]="comparePaymentMethod">
+          <mat-option *ngFor="let paymentMethod of paymentMethods" [value]="paymentMethod">
+            {{paymentMethod.paymentMethodName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-4">
+      <input formControlName="amount" currencyMask matInput placeholder="Valor Doação">
+    </mat-form-field>
+
+    <mat-form-field class="col-4">
+      <input formControlName="startDate" matInput placeholder="Data de primeira doação" [matDatepicker]="dataInicio" (focus)="dataInicio.open()">
+    </mat-form-field>
+    <mat-datepicker #dataInicio></mat-datepicker>
+
+    <mat-form-field class="col-4">
+      <input formControlName="endDate" matInput placeholder="Data de encerramento doação" [matDatepicker]="dataFim" (focus)="dataFim.open()">
+    </mat-form-field>
+    <mat-datepicker #dataFim></mat-datepicker>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [disabled]="!isFormValid()" (click)="onSave()" color="primary" cdkFocusInitial>Salvar</button>
+  <button mat-button (click)="onNoClick()">Voltar</button>
+  
+</div>

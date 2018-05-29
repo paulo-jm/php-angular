@@ -1,0 +1,58 @@
+.nav-menu {
+    background: rgba(0, 0, 0, .03);
+}
+
+.nav-menu .nav-menu-item {}
+
+.nav-menu .nav-menu-item>a,
+.nav-menu .nav-menu-item button {
+    padding: 10px 15px;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 0;
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: rgba(0, 0, 0, .5);
+    text-decoration: none;
+    outline: none;
+}
+
+.nav-menu .nav-menu-item button .mat-icon {
+    position: absolute;
+    right: 5px;
+    font-size: 18px;
+}
+
+.nav-menu .nav-menu-item ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-menu .nav-menu-item ul li {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+    padding: 5px 15px 5px 20px;
+}
+
+.nav-menu .nav-menu-item ul li:last-child {
+    padding: 5px 15px 10px 20px;
+}
+
+.nav-menu .nav-menu-item ul li a {
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .54);
+}
+
+.nav-menu .nav-menu-item a:hover,
+.nav-menu .nav-menu-item ul li a:hover {
+    color: #3f51b5;
+}

@@ -1,0 +1,64 @@
+<h1 mat-dialog-title>Doação</h1>
+<div mat-dialog-content>
+
+  <div class="row">
+
+    <mat-form-field class="col-4">
+      <mat-select (selectionChange)="updateFormGroup()" placeholder="Forma de Pagamento" [compareWith]="comparePaymentMethodType"
+        [(value)]="selectedPaymentMethodType">
+        <mat-option *ngFor="let paymentMethodType of paymentMethodTypes" [value]="paymentMethodType">
+          {{paymentMethodType.paymentMethodTypeName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div *ngIf="formGroup" [formGroup]="formGroup">
+
+    <div class="row">
+      <mat-form-field class="col">
+        <input formControlName="paymentMethodName" matInput placeholder="Nome Metodo de pagamento">
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="selectedPaymentMethodType?.paymentMethodTypeCode === 'CREDIT_CARD' " formGroupName="creditCard">
+
+      <div class="row">
+
+        <mat-form-field class="col-3">
+          <input formControlName="cardType" matInput placeholder="Bandeira do Cartão">
+        </mat-form-field>
+
+        <mat-form-field class="col">
+          <input formControlName="cardNumber" matInput placeholder="Numero do Cartão">
+        </mat-form-field>
+
+        <mat-form-field class="col-3">
+          <input formControlName="securityCode" matInput placeholder="Codigo de Segurança">
+        </mat-form-field>
+
+      </div>
+
+      <div class="row">
+
+        <mat-form-field class="col">
+          <input formControlName="cardNameOwner" matInput placeholder="Nome Titular">
+        </mat-form-field>
+
+        <mat-form-field class="col-3">
+          <input formControlName="expiratinDate" matInput placeholder="Vencimento">
+        </mat-form-field>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button [disabled]="!isFormValid()" (click)="onSave()" color="primary" cdkFocusInitial>Salvar</button>
+  <button mat-button (click)="onNoClick()">Voltar</button>
+</div>

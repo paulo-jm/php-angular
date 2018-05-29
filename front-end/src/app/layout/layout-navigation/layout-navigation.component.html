@@ -1,0 +1,21 @@
+<div class="nav-menu mat-elevation-z2">
+
+    <nav class="nav-menu-item" *ngFor="let menu of menus">
+
+        <a *ngIf="menu.path" [routerLink]="menu.path">{{menu.title}}</a>
+
+        <button *ngIf="!menu?.path" (click)="toggleSubMenu(menu)">
+               {{menu.title}} 
+            <mat-icon *ngIf="!menu.active">keyboard_arrow_down</mat-icon>
+            <mat-icon *ngIf="menu.active">keyboard_arrow_up</mat-icon>
+        </button>
+
+        <ul *ngIf="menu.active">
+            <li *ngFor="let child of menu.children">
+                <a [routerLink]="child.path">{{child.title}}</a>
+            </li>
+        </ul>
+
+    </nav>
+
+</div>

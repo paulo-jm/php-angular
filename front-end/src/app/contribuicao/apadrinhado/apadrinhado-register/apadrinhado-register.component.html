@@ -1,0 +1,40 @@
+<mat-card class="mat-elevation-z2">
+
+  <div class="row">
+    <div class="col">
+      <mat-card-title>Nota de Corretagem</mat-card-title>
+    </div>
+    <div class="col">
+      <div class="float-right">
+        <button [disabled]="!form.valid" (click)="create(form.value)" mat-raised-button color="primary">Salvar</button>
+        <button [routerLink]="['/operational/brokerage-note/list']" mat-raised-button>Voltar</button>
+      </div>
+    </div>
+  </div>
+
+  <mat-card-content>
+
+    <form [formGroup]="form">
+
+      <div class="row">
+
+        <mat-form-field class="col-4">
+          <input type="text" placeholder="Projeto" matInput formControlName="contribuicao" [matAutocomplete]="autoContribuicao">
+          <mat-autocomplete #autoContribuicao="matAutocomplete" [displayWith]="displayContribuicao">
+            <mat-option *ngFor="let contribuicao of contribuicoes | async" [value]="contribuicao">
+              {{ contribuicao.nome }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-form-field class="col">
+          <input formControlName="nome" matInput placeholder="Nome">
+        </mat-form-field>
+
+      </div>
+
+    </form>
+
+  </mat-card-content>
+
+</mat-card>

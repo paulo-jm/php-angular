@@ -1,0 +1,50 @@
+<mat-card class="mat-elevation-z2">
+
+    <div class="row">
+        <div class="col">
+            <mat-card-title>Apadrinhado</mat-card-title>
+        </div>
+        <div class="col">
+            <div class="float-right">
+                <button [routerLink]="['/contribuicao/apadrinhado/register']" mat-raised-button color="primary">Novo Doador</button>
+            </div>
+        </div>
+    </div>
+  
+    <mat-card-content>
+  
+      <mat-table [dataSource]="getDataSource()" matSort matSortActive="id" matSortDirection="asc" matSortDisableClear>
+          
+          <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
+              <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
+          </ng-container>
+          
+          <ng-container matColumnDef="nome">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Nome</mat-header-cell>
+              <mat-cell *matCellDef="let item">{{item.nome}}</mat-cell>
+          </ng-container>
+         
+          <ng-container matColumnDef="projeto">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Projeto</mat-header-cell>
+              <mat-cell *matCellDef="let item">{{item.contribuicao.nome}}</mat-cell>
+          </ng-container>
+  
+           <!-- Name Column -->
+           <ng-container matColumnDef="acao">
+              <mat-header-cell *matHeaderCellDef>Opções</mat-header-cell>
+              <mat-cell *matCellDef="let row">
+                  <button mat-icon-button [routerLink]="['/contribuicao/apadrinhado/view',row.id]"><mat-icon>pageview</mat-icon></button>
+              </mat-cell>
+          </ng-container>
+  
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  
+      </mat-table>
+  
+      <mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 25, 50]"></mat-paginator>
+      
+    </mat-card-content>
+  
+  </mat-card>

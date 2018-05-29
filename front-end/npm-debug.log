@@ -1,0 +1,3674 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@3.10.10
+3 info using node@v6.14.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData @angular-devkit/build-angular
+20 silly mapToRegistry name @angular-devkit/build-angular
+21 silly mapToRegistry scope (from package name) @angular-devkit
+22 verbose mapToRegistry no registry URL found in name for scope @angular-devkit
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: '@angular-devkit/build-angular',
+25 silly mapToRegistry   scope: '@angular-devkit',
+25 silly mapToRegistry   escapedName: '@angular-devkit%2fbuild-angular',
+25 silly mapToRegistry   name: '@angular-devkit/build-angular',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/@angular-devkit%2fbuild-angular
+27 verbose request uri https://registry.npmjs.org/@angular-devkit%2fbuild-angular
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 12:30:04 AM
+30 verbose request id 7e673ab5e4776ef7
+31 verbose etag W/"5af4856a-dc18"
+32 verbose lastModified Thu, 10 May 2018 17:46:18 GMT
+33 http request GET https://registry.npmjs.org/@angular-devkit%2fbuild-angular
+34 http 304 https://registry.npmjs.org/@angular-devkit%2fbuild-angular
+35 verbose headers { date: 'Thu, 17 May 2018 00:30:06 GMT',
+35 verbose headers   via: '1.1 varnish',
+35 verbose headers   'cache-control': 'max-age=0',
+35 verbose headers   etag: 'W/"5af4856a-dc18"',
+35 verbose headers   age: '542559',
+35 verbose headers   connection: 'keep-alive',
+35 verbose headers   'x-served-by': 'cache-gru17135-GRU',
+35 verbose headers   'x-cache': 'MISS',
+35 verbose headers   'x-cache-hits': '0',
+35 verbose headers   'x-timer': 'S1526517006.347947,VS0,VE817',
+35 verbose headers   vary: 'Accept, Accept-Encoding' }
+36 silly get cb [ 304,
+36 silly get   { date: 'Thu, 17 May 2018 00:30:06 GMT',
+36 silly get     via: '1.1 varnish',
+36 silly get     'cache-control': 'max-age=0',
+36 silly get     etag: 'W/"5af4856a-dc18"',
+36 silly get     age: '542559',
+36 silly get     connection: 'keep-alive',
+36 silly get     'x-served-by': 'cache-gru17135-GRU',
+36 silly get     'x-cache': 'MISS',
+36 silly get     'x-cache-hits': '0',
+36 silly get     'x-timer': 'S1526517006.347947,VS0,VE817',
+36 silly get     vary: 'Accept, Accept-Encoding' } ]
+37 verbose etag https://registry.npmjs.org/@angular-devkit%2fbuild-angular from cache
+38 verbose get saving @angular-devkit/build-angular to /root/.npm/registry.npmjs.org/_40angular-devkit_252fbuild-angular/.cache.json
+39 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+40 silly resolveWithNewModule @angular-devkit/build-angular@0.6.1 checking installable status
+41 silly cache add args [ '@angular-devkit/build-angular@~0.6.0', null ]
+42 verbose cache add spec @angular-devkit/build-angular@~0.6.0
+43 silly cache add parsed spec Result {
+43 silly cache add   raw: '@angular-devkit/build-angular@~0.6.0',
+43 silly cache add   scope: '@angular-devkit',
+43 silly cache add   escapedName: '@angular-devkit%2fbuild-angular',
+43 silly cache add   name: '@angular-devkit/build-angular',
+43 silly cache add   rawSpec: '~0.6.0',
+43 silly cache add   spec: '>=0.6.0 <0.7.0',
+43 silly cache add   type: 'range' }
+44 silly addNamed @angular-devkit/build-angular@>=0.6.0 <0.7.0
+45 verbose addNamed ">=0.6.0 <0.7.0" is a valid semver range for @angular-devkit/build-angular
+46 silly addNameRange { name: '@angular-devkit/build-angular',
+46 silly addNameRange   range: '>=0.6.0 <0.7.0',
+46 silly addNameRange   hasData: false }
+47 silly mapToRegistry name @angular-devkit/build-angular
+48 silly mapToRegistry scope (from package name) @angular-devkit
+49 verbose mapToRegistry no registry URL found in name for scope @angular-devkit
+50 silly mapToRegistry using default registry
+51 silly mapToRegistry registry https://registry.npmjs.org/
+52 silly mapToRegistry data Result {
+52 silly mapToRegistry   raw: '@angular-devkit/build-angular',
+52 silly mapToRegistry   scope: '@angular-devkit',
+52 silly mapToRegistry   escapedName: '@angular-devkit%2fbuild-angular',
+52 silly mapToRegistry   name: '@angular-devkit/build-angular',
+52 silly mapToRegistry   rawSpec: '',
+52 silly mapToRegistry   spec: 'latest',
+52 silly mapToRegistry   type: 'tag' }
+53 silly mapToRegistry uri https://registry.npmjs.org/@angular-devkit%2fbuild-angular
+54 verbose addNameRange registry:https://registry.npmjs.org/@angular-devkit%2fbuild-angular not in flight; fetching
+55 verbose get https://registry.npmjs.org/@angular-devkit%2fbuild-angular not expired, no request
+56 silly addNameRange number 2 { name: '@angular-devkit/build-angular',
+56 silly addNameRange   range: '>=0.6.0 <0.7.0',
+56 silly addNameRange   hasData: true }
+57 silly addNameRange versions [ '@angular-devkit/build-angular',
+57 silly addNameRange   [ '0.0.9',
+57 silly addNameRange     '0.0.10',
+57 silly addNameRange     '0.5.0',
+57 silly addNameRange     '0.5.1',
+57 silly addNameRange     '0.5.2',
+57 silly addNameRange     '0.5.3',
+57 silly addNameRange     '0.5.4',
+57 silly addNameRange     '0.5.5',
+57 silly addNameRange     '0.5.6',
+57 silly addNameRange     '0.5.7',
+57 silly addNameRange     '0.5.8',
+57 silly addNameRange     '0.5.9',
+57 silly addNameRange     '0.5.10',
+57 silly addNameRange     '0.5.11',
+57 silly addNameRange     '0.5.12',
+57 silly addNameRange     '0.5.13',
+57 silly addNameRange     '0.6.0',
+57 silly addNameRange     '0.6.1' ] ]
+58 silly addNamed @angular-devkit/build-angular@0.6.1
+59 verbose addNamed "0.6.1" is a plain semver version for @angular-devkit/build-angular
+60 silly cache afterAdd @angular-devkit/build-angular@0.6.1
+61 verbose afterAdd /root/.npm/@angular-devkit/build-angular/0.6.1/package/package.json not in flight; writing
+62 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+63 verbose afterAdd /root/.npm/@angular-devkit/build-angular/0.6.1/package/package.json written
+64 silly fetchNamedPackageData webpack
+65 silly mapToRegistry name webpack
+66 silly mapToRegistry using default registry
+67 silly mapToRegistry registry https://registry.npmjs.org/
+68 silly mapToRegistry data Result {
+68 silly mapToRegistry   raw: 'webpack',
+68 silly mapToRegistry   scope: null,
+68 silly mapToRegistry   escapedName: 'webpack',
+68 silly mapToRegistry   name: 'webpack',
+68 silly mapToRegistry   rawSpec: '',
+68 silly mapToRegistry   spec: 'latest',
+68 silly mapToRegistry   type: 'tag' }
+69 silly mapToRegistry uri https://registry.npmjs.org/webpack
+70 verbose request uri https://registry.npmjs.org/webpack
+71 verbose request no auth needed
+72 info attempt registry request try #1 at 12:30:05 AM
+73 verbose etag "5af7550a-1881c4"
+74 verbose lastModified Sat, 12 May 2018 20:56:42 GMT
+75 http request GET https://registry.npmjs.org/webpack
+76 http 304 https://registry.npmjs.org/webpack
+77 verbose headers { date: 'Thu, 17 May 2018 00:30:07 GMT',
+77 verbose headers   via: '1.1 varnish',
+77 verbose headers   'cache-control': 'max-age=300',
+77 verbose headers   etag: '"5af7550a-1881c4"',
+77 verbose headers   age: '3337',
+77 verbose headers   connection: 'keep-alive',
+77 verbose headers   'x-served-by': 'cache-gru17135-GRU',
+77 verbose headers   'x-cache': 'HIT',
+77 verbose headers   'x-cache-hits': '4',
+77 verbose headers   'x-timer': 'S1526517008.726946,VS0,VE0',
+77 verbose headers   vary: 'Accept-Encoding, Accept' }
+78 silly get cb [ 304,
+78 silly get   { date: 'Thu, 17 May 2018 00:30:07 GMT',
+78 silly get     via: '1.1 varnish',
+78 silly get     'cache-control': 'max-age=300',
+78 silly get     etag: '"5af7550a-1881c4"',
+78 silly get     age: '3337',
+78 silly get     connection: 'keep-alive',
+78 silly get     'x-served-by': 'cache-gru17135-GRU',
+78 silly get     'x-cache': 'HIT',
+78 silly get     'x-cache-hits': '4',
+78 silly get     'x-timer': 'S1526517008.726946,VS0,VE0',
+78 silly get     vary: 'Accept-Encoding, Accept' } ]
+79 verbose etag https://registry.npmjs.org/webpack from cache
+80 verbose get saving webpack to /root/.npm/registry.npmjs.org/webpack/.cache.json
+81 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+82 silly resolveWithNewModule webpack@4.6.0 checking installable status
+83 silly cache add args [ 'webpack@~4.6.0', null ]
+84 verbose cache add spec webpack@~4.6.0
+85 silly cache add parsed spec Result {
+85 silly cache add   raw: 'webpack@~4.6.0',
+85 silly cache add   scope: null,
+85 silly cache add   escapedName: 'webpack',
+85 silly cache add   name: 'webpack',
+85 silly cache add   rawSpec: '~4.6.0',
+85 silly cache add   spec: '>=4.6.0 <4.7.0',
+85 silly cache add   type: 'range' }
+86 silly addNamed webpack@>=4.6.0 <4.7.0
+87 verbose addNamed ">=4.6.0 <4.7.0" is a valid semver range for webpack
+88 silly addNameRange { name: 'webpack', range: '>=4.6.0 <4.7.0', hasData: false }
+89 silly mapToRegistry name webpack
+90 silly mapToRegistry using default registry
+91 silly mapToRegistry registry https://registry.npmjs.org/
+92 silly mapToRegistry data Result {
+92 silly mapToRegistry   raw: 'webpack',
+92 silly mapToRegistry   scope: null,
+92 silly mapToRegistry   escapedName: 'webpack',
+92 silly mapToRegistry   name: 'webpack',
+92 silly mapToRegistry   rawSpec: '',
+92 silly mapToRegistry   spec: 'latest',
+92 silly mapToRegistry   type: 'tag' }
+93 silly mapToRegistry uri https://registry.npmjs.org/webpack
+94 verbose addNameRange registry:https://registry.npmjs.org/webpack not in flight; fetching
+95 verbose get https://registry.npmjs.org/webpack not expired, no request
+96 silly addNameRange number 2 { name: 'webpack', range: '>=4.6.0 <4.7.0', hasData: true }
+97 silly addNameRange versions [ 'webpack',
+97 silly addNameRange   [ '0.1.0',
+97 silly addNameRange     '0.1.1',
+97 silly addNameRange     '0.1.2',
+97 silly addNameRange     '0.1.3',
+97 silly addNameRange     '0.1.4',
+97 silly addNameRange     '0.1.5',
+97 silly addNameRange     '0.1.6',
+97 silly addNameRange     '0.2.0',
+97 silly addNameRange     '0.2.1',
+97 silly addNameRange     '0.2.2',
+97 silly addNameRange     '0.2.3',
+97 silly addNameRange     '0.2.4',
+97 silly addNameRange     '0.2.6',
+97 silly addNameRange     '0.2.7',
+97 silly addNameRange     '0.2.8',
+97 silly addNameRange     '0.3.0',
+97 silly addNameRange     '0.3.1',
+97 silly addNameRange     '0.3.2',
+97 silly addNameRange     '0.3.3',
+97 silly addNameRange     '0.3.4',
+97 silly addNameRange     '0.3.6',
+97 silly addNameRange     '0.3.7',
+97 silly addNameRange     '0.3.8',
+97 silly addNameRange     '0.3.9',
+97 silly addNameRange     '0.3.10',
+97 silly addNameRange     '0.3.11',
+97 silly addNameRange     '0.3.12',
+97 silly addNameRange     '0.3.13',
+97 silly addNameRange     '0.3.14',
+97 silly addNameRange     '0.3.15',
+97 silly addNameRange     '0.3.16',
+97 silly addNameRange     '0.3.17',
+97 silly addNameRange     '0.3.18',
+97 silly addNameRange     '0.3.19',
+97 silly addNameRange     '0.3.20',
+97 silly addNameRange     '0.4.0',
+97 silly addNameRange     '0.4.1',
+97 silly addNameRange     '0.4.2',
+97 silly addNameRange     '0.4.3',
+97 silly addNameRange     '0.4.4',
+97 silly addNameRange     '0.4.5',
+97 silly addNameRange     '0.4.6',
+97 silly addNameRange     '0.4.7',
+97 silly addNameRange     '0.4.8',
+97 silly addNameRange     '0.4.9',
+97 silly addNameRange     '0.4.10',
+97 silly addNameRange     '0.4.11',
+97 silly addNameRange     '0.4.12',
+97 silly addNameRange     '0.4.13',
+97 silly addNameRange     '0.4.14',
+97 silly addNameRange     '0.4.15',
+97 silly addNameRange     '0.4.16',
+97 silly addNameRange     '0.4.17',
+97 silly addNameRange     '0.4.18',
+97 silly addNameRange     '0.4.19',
+97 silly addNameRange     '0.4.20',
+97 silly addNameRange     '0.4.21',
+97 silly addNameRange     '0.4.23',
+97 silly addNameRange     '0.4.24',
+97 silly addNameRange     '0.4.25',
+97 silly addNameRange     '0.5.0',
+97 silly addNameRange     '0.5.1',
+97 silly addNameRange     '0.5.2',
+97 silly addNameRange     '0.5.3',
+97 silly addNameRange     '0.5.4',
+97 silly addNameRange     '0.5.5',
+97 silly addNameRange     '0.5.6',
+97 silly addNameRange     '0.5.7',
+97 silly addNameRange     '0.5.8',
+97 silly addNameRange     '0.5.10',
+97 silly addNameRange     '0.6.0',
+97 silly addNameRange     '0.6.1',
+97 silly addNameRange     '0.6.2',
+97 silly addNameRange     '0.7.0-beta',
+97 silly addNameRange     '0.7.0-beta2',
+97 silly addNameRange     '0.7.0-beta3',
+97 silly addNameRange     '0.7.0-beta4',
+97 silly addNameRange     '0.7.0-beta5',
+97 silly addNameRange     '0.7.0-beta6',
+97 silly addNameRange     '0.7.0-beta7',
+97 silly addNameRange     '0.7.0-beta8',
+97 silly addNameRange     '0.7.0',
+97 silly addNameRange     '0.7.1',
+97 silly addNameRange     '0.7.2',
+97 silly addNameRange     '0.7.3',
+97 silly addNameRange     '0.7.4',
+97 silly addNameRange     '0.7.5',
+97 silly addNameRange     '0.7.6',
+97 silly addNameRange     '0.7.7',
+97 silly addNameRange     '0.7.8',
+97 silly addNameRange     '0.7.9',
+97 silly addNameRange     '0.7.11',
+97 silly addNameRange     '0.7.12',
+97 silly addNameRange     '0.7.13',
+97 silly addNameRange     '0.7.14',
+97 silly addNameRange     '0.7.15',
+97 silly addNameRange     '0.7.16',
+97 silly addNameRange     '0.7.17',
+97 silly addNameRange     '0.8.0-beta1',
+97 silly addNameRange     '0.8.0-beta2',
+97 silly addNameRange     ... 401 more items ] ]
+98 silly addNamed webpack@4.6.0
+99 verbose addNamed "4.6.0" is a plain semver version for webpack
+100 silly cache afterAdd webpack@4.6.0
+101 verbose afterAdd /root/.npm/webpack/4.6.0/package/package.json not in flight; writing
+102 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+103 verbose afterAdd /root/.npm/webpack/4.6.0/package/package.json written
+104 silly fetchNamedPackageData fsevents
+105 silly mapToRegistry name fsevents
+106 silly mapToRegistry using default registry
+107 silly mapToRegistry registry https://registry.npmjs.org/
+108 silly mapToRegistry data Result {
+108 silly mapToRegistry   raw: 'fsevents',
+108 silly mapToRegistry   scope: null,
+108 silly mapToRegistry   escapedName: 'fsevents',
+108 silly mapToRegistry   name: 'fsevents',
+108 silly mapToRegistry   rawSpec: '',
+108 silly mapToRegistry   spec: 'latest',
+108 silly mapToRegistry   type: 'tag' }
+109 silly mapToRegistry uri https://registry.npmjs.org/fsevents
+110 verbose request uri https://registry.npmjs.org/fsevents
+111 verbose request no auth needed
+112 info attempt registry request try #1 at 12:30:06 AM
+113 verbose etag "5afaf37f-11155"
+114 verbose lastModified Tue, 15 May 2018 14:49:35 GMT
+115 http request GET https://registry.npmjs.org/fsevents
+116 http 304 https://registry.npmjs.org/fsevents
+117 verbose headers { date: 'Thu, 17 May 2018 00:30:08 GMT',
+117 verbose headers   via: '1.1 varnish',
+117 verbose headers   'cache-control': 'max-age=300',
+117 verbose headers   etag: '"5afaf37f-11155"',
+117 verbose headers   age: '5918',
+117 verbose headers   connection: 'keep-alive',
+117 verbose headers   'x-served-by': 'cache-gru17135-GRU',
+117 verbose headers   'x-cache': 'HIT',
+117 verbose headers   'x-cache-hits': '49',
+117 verbose headers   'x-timer': 'S1526517008.288483,VS0,VE0',
+117 verbose headers   vary: 'Accept-Encoding, Accept' }
+118 silly get cb [ 304,
+118 silly get   { date: 'Thu, 17 May 2018 00:30:08 GMT',
+118 silly get     via: '1.1 varnish',
+118 silly get     'cache-control': 'max-age=300',
+118 silly get     etag: '"5afaf37f-11155"',
+118 silly get     age: '5918',
+118 silly get     connection: 'keep-alive',
+118 silly get     'x-served-by': 'cache-gru17135-GRU',
+118 silly get     'x-cache': 'HIT',
+118 silly get     'x-cache-hits': '49',
+118 silly get     'x-timer': 'S1526517008.288483,VS0,VE0',
+118 silly get     vary: 'Accept-Encoding, Accept' } ]
+119 verbose etag https://registry.npmjs.org/fsevents from cache
+120 verbose get saving fsevents to /root/.npm/registry.npmjs.org/fsevents/.cache.json
+121 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+122 silly resolveWithNewModule fsevents@1.2.4 checking installable status
+123 silly fetchNamedPackageData acorn
+124 silly mapToRegistry name acorn
+125 silly mapToRegistry using default registry
+126 silly mapToRegistry registry https://registry.npmjs.org/
+127 silly mapToRegistry data Result {
+127 silly mapToRegistry   raw: 'acorn',
+127 silly mapToRegistry   scope: null,
+127 silly mapToRegistry   escapedName: 'acorn',
+127 silly mapToRegistry   name: 'acorn',
+127 silly mapToRegistry   rawSpec: '',
+127 silly mapToRegistry   spec: 'latest',
+127 silly mapToRegistry   type: 'tag' }
+128 silly mapToRegistry uri https://registry.npmjs.org/acorn
+129 verbose request uri https://registry.npmjs.org/acorn
+130 verbose request no auth needed
+131 info attempt registry request try #1 at 12:30:09 AM
+132 verbose etag "5aa103d7-2f54a"
+133 verbose lastModified Thu, 8 Mar 2018 9:35:19 GMT
+134 http request GET https://registry.npmjs.org/acorn
+135 http 304 https://registry.npmjs.org/acorn
+136 verbose headers { date: 'Thu, 17 May 2018 00:30:12 GMT',
+136 verbose headers   via: '1.1 varnish',
+136 verbose headers   'cache-control': 'max-age=300',
+136 verbose headers   etag: '"5aa103d7-2f54a"',
+136 verbose headers   age: '10049',
+136 verbose headers   connection: 'keep-alive',
+136 verbose headers   'x-served-by': 'cache-gru17135-GRU',
+136 verbose headers   'x-cache': 'HIT',
+136 verbose headers   'x-cache-hits': '36',
+136 verbose headers   'x-timer': 'S1526517012.234778,VS0,VE0',
+136 verbose headers   vary: 'Accept-Encoding, Accept' }
+137 silly get cb [ 304,
+137 silly get   { date: 'Thu, 17 May 2018 00:30:12 GMT',
+137 silly get     via: '1.1 varnish',
+137 silly get     'cache-control': 'max-age=300',
+137 silly get     etag: '"5aa103d7-2f54a"',
+137 silly get     age: '10049',
+137 silly get     connection: 'keep-alive',
+137 silly get     'x-served-by': 'cache-gru17135-GRU',
+137 silly get     'x-cache': 'HIT',
+137 silly get     'x-cache-hits': '36',
+137 silly get     'x-timer': 'S1526517012.234778,VS0,VE0',
+137 silly get     vary: 'Accept-Encoding, Accept' } ]
+138 verbose etag https://registry.npmjs.org/acorn from cache
+139 verbose get saving acorn to /root/.npm/registry.npmjs.org/acorn/.cache.json
+140 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+141 silly resolveWithNewModule acorn@5.5.3 checking installable status
+142 silly cache add args [ 'acorn@^5.0.0', null ]
+143 verbose cache add spec acorn@^5.0.0
+144 silly cache add parsed spec Result {
+144 silly cache add   raw: 'acorn@^5.0.0',
+144 silly cache add   scope: null,
+144 silly cache add   escapedName: 'acorn',
+144 silly cache add   name: 'acorn',
+144 silly cache add   rawSpec: '^5.0.0',
+144 silly cache add   spec: '>=5.0.0 <6.0.0',
+144 silly cache add   type: 'range' }
+145 silly addNamed acorn@>=5.0.0 <6.0.0
+146 verbose addNamed ">=5.0.0 <6.0.0" is a valid semver range for acorn
+147 silly addNameRange { name: 'acorn', range: '>=5.0.0 <6.0.0', hasData: false }
+148 silly mapToRegistry name acorn
+149 silly mapToRegistry using default registry
+150 silly mapToRegistry registry https://registry.npmjs.org/
+151 silly mapToRegistry data Result {
+151 silly mapToRegistry   raw: 'acorn',
+151 silly mapToRegistry   scope: null,
+151 silly mapToRegistry   escapedName: 'acorn',
+151 silly mapToRegistry   name: 'acorn',
+151 silly mapToRegistry   rawSpec: '',
+151 silly mapToRegistry   spec: 'latest',
+151 silly mapToRegistry   type: 'tag' }
+152 silly mapToRegistry uri https://registry.npmjs.org/acorn
+153 verbose addNameRange registry:https://registry.npmjs.org/acorn not in flight; fetching
+154 verbose get https://registry.npmjs.org/acorn not expired, no request
+155 silly addNameRange number 2 { name: 'acorn', range: '>=5.0.0 <6.0.0', hasData: true }
+156 silly addNameRange versions [ 'acorn',
+156 silly addNameRange   [ '0.0.1',
+156 silly addNameRange     '0.1.0',
+156 silly addNameRange     '0.2.0',
+156 silly addNameRange     '0.3.0',
+156 silly addNameRange     '0.3.1',
+156 silly addNameRange     '0.4.0',
+156 silly addNameRange     '0.4.2',
+156 silly addNameRange     '0.5.0',
+156 silly addNameRange     '0.6.0',
+156 silly addNameRange     '0.7.0',
+156 silly addNameRange     '0.8.0',
+156 silly addNameRange     '0.9.0',
+156 silly addNameRange     '0.10.0',
+156 silly addNameRange     '0.11.0',
+156 silly addNameRange     '0.12.0',
+156 silly addNameRange     '1.0.0',
+156 silly addNameRange     '1.0.1',
+156 silly addNameRange     '1.0.3',
+156 silly addNameRange     '1.1.0',
+156 silly addNameRange     '1.2.0',
+156 silly addNameRange     '2.0.0',
+156 silly addNameRange     '1.2.1',
+156 silly addNameRange     '2.0.1',
+156 silly addNameRange     '1.2.2',
+156 silly addNameRange     '2.0.4',
+156 silly addNameRange     '2.1.0',
+156 silly addNameRange     '2.2.0',
+156 silly addNameRange     '2.3.0',
+156 silly addNameRange     '2.4.0',
+156 silly addNameRange     '2.5.0',
+156 silly addNameRange     '2.5.2',
+156 silly addNameRange     '2.6.0',
+156 silly addNameRange     '2.6.2',
+156 silly addNameRange     '2.6.4',
+156 silly addNameRange     '2.7.0',
+156 silly addNameRange     '3.0.0',
+156 silly addNameRange     '3.0.2',
+156 silly addNameRange     '3.0.4',
+156 silly addNameRange     '3.1.0',
+156 silly addNameRange     '3.2.0',
+156 silly addNameRange     '3.3.0',
+156 silly addNameRange     '4.0.0',
+156 silly addNameRange     '4.0.1',
+156 silly addNameRange     '4.0.2',
+156 silly addNameRange     '4.0.3',
+156 silly addNameRange     '4.0.4',
+156 silly addNameRange     '4.0.5',
+156 silly addNameRange     '4.0.6',
+156 silly addNameRange     '4.0.7',
+156 silly addNameRange     '4.0.8',
+156 silly addNameRange     '4.0.9',
+156 silly addNameRange     '4.0.10',
+156 silly addNameRange     '4.0.11',
+156 silly addNameRange     '5.0.0',
+156 silly addNameRange     '5.0.1',
+156 silly addNameRange     '5.0.2',
+156 silly addNameRange     '5.0.3',
+156 silly addNameRange     '4.0.13',
+156 silly addNameRange     '5.1.0',
+156 silly addNameRange     '5.1.1',
+156 silly addNameRange     '5.1.2',
+156 silly addNameRange     '5.2.0',
+156 silly addNameRange     '5.2.1',
+156 silly addNameRange     '5.3.0',
+156 silly addNameRange     '5.4.0',
+156 silly addNameRange     '5.4.1',
+156 silly addNameRange     '5.5.0',
+156 silly addNameRange     '5.5.1',
+156 silly addNameRange     '5.5.2',
+156 silly addNameRange     '5.5.3' ] ]
+157 silly addNamed acorn@5.5.3
+158 verbose addNamed "5.5.3" is a plain semver version for acorn
+159 silly cache afterAdd acorn@5.5.3
+160 verbose afterAdd /root/.npm/acorn/5.5.3/package/package.json not in flight; writing
+161 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+162 verbose afterAdd /root/.npm/acorn/5.5.3/package/package.json written
+163 silly fetchNamedPackageData fsevents
+164 silly mapToRegistry name fsevents
+165 silly mapToRegistry using default registry
+166 silly mapToRegistry registry https://registry.npmjs.org/
+167 silly mapToRegistry data Result {
+167 silly mapToRegistry   raw: 'fsevents',
+167 silly mapToRegistry   scope: null,
+167 silly mapToRegistry   escapedName: 'fsevents',
+167 silly mapToRegistry   name: 'fsevents',
+167 silly mapToRegistry   rawSpec: '',
+167 silly mapToRegistry   spec: 'latest',
+167 silly mapToRegistry   type: 'tag' }
+168 silly mapToRegistry uri https://registry.npmjs.org/fsevents
+169 silly resolveWithNewModule fsevents@1.2.4 checking installable status
+170 silly fetchNamedPackageData fsevents
+171 silly mapToRegistry name fsevents
+172 silly mapToRegistry using default registry
+173 silly mapToRegistry registry https://registry.npmjs.org/
+174 silly mapToRegistry data Result {
+174 silly mapToRegistry   raw: 'fsevents',
+174 silly mapToRegistry   scope: null,
+174 silly mapToRegistry   escapedName: 'fsevents',
+174 silly mapToRegistry   name: 'fsevents',
+174 silly mapToRegistry   rawSpec: '',
+174 silly mapToRegistry   spec: 'latest',
+174 silly mapToRegistry   type: 'tag' }
+175 silly mapToRegistry uri https://registry.npmjs.org/fsevents
+176 silly resolveWithNewModule fsevents@1.2.4 checking installable status
+177 silly loadAllDepsIntoIdealTree Finishing
+178 silly loadIdealTree Finishing
+179 silly currentTree angular-io-example@1.0.0
+179 silly currentTree +-- @angular-devkit/architect@0.6.1
+179 silly currentTree +-- @angular-devkit/build-optimizer@0.6.1
+179 silly currentTree +-- @angular-devkit/core@0.6.1
+179 silly currentTree +-- @angular-devkit/schematics@0.6.1
+179 silly currentTree +-- @angular/animations@6.0.2
+179 silly currentTree +-- @angular/cli@6.0.1
+179 silly currentTree | +-- camelcase@4.1.0
+179 silly currentTree | `-- yargs-parser@10.0.0
+179 silly currentTree +-- @angular/common@6.0.2
+179 silly currentTree +-- @angular/compiler-cli@6.0.2
+179 silly currentTree | +-- anymatch@1.3.2
+179 silly currentTree | +-- arr-diff@2.0.0
+179 silly currentTree | +-- array-unique@0.2.1
+179 silly currentTree | +-- braces@1.8.5
+179 silly currentTree | +-- chokidar@1.7.0
+179 silly currentTree | +-- expand-brackets@0.1.5
+179 silly currentTree | +-- extglob@0.3.2
+179 silly currentTree | +-- glob-parent@2.0.0
+179 silly currentTree | +-- is-extglob@1.0.0
+179 silly currentTree | +-- is-glob@2.0.1
+179 silly currentTree | +-- kind-of@3.2.2
+179 silly currentTree | +-- micromatch@2.3.11
+179 silly currentTree | `-- minimist@1.2.0
+179 silly currentTree +-- @angular/compiler@6.0.2
+179 silly currentTree +-- @angular/core@6.0.2
+179 silly currentTree +-- @angular/forms@6.0.2
+179 silly currentTree +-- @angular/http@6.0.2
+179 silly currentTree +-- @angular/platform-browser-dynamic@6.0.2
+179 silly currentTree +-- @angular/platform-browser@6.0.2
+179 silly currentTree +-- @angular/platform-server@6.0.2
+179 silly currentTree +-- @angular/router@6.0.2
+179 silly currentTree +-- @angular/upgrade@6.0.2
+179 silly currentTree +-- @ngtools/webpack@6.0.1
+179 silly currentTree +-- @schematics/angular@0.6.1
+179 silly currentTree +-- @schematics/update@0.6.1
+179 silly currentTree +-- @types/jasmine@2.8.7
+179 silly currentTree +-- @types/jasminewd2@2.0.3
+179 silly currentTree +-- @types/node@6.0.110
+179 silly currentTree +-- @types/q@0.0.32
+179 silly currentTree +-- @types/selenium-webdriver@2.53.43
+179 silly currentTree +-- abbrev@1.0.9
+179 silly currentTree +-- accepts@1.3.5
+179 silly currentTree +-- acorn-dynamic-import@3.0.0
+179 silly currentTree +-- adm-zip@0.4.4
+179 silly currentTree +-- after@0.8.2
+179 silly currentTree +-- agent-base@4.2.0
+179 silly currentTree +-- ajv-keywords@3.2.0
+179 silly currentTree +-- ajv@6.4.0
+179 silly currentTree +-- align-text@0.1.4
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- amdefine@1.0.1
+179 silly currentTree +-- angular-in-memory-web-api@0.6.0
+179 silly currentTree +-- ansi-html@0.0.7
+179 silly currentTree +-- ansi-regex@2.1.1
+179 silly currentTree +-- ansi-styles@3.2.1
+179 silly currentTree +-- anymatch@2.0.0
+179 silly currentTree +-- append-transform@0.4.0
+179 silly currentTree +-- aproba@1.2.0
+179 silly currentTree +-- are-we-there-yet@1.1.4
+179 silly currentTree +-- argparse@1.0.10
+179 silly currentTree +-- arr-diff@4.0.0
+179 silly currentTree +-- arr-flatten@1.1.0
+179 silly currentTree +-- arr-union@3.1.0
+179 silly currentTree +-- array-find-index@1.0.2
+179 silly currentTree +-- array-flatten@2.1.1
+179 silly currentTree +-- array-includes@3.0.3
+179 silly currentTree +-- array-slice@0.2.3
+179 silly currentTree +-- array-union@1.0.2
+179 silly currentTree +-- array-uniq@1.0.3
+179 silly currentTree +-- array-unique@0.3.2
+179 silly currentTree +-- arraybuffer.slice@0.0.6
+179 silly currentTree +-- arrify@1.0.1
+179 silly currentTree +-- asap@2.0.6
+179 silly currentTree +-- asn1.js@4.10.1
+179 silly currentTree +-- asn1@0.2.3
+179 silly currentTree +-- assert-plus@1.0.0
+179 silly currentTree +-- assert@1.4.1
+179 silly currentTree +-- assign-symbols@1.0.0
+179 silly currentTree +-- async-each@1.0.1
+179 silly currentTree +-- async-foreach@0.1.3
+179 silly currentTree +-- async@1.5.2
+179 silly currentTree +-- asynckit@0.4.0
+179 silly currentTree +-- atob@2.1.1
+179 silly currentTree +-- autoprefixer@8.5.0
+179 silly currentTree +-- aws-sign2@0.7.0
+179 silly currentTree +-- aws4@1.7.0
+179 silly currentTree +-- babel-code-frame@6.26.0
+179 silly currentTree | +-- ansi-styles@2.2.1
+179 silly currentTree | +-- chalk@1.1.3
+179 silly currentTree | `-- supports-color@2.0.0
+179 silly currentTree +-- babel-generator@6.26.1
+179 silly currentTree +-- babel-messages@6.23.0
+179 silly currentTree +-- babel-runtime@6.26.0
+179 silly currentTree +-- babel-template@6.26.0
+179 silly currentTree +-- babel-traverse@6.26.0
+179 silly currentTree +-- babel-types@6.26.0
+179 silly currentTree +-- babylon@6.18.0
+179 silly currentTree +-- backo2@1.0.2
+179 silly currentTree +-- balanced-match@1.0.0
+179 silly currentTree +-- base@0.11.2
+179 silly currentTree | +-- define-property@1.0.0
+179 silly currentTree | +-- is-accessor-descriptor@1.0.0
+179 silly currentTree | +-- is-data-descriptor@1.0.0
+179 silly currentTree | `-- is-descriptor@1.0.2
+179 silly currentTree +-- base64-arraybuffer@0.1.5
+179 silly currentTree +-- base64-js@1.3.0
+179 silly currentTree +-- base64id@1.0.0
+179 silly currentTree +-- batch@0.6.1
+179 silly currentTree +-- bcrypt-pbkdf@1.0.1
+179 silly currentTree +-- better-assert@1.0.2
+179 silly currentTree +-- big.js@3.2.0
+179 silly currentTree +-- binary-extensions@1.11.0
+179 silly currentTree +-- blob@0.0.4
+179 silly currentTree +-- block-stream@0.0.9
+179 silly currentTree +-- blocking-proxy@1.0.1
+179 silly currentTree | `-- minimist@1.2.0
+179 silly currentTree +-- bluebird@3.5.1
+179 silly currentTree +-- bn.js@4.11.8
+179 silly currentTree +-- body-parser@1.18.2
+179 silly currentTree | `-- qs@6.5.1
+179 silly currentTree +-- bonjour@3.5.0
+179 silly currentTree +-- boolbase@1.0.0
+179 silly currentTree +-- boom@4.3.1
+179 silly currentTree +-- brace-expansion@1.1.11
+179 silly currentTree +-- braces@2.3.2
+179 silly currentTree | `-- extend-shallow@2.0.1
+179 silly currentTree +-- brorand@1.1.0
+179 silly currentTree +-- browserify-aes@1.2.0
+179 silly currentTree +-- browserify-cipher@1.0.1
+179 silly currentTree +-- browserify-des@1.0.1
+179 silly currentTree +-- browserify-rsa@4.0.1
+179 silly currentTree +-- browserify-sign@4.0.4
+179 silly currentTree +-- browserify-zlib@0.2.0
+179 silly currentTree +-- browserslist@3.2.7
+179 silly currentTree +-- buffer-from@1.0.0
+179 silly currentTree +-- buffer-indexof@1.1.1
+179 silly currentTree +-- buffer-xor@1.0.3
+179 silly currentTree +-- buffer@4.9.1
+179 silly currentTree +-- builtin-modules@1.1.1
+179 silly currentTree +-- builtin-status-codes@3.0.0
+179 silly currentTree +-- builtins@1.0.3
+179 silly currentTree +-- bytes@3.0.0
+179 silly currentTree +-- cacache@10.0.4
+179 silly currentTree +-- cache-base@1.0.1
+179 silly currentTree +-- cache-loader@1.2.2
+179 silly currentTree +-- callsite@1.0.0
+179 silly currentTree +-- camel-case@3.0.0
+179 silly currentTree +-- camelcase-keys@2.1.0
+179 silly currentTree | `-- camelcase@2.1.1
+179 silly currentTree +-- camelcase@1.2.1
+179 silly currentTree +-- caniuse-lite@1.0.30000841
+179 silly currentTree +-- caseless@0.12.0
+179 silly currentTree +-- center-align@0.1.3
+179 silly currentTree +-- chalk@2.2.2
+179 silly currentTree | +-- has-flag@2.0.0
+179 silly currentTree | `-- supports-color@4.5.0
+179 silly currentTree +-- chokidar@2.0.3
+179 silly currentTree +-- chownr@1.0.1
+179 silly currentTree +-- chrome-trace-event@0.1.3
+179 silly currentTree +-- cipher-base@1.0.4
+179 silly currentTree +-- circular-dependency-plugin@5.0.2
+179 silly currentTree +-- class-utils@0.3.6
+179 silly currentTree | `-- define-property@0.2.5
+179 silly currentTree +-- clean-css@4.1.11
+179 silly currentTree +-- cliui@2.1.0
+179 silly currentTree | `-- wordwrap@0.0.2
+179 silly currentTree +-- clone-deep@2.0.2
+179 silly currentTree +-- clone@2.1.1
+179 silly currentTree +-- co@4.6.0
+179 silly currentTree +-- code-point-at@1.1.0
+179 silly currentTree +-- collection-visit@1.0.0
+179 silly currentTree +-- color-convert@1.9.1
+179 silly currentTree +-- color-name@1.1.3
+179 silly currentTree +-- colors@1.1.2
+179 silly currentTree +-- combine-lists@1.0.1
+179 silly currentTree +-- combined-stream@1.0.6
+179 silly currentTree +-- commander@2.15.1
+179 silly currentTree +-- commondir@1.0.1
+179 silly currentTree +-- compare-versions@3.2.1
+179 silly currentTree +-- component-bind@1.0.0
+179 silly currentTree +-- component-emitter@1.2.1
+179 silly currentTree +-- component-inherit@0.0.3
+179 silly currentTree +-- compressible@2.0.13
+179 silly currentTree +-- compression@1.7.2
+179 silly currentTree | `-- safe-buffer@5.1.1
+179 silly currentTree +-- concat-map@0.0.1
+179 silly currentTree +-- concat-stream@1.6.2
+179 silly currentTree +-- connect-history-api-fallback@1.5.0
+179 silly currentTree +-- connect@3.6.6
+179 silly currentTree | +-- finalhandler@1.1.0
+179 silly currentTree | `-- statuses@1.3.1
+179 silly currentTree +-- console-browserify@1.1.0
+179 silly currentTree +-- console-control-strings@1.1.0
+179 silly currentTree +-- constants-browserify@1.0.0
+179 silly currentTree +-- content-disposition@0.5.2
+179 silly currentTree +-- content-type@1.0.4
+179 silly currentTree +-- convert-source-map@1.5.1
+179 silly currentTree +-- cookie-signature@1.0.6
+179 silly currentTree +-- cookie@0.3.1
+179 silly currentTree +-- copy-concurrently@1.0.5
+179 silly currentTree +-- copy-descriptor@0.1.1
+179 silly currentTree +-- copy-webpack-plugin@4.5.1
+179 silly currentTree +-- core-js@2.5.6
+179 silly currentTree +-- core-util-is@1.0.2
+179 silly currentTree +-- cosmiconfig@2.2.2
+179 silly currentTree | `-- minimist@1.2.0
+179 silly currentTree +-- create-ecdh@4.0.3
+179 silly currentTree +-- create-hash@1.2.0
+179 silly currentTree +-- create-hmac@1.1.7
+179 silly currentTree +-- cross-spawn@3.0.1
+179 silly currentTree +-- cryptiles@3.1.2
+179 silly currentTree | `-- boom@5.2.0
+179 silly currentTree +-- crypto-browserify@3.12.0
+179 silly currentTree +-- css-parse@1.7.0
+179 silly currentTree +-- css-select@1.2.0
+179 silly currentTree +-- css-what@2.1.0
+179 silly currentTree +-- cuint@0.2.2
+179 silly currentTree +-- currently-unhandled@0.4.1
+179 silly currentTree +-- custom-event@1.0.1
+179 silly currentTree +-- cyclist@0.2.2
+179 silly currentTree +-- d@1.0.0
+179 silly currentTree +-- dashdash@1.14.1
+179 silly currentTree +-- date-now@0.1.4
+179 silly currentTree +-- debug@2.6.9
+179 silly currentTree +-- decamelize@1.2.0
+179 silly currentTree +-- decode-uri-component@0.2.0
+179 silly currentTree +-- deep-equal@1.0.1
+179 silly currentTree +-- deep-is@0.1.3
+179 silly currentTree +-- default-require-extensions@1.0.0
+179 silly currentTree +-- define-properties@1.1.2
+179 silly currentTree +-- define-property@2.0.2
+179 silly currentTree | +-- is-accessor-descriptor@1.0.0
+179 silly currentTree | +-- is-data-descriptor@1.0.0
+179 silly currentTree | `-- is-descriptor@1.0.2
+179 silly currentTree +-- del@3.0.0
+179 silly currentTree | `-- globby@6.1.0
+179 silly currentTree |   `-- pify@2.3.0
+179 silly currentTree +-- delayed-stream@1.0.0
+179 silly currentTree +-- delegates@1.0.0
+179 silly currentTree +-- depd@1.1.2
+179 silly currentTree +-- des.js@1.0.0
+179 silly currentTree +-- destroy@1.0.4
+179 silly currentTree +-- detect-indent@4.0.0
+179 silly currentTree +-- detect-node@2.0.3
+179 silly currentTree +-- di@0.0.1
+179 silly currentTree +-- diff@3.5.0
+179 silly currentTree +-- diffie-hellman@5.0.3
+179 silly currentTree +-- dir-glob@2.0.0
+179 silly currentTree +-- dns-equal@1.0.0
+179 silly currentTree +-- dns-packet@1.3.1
+179 silly currentTree +-- dns-txt@2.0.2
+179 silly currentTree +-- dom-converter@0.1.4
+179 silly currentTree | `-- utila@0.3.3
+179 silly currentTree +-- dom-serialize@2.2.1
+179 silly currentTree +-- dom-serializer@0.1.0
+179 silly currentTree | `-- domelementtype@1.1.3
+179 silly currentTree +-- domain-browser@1.2.0
+179 silly currentTree +-- domelementtype@1.3.0
+179 silly currentTree +-- domhandler@2.1.0
+179 silly currentTree +-- domino@2.0.2
+179 silly currentTree +-- domutils@1.5.1
+179 silly currentTree +-- duplexify@3.6.0
+179 silly currentTree +-- ecc-jsbn@0.1.1
+179 silly currentTree +-- ee-first@1.1.1
+179 silly currentTree +-- ejs@2.6.1
+179 silly currentTree +-- electron-to-chromium@1.3.46
+179 silly currentTree +-- elliptic@6.4.0
+179 silly currentTree +-- emojis-list@2.1.0
+179 silly currentTree +-- encodeurl@1.0.2
+179 silly currentTree +-- end-of-stream@1.4.1
+179 silly currentTree +-- engine.io-client@1.8.3
+179 silly currentTree | +-- debug@2.3.3
+179 silly currentTree | `-- ms@0.7.2
+179 silly currentTree +-- engine.io-parser@1.3.2
+179 silly currentTree +-- engine.io@1.8.3
+179 silly currentTree | +-- accepts@1.3.3
+179 silly currentTree | +-- debug@2.3.3
+179 silly currentTree | `-- ms@0.7.2
+179 silly currentTree +-- enhanced-resolve@4.0.0
+179 silly currentTree +-- ent@2.2.0
+179 silly currentTree +-- entities@1.1.1
+179 silly currentTree +-- errno@0.1.7
+179 silly currentTree +-- error-ex@1.3.1
+179 silly currentTree +-- es-abstract@1.11.0
+179 silly currentTree +-- es-to-primitive@1.1.1
+179 silly currentTree +-- es5-ext@0.10.42
+179 silly currentTree +-- es6-iterator@2.0.3
+179 silly currentTree +-- es6-promise@4.2.4
+179 silly currentTree +-- es6-promisify@5.0.0
+179 silly currentTree +-- es6-symbol@3.1.1
+179 silly currentTree +-- escape-html@1.0.3
+179 silly currentTree +-- escape-string-regexp@1.0.5
+179 silly currentTree +-- escodegen@1.8.1
+179 silly currentTree | `-- source-map@0.2.0
+179 silly currentTree +-- eslint-scope@3.7.1
+179 silly currentTree | `-- estraverse@4.2.0
+179 silly currentTree +-- esprima@2.7.3
+179 silly currentTree +-- esrecurse@4.2.1
+179 silly currentTree | `-- estraverse@4.2.0
+179 silly currentTree +-- estraverse@1.9.3
+179 silly currentTree +-- esutils@2.0.2
+179 silly currentTree +-- etag@1.8.1
+179 silly currentTree +-- eventemitter3@3.1.0
+179 silly currentTree +-- events@1.1.1
+179 silly currentTree +-- eventsource@0.1.6
+179 silly currentTree +-- evp_bytestokey@1.0.3
+179 silly currentTree +-- execa@0.7.0
+179 silly currentTree | `-- cross-spawn@5.1.0
+179 silly currentTree +-- exit@0.1.2
+179 silly currentTree +-- expand-braces@0.1.2
+179 silly currentTree | +-- array-unique@0.2.1
+179 silly currentTree | +-- braces@0.1.5
+179 silly currentTree | +-- expand-range@0.1.1
+179 silly currentTree | +-- is-number@0.1.1
+179 silly currentTree | `-- repeat-string@0.2.2
+179 silly currentTree +-- expand-brackets@2.1.4
+179 silly currentTree | +-- define-property@0.2.5
+179 silly currentTree | `-- extend-shallow@2.0.1
+179 silly currentTree +-- expand-range@1.8.2
+179 silly currentTree | +-- fill-range@2.2.4
+179 silly currentTree | +-- is-number@2.1.0
+179 silly currentTree | +-- isobject@2.1.0
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- express@4.16.3
+179 silly currentTree | +-- array-flatten@1.1.1
+179 silly currentTree | +-- qs@6.5.1
+179 silly currentTree | `-- safe-buffer@5.1.1
+179 silly currentTree +-- extend-shallow@3.0.2
+179 silly currentTree | `-- is-extendable@1.0.1
+179 silly currentTree +-- extend@3.0.1
+179 silly currentTree +-- extglob@2.0.4
+179 silly currentTree | +-- define-property@1.0.0
+179 silly currentTree | +-- extend-shallow@2.0.1
+179 silly currentTree | +-- is-accessor-descriptor@1.0.0
+179 silly currentTree | +-- is-data-descriptor@1.0.0
+179 silly currentTree | `-- is-descriptor@1.0.2
+179 silly currentTree +-- extract-zip@1.6.6
+179 silly currentTree | +-- concat-stream@1.6.0
+179 silly currentTree | `-- mkdirp@0.5.0
+179 silly currentTree +-- extsprintf@1.3.0
+179 silly currentTree +-- fast-deep-equal@1.1.0
+179 silly currentTree +-- fast-json-stable-stringify@2.0.0
+179 silly currentTree +-- fast-levenshtein@2.0.6
+179 silly currentTree +-- faye-websocket@0.10.0
+179 silly currentTree +-- fd-slicer@1.0.1
+179 silly currentTree +-- file-loader@1.1.11
+179 silly currentTree +-- filename-regex@2.0.1
+179 silly currentTree +-- fileset@2.0.3
+179 silly currentTree +-- fill-range@4.0.0
+179 silly currentTree | `-- extend-shallow@2.0.1
+179 silly currentTree +-- finalhandler@1.1.1
+179 silly currentTree +-- find-cache-dir@1.0.0
+179 silly currentTree +-- find-up@2.1.0
+179 silly currentTree +-- flush-write-stream@1.0.3
+179 silly currentTree +-- follow-redirects@1.4.1
+179 silly currentTree | `-- debug@3.1.0
+179 silly currentTree +-- for-in@1.0.2
+179 silly currentTree +-- for-own@1.0.0
+179 silly currentTree +-- foreach@2.0.5
+179 silly currentTree +-- forever-agent@0.6.1
+179 silly currentTree +-- form-data@2.3.2
+179 silly currentTree +-- forwarded@0.1.2
+179 silly currentTree +-- fragment-cache@0.2.1
+179 silly currentTree +-- fresh@0.5.2
+179 silly currentTree +-- from2@2.3.0
+179 silly currentTree +-- fs-access@1.0.1
+179 silly currentTree +-- fs-extra@1.0.0
+179 silly currentTree +-- fs-write-stream-atomic@1.0.10
+179 silly currentTree +-- fs.realpath@1.0.0
+179 silly currentTree +-- fstream@1.0.11
+179 silly currentTree +-- function-bind@1.1.1
+179 silly currentTree +-- gauge@2.7.4
+179 silly currentTree +-- gaze@1.1.2
+179 silly currentTree +-- generate-function@2.0.0
+179 silly currentTree +-- generate-object-property@1.2.0
+179 silly currentTree +-- get-caller-file@1.0.2
+179 silly currentTree +-- get-stdin@4.0.1
+179 silly currentTree +-- get-stream@3.0.0
+179 silly currentTree +-- get-value@2.0.6
+179 silly currentTree +-- getpass@0.1.7
+179 silly currentTree +-- glob-base@0.3.0
+179 silly currentTree | +-- glob-parent@2.0.0
+179 silly currentTree | +-- is-extglob@1.0.0
+179 silly currentTree | `-- is-glob@2.0.1
+179 silly currentTree +-- glob-parent@3.1.0
+179 silly currentTree | `-- is-glob@3.1.0
+179 silly currentTree +-- glob@7.1.2
+179 silly currentTree +-- globals@9.18.0
+179 silly currentTree +-- globby@7.1.1
+179 silly currentTree +-- globule@1.2.0
+179 silly currentTree +-- graceful-fs@4.1.11
+179 silly currentTree +-- handle-thing@1.2.5
+179 silly currentTree +-- handlebars@4.0.11
+179 silly currentTree | +-- source-map@0.4.4
+179 silly currentTree | `-- uglify-js@2.8.29
+179 silly currentTree |   `-- source-map@0.5.7
+179 silly currentTree +-- har-schema@2.0.0
+179 silly currentTree +-- har-validator@5.0.3
+179 silly currentTree | `-- ajv@5.5.2
+179 silly currentTree +-- has-ansi@2.0.0
+179 silly currentTree +-- has-binary@0.1.7
+179 silly currentTree | `-- isarray@0.0.1
+179 silly currentTree +-- has-cors@1.1.0
+179 silly currentTree +-- has-flag@3.0.0
+179 silly currentTree +-- has-symbols@1.0.0
+179 silly currentTree +-- has-unicode@2.0.1
+179 silly currentTree +-- has-value@1.0.0
+179 silly currentTree +-- has-values@1.0.0
+179 silly currentTree | `-- kind-of@4.0.0
+179 silly currentTree +-- has@1.0.1
+179 silly currentTree +-- hash-base@3.0.4
+179 silly currentTree +-- hash.js@1.1.3
+179 silly currentTree +-- hasha@2.2.0
+179 silly currentTree +-- hawk@6.0.2
+179 silly currentTree +-- he@1.1.1
+179 silly currentTree +-- hmac-drbg@1.0.1
+179 silly currentTree +-- hoek@4.2.1
+179 silly currentTree +-- hosted-git-info@2.6.0
+179 silly currentTree +-- hpack.js@2.1.6
+179 silly currentTree +-- html-entities@1.2.1
+179 silly currentTree +-- html-minifier@3.5.15
+179 silly currentTree +-- html-webpack-plugin@3.2.0
+179 silly currentTree | `-- loader-utils@0.2.17
+179 silly currentTree +-- htmlparser2@3.3.0
+179 silly currentTree | +-- domutils@1.1.6
+179 silly currentTree | +-- isarray@0.0.1
+179 silly currentTree | +-- readable-stream@1.0.34
+179 silly currentTree | `-- string_decoder@0.10.31
+179 silly currentTree +-- http-deceiver@1.2.7
+179 silly currentTree +-- http-errors@1.6.3
+179 silly currentTree +-- http-parser-js@0.4.12
+179 silly currentTree +-- http-proxy-middleware@0.18.0
+179 silly currentTree +-- http-proxy@1.17.0
+179 silly currentTree +-- http-signature@1.2.0
+179 silly currentTree +-- https-browserify@1.0.0
+179 silly currentTree +-- https-proxy-agent@2.2.1
+179 silly currentTree | `-- debug@3.1.0
+179 silly currentTree +-- iconv-lite@0.4.19
+179 silly currentTree +-- ieee754@1.1.11
+179 silly currentTree +-- iferr@0.1.5
+179 silly currentTree +-- ignore@3.3.8
+179 silly currentTree +-- image-size@0.5.5
+179 silly currentTree +-- immediate@3.0.6
+179 silly currentTree +-- import-local@1.0.0
+179 silly currentTree +-- imurmurhash@0.1.4
+179 silly currentTree +-- in-publish@2.0.0
+179 silly currentTree +-- indent-string@2.1.0
+179 silly currentTree +-- indexof@0.0.1
+179 silly currentTree +-- inflight@1.0.6
+179 silly currentTree +-- inherits@2.0.3
+179 silly currentTree +-- ini@1.3.5
+179 silly currentTree +-- internal-ip@1.2.0
+179 silly currentTree +-- invariant@2.2.4
+179 silly currentTree +-- invert-kv@1.0.0
+179 silly currentTree +-- ip@1.1.5
+179 silly currentTree +-- ipaddr.js@1.6.0
+179 silly currentTree +-- is-accessor-descriptor@0.1.6
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- is-arrayish@0.2.1
+179 silly currentTree +-- is-binary-path@1.0.1
+179 silly currentTree +-- is-buffer@1.1.6
+179 silly currentTree +-- is-builtin-module@1.0.0
+179 silly currentTree +-- is-callable@1.1.3
+179 silly currentTree +-- is-data-descriptor@0.1.4
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- is-date-object@1.0.1
+179 silly currentTree +-- is-descriptor@0.1.6
+179 silly currentTree | `-- kind-of@5.1.0
+179 silly currentTree +-- is-directory@0.3.1
+179 silly currentTree +-- is-dotfile@1.0.3
+179 silly currentTree +-- is-equal-shallow@0.1.3
+179 silly currentTree +-- is-extendable@0.1.1
+179 silly currentTree +-- is-extglob@2.1.1
+179 silly currentTree +-- is-finite@1.0.2
+179 silly currentTree +-- is-fullwidth-code-point@1.0.0
+179 silly currentTree +-- is-glob@4.0.0
+179 silly currentTree +-- is-my-ip-valid@1.0.0
+179 silly currentTree +-- is-my-json-valid@2.17.2
+179 silly currentTree +-- is-number@3.0.0
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- is-odd@2.0.0
+179 silly currentTree | `-- is-number@4.0.0
+179 silly currentTree +-- is-path-cwd@1.0.0
+179 silly currentTree +-- is-path-in-cwd@1.0.1
+179 silly currentTree +-- is-path-inside@1.0.1
+179 silly currentTree +-- is-plain-object@2.0.4
+179 silly currentTree +-- is-posix-bracket@0.1.1
+179 silly currentTree +-- is-primitive@2.0.0
+179 silly currentTree +-- is-property@1.0.2
+179 silly currentTree +-- is-regex@1.0.4
+179 silly currentTree +-- is-stream@1.1.0
+179 silly currentTree +-- is-symbol@1.0.1
+179 silly currentTree +-- is-typedarray@1.0.0
+179 silly currentTree +-- is-utf8@0.2.1
+179 silly currentTree +-- is-windows@1.0.2
+179 silly currentTree +-- is-wsl@1.1.0
+179 silly currentTree +-- isarray@1.0.0
+179 silly currentTree +-- isbinaryfile@3.0.2
+179 silly currentTree +-- isexe@2.0.0
+179 silly currentTree +-- isobject@3.0.1
+179 silly currentTree +-- isstream@0.1.2
+179 silly currentTree +-- istanbul-api@1.3.1
+179 silly currentTree | `-- async@2.6.0
+179 silly currentTree +-- istanbul-instrumenter-loader@3.0.1
+179 silly currentTree | +-- ajv@5.5.2
+179 silly currentTree | `-- schema-utils@0.3.0
+179 silly currentTree +-- istanbul-lib-coverage@1.2.0
+179 silly currentTree +-- istanbul-lib-hook@1.2.0
+179 silly currentTree +-- istanbul-lib-instrument@1.10.1
+179 silly currentTree +-- istanbul-lib-report@1.1.4
+179 silly currentTree | +-- has-flag@1.0.0
+179 silly currentTree | `-- supports-color@3.2.3
+179 silly currentTree +-- istanbul-lib-source-maps@1.2.4
+179 silly currentTree | `-- debug@3.1.0
+179 silly currentTree +-- istanbul-reports@1.3.0
+179 silly currentTree +-- istanbul@0.4.5
+179 silly currentTree | +-- glob@5.0.15
+179 silly currentTree | +-- has-flag@1.0.0
+179 silly currentTree | +-- resolve@1.1.7
+179 silly currentTree | `-- supports-color@3.2.3
+179 silly currentTree +-- jasmine-core@2.99.1
+179 silly currentTree +-- jasmine-spec-reporter@4.2.1
+179 silly currentTree +-- jasmine@2.8.0
+179 silly currentTree | `-- jasmine-core@2.8.0
+179 silly currentTree +-- jasminewd2@2.2.0
+179 silly currentTree +-- js-base64@2.4.3
+179 silly currentTree +-- js-tokens@3.0.2
+179 silly currentTree +-- js-yaml@3.11.0
+179 silly currentTree | `-- esprima@4.0.0
+179 silly currentTree +-- jsbn@0.1.1
+179 silly currentTree +-- jsesc@1.3.0
+179 silly currentTree +-- json-schema-traverse@0.3.1
+179 silly currentTree +-- json-schema@0.2.3
+179 silly currentTree +-- json-stringify-safe@5.0.1
+179 silly currentTree +-- json3@3.3.2
+179 silly currentTree +-- json5@0.5.1
+179 silly currentTree +-- jsonfile@2.4.0
+179 silly currentTree +-- jsonpointer@4.0.1
+179 silly currentTree +-- jsprim@1.4.1
+179 silly currentTree +-- jszip@3.1.5
+179 silly currentTree | +-- core-js@2.3.0
+179 silly currentTree | +-- es6-promise@3.0.2
+179 silly currentTree | +-- process-nextick-args@1.0.7
+179 silly currentTree | +-- readable-stream@2.0.6
+179 silly currentTree | `-- string_decoder@0.10.31
+179 silly currentTree +-- karma-chrome-launcher@2.2.0
+179 silly currentTree +-- karma-coverage-istanbul-reporter@1.4.2
+179 silly currentTree +-- karma-jasmine-html-reporter@0.2.2
+179 silly currentTree +-- karma-jasmine@1.1.2
+179 silly currentTree +-- karma-phantomjs-launcher@1.0.4
+179 silly currentTree +-- karma-source-map-support@1.3.0
+179 silly currentTree +-- karma@1.7.1
+179 silly currentTree | +-- anymatch@1.3.2
+179 silly currentTree | +-- arr-diff@2.0.0
+179 silly currentTree | +-- array-unique@0.2.1
+179 silly currentTree | +-- braces@1.8.5
+179 silly currentTree | +-- chokidar@1.7.0
+179 silly currentTree | +-- expand-brackets@0.1.5
+179 silly currentTree | +-- extglob@0.3.2
+179 silly currentTree | +-- glob-parent@2.0.0
+179 silly currentTree | +-- is-extglob@1.0.0
+179 silly currentTree | +-- is-glob@2.0.1
+179 silly currentTree | +-- kind-of@3.2.2
+179 silly currentTree | +-- lodash@3.10.1
+179 silly currentTree | `-- micromatch@2.3.11
+179 silly currentTree +-- kew@0.7.0
+179 silly currentTree +-- killable@1.0.0
+179 silly currentTree +-- kind-of@6.0.2
+179 silly currentTree +-- klaw@1.3.1
+179 silly currentTree +-- lazy-cache@1.0.4
+179 silly currentTree +-- lcid@1.0.0
+179 silly currentTree +-- less-loader@4.1.0
+179 silly currentTree +-- less@3.0.4
+179 silly currentTree | `-- source-map@0.6.1
+179 silly currentTree +-- levn@0.3.0
+179 silly currentTree +-- license-webpack-plugin@1.3.1
+179 silly currentTree +-- lie@3.1.1
+179 silly currentTree +-- load-json-file@1.1.0
+179 silly currentTree | `-- pify@2.3.0
+179 silly currentTree +-- loader-runner@2.3.0
+179 silly currentTree +-- loader-utils@1.1.0
+179 silly currentTree +-- locate-path@2.0.0
+179 silly currentTree +-- lodash.assign@4.2.0
+179 silly currentTree +-- lodash.clonedeep@4.5.0
+179 silly currentTree +-- lodash.mergewith@4.6.1
+179 silly currentTree +-- lodash.tail@4.1.1
+179 silly currentTree +-- lodash@4.17.10
+179 silly currentTree +-- log-symbols@2.2.0
+179 silly currentTree +-- log4js@0.6.38
+179 silly currentTree | +-- isarray@0.0.1
+179 silly currentTree | +-- readable-stream@1.0.34
+179 silly currentTree | +-- semver@4.3.6
+179 silly currentTree | `-- string_decoder@0.10.31
+179 silly currentTree +-- loglevel@1.6.1
+179 silly currentTree +-- loglevelnext@1.0.5
+179 silly currentTree +-- longest@1.0.1
+179 silly currentTree +-- loose-envify@1.3.1
+179 silly currentTree +-- loud-rejection@1.6.0
+179 silly currentTree +-- lower-case@1.1.4
+179 silly currentTree +-- lru-cache@4.1.3
+179 silly currentTree +-- make-dir@1.3.0
+179 silly currentTree +-- make-error@1.3.4
+179 silly currentTree +-- map-cache@0.2.2
+179 silly currentTree +-- map-obj@1.0.1
+179 silly currentTree +-- map-visit@1.0.0
+179 silly currentTree +-- math-random@1.0.1
+179 silly currentTree +-- md5.js@1.3.4
+179 silly currentTree +-- media-typer@0.3.0
+179 silly currentTree +-- mem@1.1.0
+179 silly currentTree +-- memory-fs@0.4.1
+179 silly currentTree +-- meow@3.7.0
+179 silly currentTree | `-- minimist@1.2.0
+179 silly currentTree +-- merge-descriptors@1.0.1
+179 silly currentTree +-- methods@1.1.2
+179 silly currentTree +-- micromatch@3.1.10
+179 silly currentTree +-- miller-rabin@4.0.1
+179 silly currentTree +-- mime-db@1.33.0
+179 silly currentTree +-- mime-types@2.1.18
+179 silly currentTree +-- mime@1.6.0
+179 silly currentTree +-- mimic-fn@1.2.0
+179 silly currentTree +-- mini-css-extract-plugin@0.4.0
+179 silly currentTree +-- minimalistic-assert@1.0.1
+179 silly currentTree +-- minimalistic-crypto-utils@1.0.1
+179 silly currentTree +-- minimatch@3.0.4
+179 silly currentTree +-- minimist@0.0.8
+179 silly currentTree +-- mississippi@2.0.0
+179 silly currentTree +-- mixin-deep@1.3.1
+179 silly currentTree | `-- is-extendable@1.0.1
+179 silly currentTree +-- mixin-object@2.0.1
+179 silly currentTree | `-- for-in@0.1.8
+179 silly currentTree +-- mkdirp@0.5.1
+179 silly currentTree +-- move-concurrently@1.0.1
+179 silly currentTree +-- ms@2.0.0
+179 silly currentTree +-- multicast-dns-service-types@1.1.0
+179 silly currentTree +-- multicast-dns@6.2.3
+179 silly currentTree +-- nan@2.10.0
+179 silly currentTree +-- nanomatch@1.2.9
+179 silly currentTree +-- negotiator@0.6.1
+179 silly currentTree +-- neo-async@2.5.1
+179 silly currentTree +-- next-tick@1.0.0
+179 silly currentTree +-- no-case@2.3.2
+179 silly currentTree +-- node-forge@0.7.5
+179 silly currentTree +-- node-gyp@3.6.2
+179 silly currentTree | `-- semver@5.3.0
+179 silly currentTree +-- node-libs-browser@2.1.0
+179 silly currentTree | `-- punycode@1.4.1
+179 silly currentTree +-- node-sass@4.9.0
+179 silly currentTree | +-- ansi-styles@2.2.1
+179 silly currentTree | +-- assert-plus@0.2.0
+179 silly currentTree | +-- aws-sign2@0.6.0
+179 silly currentTree | +-- boom@2.10.1
+179 silly currentTree | +-- caseless@0.11.0
+179 silly currentTree | +-- chalk@1.1.3
+179 silly currentTree | +-- cryptiles@2.0.5
+179 silly currentTree | +-- form-data@2.1.4
+179 silly currentTree | +-- har-validator@2.0.6
+179 silly currentTree | +-- hawk@3.1.3
+179 silly currentTree | +-- hoek@2.16.3
+179 silly currentTree | +-- http-signature@1.1.1
+179 silly currentTree | +-- qs@6.3.2
+179 silly currentTree | +-- request@2.79.0
+179 silly currentTree | +-- sntp@1.0.9
+179 silly currentTree | +-- supports-color@2.0.0
+179 silly currentTree | `-- tunnel-agent@0.4.3
+179 silly currentTree +-- nopt@3.0.6
+179 silly currentTree +-- normalize-package-data@2.4.0
+179 silly currentTree +-- normalize-path@2.1.1
+179 silly currentTree +-- normalize-range@0.1.2
+179 silly currentTree +-- npm-package-arg@6.1.0
+179 silly currentTree +-- npm-registry-client@8.5.1
+179 silly currentTree +-- npm-run-path@2.0.2
+179 silly currentTree +-- npmlog@4.1.2
+179 silly currentTree +-- nth-check@1.0.1
+179 silly currentTree +-- null-check@1.0.0
+179 silly currentTree +-- num2fraction@1.2.2
+179 silly currentTree +-- number-is-nan@1.0.1
+179 silly currentTree +-- oauth-sign@0.8.2
+179 silly currentTree +-- object-assign@4.1.1
+179 silly currentTree +-- object-component@0.0.3
+179 silly currentTree +-- object-copy@0.1.0
+179 silly currentTree | +-- define-property@0.2.5
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- object-keys@1.0.11
+179 silly currentTree +-- object-visit@1.0.1
+179 silly currentTree +-- object.assign@4.1.0
+179 silly currentTree +-- object.getownpropertydescriptors@2.0.3
+179 silly currentTree +-- object.omit@2.0.1
+179 silly currentTree | `-- for-own@0.1.5
+179 silly currentTree +-- object.pick@1.3.0
+179 silly currentTree +-- obuf@1.1.2
+179 silly currentTree +-- on-finished@2.3.0
+179 silly currentTree +-- on-headers@1.0.1
+179 silly currentTree +-- once@1.4.0
+179 silly currentTree +-- opn@5.3.0
+179 silly currentTree +-- optimist@0.6.1
+179 silly currentTree | `-- wordwrap@0.0.3
+179 silly currentTree +-- optionator@0.8.2
+179 silly currentTree +-- options@0.0.6
+179 silly currentTree +-- original@1.0.1
+179 silly currentTree +-- os-browserify@0.3.0
+179 silly currentTree +-- os-homedir@1.0.2
+179 silly currentTree +-- os-locale@1.4.0
+179 silly currentTree +-- os-tmpdir@1.0.2
+179 silly currentTree +-- osenv@0.1.5
+179 silly currentTree +-- p-finally@1.0.0
+179 silly currentTree +-- p-limit@1.2.0
+179 silly currentTree +-- p-locate@2.0.0
+179 silly currentTree +-- p-map@1.2.0
+179 silly currentTree +-- p-try@1.0.0
+179 silly currentTree +-- pako@1.0.6
+179 silly currentTree +-- parallel-transform@1.1.0
+179 silly currentTree +-- param-case@2.1.1
+179 silly currentTree +-- parse-asn1@5.1.1
+179 silly currentTree +-- parse-glob@3.0.4
+179 silly currentTree | +-- is-extglob@1.0.0
+179 silly currentTree | `-- is-glob@2.0.1
+179 silly currentTree +-- parse-json@2.2.0
+179 silly currentTree +-- parse5@4.0.0
+179 silly currentTree +-- parsejson@0.0.3
+179 silly currentTree +-- parseqs@0.0.5
+179 silly currentTree +-- parseuri@0.0.5
+179 silly currentTree +-- parseurl@1.3.2
+179 silly currentTree +-- pascalcase@0.1.1
+179 silly currentTree +-- path-browserify@0.0.0
+179 silly currentTree +-- path-dirname@1.0.2
+179 silly currentTree +-- path-exists@3.0.0
+179 silly currentTree +-- path-is-absolute@1.0.1
+179 silly currentTree +-- path-is-inside@1.0.2
+179 silly currentTree +-- path-key@2.0.1
+179 silly currentTree +-- path-parse@1.0.5
+179 silly currentTree +-- path-to-regexp@0.1.7
+179 silly currentTree +-- path-type@3.0.0
+179 silly currentTree +-- pbkdf2@3.0.16
+179 silly currentTree +-- pend@1.2.0
+179 silly currentTree +-- performance-now@2.1.0
+179 silly currentTree +-- phantomjs-prebuilt@2.1.16
+179 silly currentTree +-- pify@3.0.0
+179 silly currentTree +-- pinkie-promise@2.0.1
+179 silly currentTree +-- pinkie@2.0.4
+179 silly currentTree +-- pkg-dir@2.0.0
+179 silly currentTree +-- portfinder@1.0.13
+179 silly currentTree +-- posix-character-classes@0.1.1
+179 silly currentTree +-- postcss-import@11.1.0
+179 silly currentTree +-- postcss-load-config@1.2.0
+179 silly currentTree +-- postcss-load-options@1.2.0
+179 silly currentTree +-- postcss-load-plugins@2.3.0
+179 silly currentTree +-- postcss-loader@2.1.5
+179 silly currentTree +-- postcss-url@7.3.2
+179 silly currentTree +-- postcss-value-parser@3.3.0
+179 silly currentTree +-- postcss@6.0.22
+179 silly currentTree | +-- chalk@2.4.1
+179 silly currentTree | `-- source-map@0.6.1
+179 silly currentTree +-- prelude-ls@1.1.2
+179 silly currentTree +-- preserve@0.2.0
+179 silly currentTree +-- pretty-error@2.1.1
+179 silly currentTree +-- process-nextick-args@2.0.0
+179 silly currentTree +-- process@0.11.10
+179 silly currentTree +-- progress@1.1.8
+179 silly currentTree +-- promise-inflight@1.0.1
+179 silly currentTree +-- promise@7.3.1
+179 silly currentTree +-- protractor@5.3.2
+179 silly currentTree | +-- adm-zip@0.4.11
+179 silly currentTree | +-- ansi-styles@2.2.1
+179 silly currentTree | +-- chalk@1.1.3
+179 silly currentTree | +-- del@2.2.2
+179 silly currentTree | +-- globby@5.0.0
+179 silly currentTree | +-- minimist@1.2.0
+179 silly currentTree | +-- pify@2.3.0
+179 silly currentTree | +-- source-map-support@0.4.18
+179 silly currentTree | +-- supports-color@2.0.0
+179 silly currentTree | `-- webdriver-manager@12.0.6
+179 silly currentTree +-- proxy-addr@2.0.3
+179 silly currentTree +-- prr@1.0.1
+179 silly currentTree +-- pseudomap@1.0.2
+179 silly currentTree +-- public-encrypt@4.0.2
+179 silly currentTree +-- pump@2.0.1
+179 silly currentTree +-- pumpify@1.5.0
+179 silly currentTree +-- punycode@2.1.0
+179 silly currentTree +-- q@1.4.1
+179 silly currentTree +-- qjobs@1.2.0
+179 silly currentTree +-- qs@6.5.2
+179 silly currentTree +-- querystring-es3@0.2.1
+179 silly currentTree +-- querystring@0.2.0
+179 silly currentTree +-- querystringify@2.0.0
+179 silly currentTree +-- randomatic@3.0.0
+179 silly currentTree | `-- is-number@4.0.0
+179 silly currentTree +-- randombytes@2.0.6
+179 silly currentTree +-- randomfill@1.0.4
+179 silly currentTree +-- range-parser@1.2.0
+179 silly currentTree +-- raw-body@2.3.2
+179 silly currentTree | +-- depd@1.1.1
+179 silly currentTree | +-- http-errors@1.6.2
+179 silly currentTree | `-- setprototypeof@1.0.3
+179 silly currentTree +-- raw-loader@0.5.1
+179 silly currentTree +-- read-cache@1.0.0
+179 silly currentTree | `-- pify@2.3.0
+179 silly currentTree +-- read-pkg-up@1.0.1
+179 silly currentTree | +-- find-up@1.1.2
+179 silly currentTree | `-- path-exists@2.1.0
+179 silly currentTree +-- read-pkg@1.1.0
+179 silly currentTree | +-- path-type@1.1.0
+179 silly currentTree | `-- pify@2.3.0
+179 silly currentTree +-- readable-stream@2.3.6
+179 silly currentTree +-- readdirp@2.1.0
+179 silly currentTree +-- redent@1.0.0
+179 silly currentTree +-- reflect-metadata@0.1.12
+179 silly currentTree +-- regenerator-runtime@0.11.1
+179 silly currentTree +-- regex-cache@0.4.4
+179 silly currentTree +-- regex-not@1.0.2
+179 silly currentTree +-- relateurl@0.2.7
+179 silly currentTree +-- remove-trailing-separator@1.1.0
+179 silly currentTree +-- renderkid@2.0.1
+179 silly currentTree | `-- utila@0.3.3
+179 silly currentTree +-- repeat-element@1.1.2
+179 silly currentTree +-- repeat-string@1.6.1
+179 silly currentTree +-- repeating@2.0.1
+179 silly currentTree +-- request-progress@2.0.1
+179 silly currentTree +-- request@2.86.0
+179 silly currentTree +-- require-directory@2.1.1
+179 silly currentTree +-- require-from-string@1.2.1
+179 silly currentTree +-- require-main-filename@1.0.1
+179 silly currentTree +-- requires-port@1.0.0
+179 silly currentTree +-- resolve-cwd@2.0.0
+179 silly currentTree +-- resolve-from@3.0.0
+179 silly currentTree +-- resolve-url@0.2.1
+179 silly currentTree +-- resolve@1.7.1
+179 silly currentTree +-- ret@0.1.15
+179 silly currentTree +-- retry@0.10.1
+179 silly currentTree +-- right-align@0.1.3
+179 silly currentTree +-- rimraf@2.6.2
+179 silly currentTree +-- ripemd160@2.0.2
+179 silly currentTree +-- run-queue@1.0.3
+179 silly currentTree +-- rxjs@6.1.0
+179 silly currentTree +-- safe-buffer@5.1.2
+179 silly currentTree +-- safe-regex@1.1.0
+179 silly currentTree +-- sass-graph@2.2.4
+179 silly currentTree | +-- camelcase@3.0.0
+179 silly currentTree | +-- cliui@3.2.0
+179 silly currentTree | +-- y18n@3.2.1
+179 silly currentTree | `-- yargs@7.1.0
+179 silly currentTree +-- sass-loader@7.0.1
+179 silly currentTree +-- saucelabs@1.5.0
+179 silly currentTree +-- sax@0.5.8
+179 silly currentTree +-- schema-utils@0.4.5
+179 silly currentTree +-- scss-tokenizer@0.2.3
+179 silly currentTree | `-- source-map@0.4.4
+179 silly currentTree +-- select-hose@2.0.0
+179 silly currentTree +-- selenium-webdriver@3.6.0
+179 silly currentTree | `-- tmp@0.0.30
+179 silly currentTree +-- selfsigned@1.10.3
+179 silly currentTree +-- semver-intersect@1.3.1
+179 silly currentTree +-- semver@5.5.0
+179 silly currentTree +-- send@0.16.2
+179 silly currentTree | `-- mime@1.4.1
+179 silly currentTree +-- serialize-javascript@1.5.0
+179 silly currentTree +-- serve-index@1.9.1
+179 silly currentTree +-- serve-static@1.13.2
+179 silly currentTree +-- set-blocking@2.0.0
+179 silly currentTree +-- set-immediate-shim@1.0.1
+179 silly currentTree +-- set-value@2.0.0
+179 silly currentTree | `-- extend-shallow@2.0.1
+179 silly currentTree +-- setimmediate@1.0.5
+179 silly currentTree +-- setprototypeof@1.1.0
+179 silly currentTree +-- sha.js@2.4.11
+179 silly currentTree +-- shallow-clone@1.0.0
+179 silly currentTree | `-- kind-of@5.1.0
+179 silly currentTree +-- shebang-command@1.2.0
+179 silly currentTree +-- shebang-regex@1.0.0
+179 silly currentTree +-- signal-exit@3.0.2
+179 silly currentTree +-- silent-error@1.1.0
+179 silly currentTree +-- slash@1.0.0
+179 silly currentTree +-- slide@1.1.6
+179 silly currentTree +-- snapdragon-node@2.1.1
+179 silly currentTree | +-- define-property@1.0.0
+179 silly currentTree | +-- is-accessor-descriptor@1.0.0
+179 silly currentTree | +-- is-data-descriptor@1.0.0
+179 silly currentTree | `-- is-descriptor@1.0.2
+179 silly currentTree +-- snapdragon-util@3.0.1
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- snapdragon@0.8.2
+179 silly currentTree | +-- define-property@0.2.5
+179 silly currentTree | `-- extend-shallow@2.0.1
+179 silly currentTree +-- sntp@2.1.0
+179 silly currentTree +-- socket.io-adapter@0.5.0
+179 silly currentTree | +-- debug@2.3.3
+179 silly currentTree | `-- ms@0.7.2
+179 silly currentTree +-- socket.io-client@1.7.3
+179 silly currentTree | +-- debug@2.3.3
+179 silly currentTree | `-- ms@0.7.2
+179 silly currentTree +-- socket.io-parser@2.3.1
+179 silly currentTree | +-- component-emitter@1.1.2
+179 silly currentTree | +-- debug@2.2.0
+179 silly currentTree | +-- isarray@0.0.1
+179 silly currentTree | `-- ms@0.7.1
+179 silly currentTree +-- socket.io@1.7.3
+179 silly currentTree | +-- debug@2.3.3
+179 silly currentTree | +-- ms@0.7.2
+179 silly currentTree | `-- object-assign@4.1.0
+179 silly currentTree +-- sockjs-client@1.1.4
+179 silly currentTree | `-- faye-websocket@0.11.1
+179 silly currentTree +-- sockjs@0.3.19
+179 silly currentTree +-- source-list-map@2.0.0
+179 silly currentTree +-- source-map-resolve@0.5.2
+179 silly currentTree +-- source-map-support@0.5.6
+179 silly currentTree | `-- source-map@0.6.1
+179 silly currentTree +-- source-map-url@0.4.0
+179 silly currentTree +-- source-map@0.5.7
+179 silly currentTree +-- spdx-correct@3.0.0
+179 silly currentTree +-- spdx-exceptions@2.1.0
+179 silly currentTree +-- spdx-expression-parse@3.0.0
+179 silly currentTree +-- spdx-license-ids@3.0.0
+179 silly currentTree +-- spdy-transport@2.1.0
+179 silly currentTree +-- spdy@3.4.7
+179 silly currentTree +-- split-string@3.1.0
+179 silly currentTree +-- sprintf-js@1.0.3
+179 silly currentTree +-- sshpk@1.14.1
+179 silly currentTree +-- ssri@5.3.0
+179 silly currentTree +-- static-extend@0.1.2
+179 silly currentTree | `-- define-property@0.2.5
+179 silly currentTree +-- stats-webpack-plugin@0.6.2
+179 silly currentTree +-- statuses@1.4.0
+179 silly currentTree +-- stdout-stream@1.4.0
+179 silly currentTree +-- stream-browserify@2.0.1
+179 silly currentTree +-- stream-each@1.2.2
+179 silly currentTree +-- stream-http@2.8.2
+179 silly currentTree +-- stream-shift@1.0.0
+179 silly currentTree +-- string_decoder@1.1.1
+179 silly currentTree +-- string-width@1.0.2
+179 silly currentTree +-- stringstream@0.0.5
+179 silly currentTree +-- strip-ansi@3.0.1
+179 silly currentTree +-- strip-bom@2.0.0
+179 silly currentTree +-- strip-eof@1.0.0
+179 silly currentTree +-- strip-indent@1.0.1
+179 silly currentTree +-- style-loader@0.21.0
+179 silly currentTree +-- stylus-loader@3.0.2
+179 silly currentTree +-- stylus@0.54.5
+179 silly currentTree | +-- glob@7.0.6
+179 silly currentTree | `-- source-map@0.1.43
+179 silly currentTree +-- supports-color@5.4.0
+179 silly currentTree +-- symbol-observable@1.2.0
+179 silly currentTree +-- tapable@1.0.0
+179 silly currentTree +-- tar@2.2.1
+179 silly currentTree +-- throttleit@1.0.0
+179 silly currentTree +-- through2@2.0.3
+179 silly currentTree +-- thunky@1.0.2
+179 silly currentTree +-- timers-browserify@2.0.10
+179 silly currentTree +-- tmp@0.0.31
+179 silly currentTree +-- to-array@0.1.4
+179 silly currentTree +-- to-arraybuffer@1.0.1
+179 silly currentTree +-- to-fast-properties@1.0.3
+179 silly currentTree +-- to-object-path@0.3.0
+179 silly currentTree | `-- kind-of@3.2.2
+179 silly currentTree +-- to-regex-range@2.1.1
+179 silly currentTree +-- to-regex@3.0.2
+179 silly currentTree +-- toposort@1.0.7
+179 silly currentTree +-- tough-cookie@2.3.4
+179 silly currentTree | `-- punycode@1.4.1
+179 silly currentTree +-- tree-kill@1.2.0
+179 silly currentTree +-- trim-newlines@1.0.0
+179 silly currentTree +-- trim-right@1.0.1
+179 silly currentTree +-- true-case-path@1.0.2
+179 silly currentTree | `-- glob@6.0.4
+179 silly currentTree +-- ts-node@5.0.1
+179 silly currentTree | +-- chalk@2.4.1
+179 silly currentTree | `-- minimist@1.2.0
+179 silly currentTree +-- tsickle@0.27.5
+179 silly currentTree | +-- minimist@1.2.0
+179 silly currentTree | `-- source-map@0.6.1
+179 silly currentTree +-- tslib@1.9.1
+179 silly currentTree +-- tslint@5.10.0
+179 silly currentTree | `-- chalk@2.4.1
+179 silly currentTree +-- tsutils@2.27.0
+179 silly currentTree +-- tty-browserify@0.0.0
+179 silly currentTree +-- tunnel-agent@0.6.0
+179 silly currentTree +-- tweetnacl@0.14.5
+179 silly currentTree +-- type-check@0.3.2
+179 silly currentTree +-- type-is@1.6.16
+179 silly currentTree +-- typedarray@0.0.6
+179 silly currentTree +-- typescript@2.7.2
+179 silly currentTree +-- uglify-js@3.3.25
+179 silly currentTree | `-- source-map@0.6.1
+179 silly currentTree +-- uglify-to-browserify@1.0.2
+179 silly currentTree +-- uglifyjs-webpack-plugin@1.2.5
+179 silly currentTree | +-- commander@2.13.0
+179 silly currentTree | +-- source-map@0.6.1
+179 silly currentTree | `-- uglify-es@3.3.9
+179 silly currentTree +-- ultron@1.0.2
+179 silly currentTree +-- union-value@1.0.0
+179 silly currentTree | +-- extend-shallow@2.0.1
+179 silly currentTree | `-- set-value@0.4.3
+179 silly currentTree +-- unique-filename@1.1.0
+179 silly currentTree +-- unique-slug@2.0.0
+179 silly currentTree +-- unpipe@1.0.0
+179 silly currentTree +-- unset-value@1.0.0
+179 silly currentTree | +-- has-value@0.3.1
+179 silly currentTree | | `-- isobject@2.1.0
+179 silly currentTree | `-- has-values@0.1.4
+179 silly currentTree +-- upath@1.1.0
+179 silly currentTree +-- upper-case@1.1.3
+179 silly currentTree +-- uri-js@3.0.2
+179 silly currentTree +-- urix@0.1.0
+179 silly currentTree +-- url-join@4.0.0
+179 silly currentTree +-- url-loader@1.0.1
+179 silly currentTree | `-- mime@2.3.1
+179 silly currentTree +-- url-parse@1.4.0
+179 silly currentTree +-- url@0.11.0
+179 silly currentTree | `-- punycode@1.3.2
+179 silly currentTree +-- use@3.1.0
+179 silly currentTree +-- useragent@2.3.0
+179 silly currentTree +-- util-deprecate@1.0.2
+179 silly currentTree +-- util.promisify@1.0.0
+179 silly currentTree +-- util@0.10.3
+179 silly currentTree | `-- inherits@2.0.1
+179 silly currentTree +-- utila@0.4.0
+179 silly currentTree +-- utils-merge@1.0.1
+179 silly currentTree +-- uuid@3.2.1
+179 silly currentTree +-- validate-npm-package-license@3.0.3
+179 silly currentTree +-- validate-npm-package-name@3.0.0
+179 silly currentTree +-- vary@1.1.2
+179 silly currentTree +-- verror@1.10.0
+179 silly currentTree +-- vm-browserify@0.0.4
+179 silly currentTree +-- void-elements@2.0.1
+179 silly currentTree +-- watchpack@1.6.0
+179 silly currentTree +-- wbuf@1.7.3
+179 silly currentTree +-- webdriver-js-extender@1.0.0
+179 silly currentTree | +-- sax@0.6.1
+179 silly currentTree | +-- selenium-webdriver@2.53.3
+179 silly currentTree | +-- tmp@0.0.24
+179 silly currentTree | `-- xml2js@0.4.4
+179 silly currentTree +-- webpack-core@0.6.9
+179 silly currentTree | +-- source-list-map@0.1.8
+179 silly currentTree | `-- source-map@0.4.4
+179 silly currentTree +-- webpack-dev-middleware@3.1.3
+179 silly currentTree | `-- mime@2.3.1
+179 silly currentTree +-- webpack-dev-server@3.1.4
+179 silly currentTree | +-- ansi-regex@3.0.0
+179 silly currentTree | +-- camelcase@4.1.0
+179 silly currentTree | +-- cliui@4.1.0
+179 silly currentTree | | `-- strip-ansi@4.0.0
+179 silly currentTree | +-- debug@3.1.0
+179 silly currentTree | +-- is-fullwidth-code-point@2.0.0
+179 silly currentTree | +-- os-locale@2.1.0
+179 silly currentTree | +-- string-width@2.1.1
+179 silly currentTree | | `-- strip-ansi@4.0.0
+179 silly currentTree | +-- which-module@2.0.0
+179 silly currentTree | +-- y18n@3.2.1
+179 silly currentTree | +-- yargs-parser@9.0.2
+179 silly currentTree | `-- yargs@11.0.0
+179 silly currentTree +-- webpack-log@1.2.0
+179 silly currentTree +-- webpack-merge@4.1.2
+179 silly currentTree +-- webpack-sources@1.1.0
+179 silly currentTree | `-- source-map@0.6.1
+179 silly currentTree +-- webpack-subresource-integrity@1.1.0-rc.4
+179 silly currentTree +-- websocket-driver@0.7.0
+179 silly currentTree +-- websocket-extensions@0.1.3
+179 silly currentTree +-- when@3.6.4
+179 silly currentTree +-- which-module@1.0.0
+179 silly currentTree +-- which@1.3.0
+179 silly currentTree +-- wide-align@1.1.2
+179 silly currentTree +-- window-size@0.1.0
+179 silly currentTree +-- wordwrap@1.0.0
+179 silly currentTree +-- worker-farm@1.6.0
+179 silly currentTree +-- wrap-ansi@2.1.0
+179 silly currentTree +-- wrappy@1.0.2
+179 silly currentTree +-- ws@1.1.2
+179 silly currentTree +-- wtf-8@1.0.0
+179 silly currentTree +-- xhr2@0.1.4
+179 silly currentTree +-- xml2js@0.4.19
+179 silly currentTree | `-- sax@1.2.4
+179 silly currentTree +-- xmlbuilder@9.0.7
+179 silly currentTree +-- xmlhttprequest-ssl@1.5.3
+179 silly currentTree +-- xtend@4.0.1
+179 silly currentTree +-- xxhashjs@0.2.2
+179 silly currentTree +-- y18n@4.0.0
+179 silly currentTree +-- yallist@2.1.2
+179 silly currentTree +-- yargs-parser@5.0.0
+179 silly currentTree | `-- camelcase@3.0.0
+179 silly currentTree +-- yargs@3.10.0
+179 silly currentTree +-- yauzl@2.4.1
+179 silly currentTree +-- yeast@0.1.2
+179 silly currentTree +-- yn@2.0.0
+179 silly currentTree `-- zone.js@0.8.26
+180 silly idealTree angular-io-example@1.0.0
+180 silly idealTree +-- @angular-devkit/architect@0.6.1
+180 silly idealTree +-- @angular-devkit/build-angular@0.6.1
+180 silly idealTree +-- @angular-devkit/build-optimizer@0.6.1
+180 silly idealTree +-- @angular-devkit/core@0.6.1
+180 silly idealTree +-- @angular-devkit/schematics@0.6.1
+180 silly idealTree +-- @angular/animations@6.0.2
+180 silly idealTree +-- @angular/cli@6.0.1
+180 silly idealTree | +-- camelcase@4.1.0
+180 silly idealTree | `-- yargs-parser@10.0.0
+180 silly idealTree +-- @angular/common@6.0.2
+180 silly idealTree +-- @angular/compiler-cli@6.0.2
+180 silly idealTree | +-- anymatch@1.3.2
+180 silly idealTree | +-- arr-diff@2.0.0
+180 silly idealTree | +-- array-unique@0.2.1
+180 silly idealTree | +-- braces@1.8.5
+180 silly idealTree | +-- chokidar@1.7.0
+180 silly idealTree | +-- expand-brackets@0.1.5
+180 silly idealTree | +-- extglob@0.3.2
+180 silly idealTree | +-- glob-parent@2.0.0
+180 silly idealTree | +-- is-extglob@1.0.0
+180 silly idealTree | +-- is-glob@2.0.1
+180 silly idealTree | +-- kind-of@3.2.2
+180 silly idealTree | +-- micromatch@2.3.11
+180 silly idealTree | `-- minimist@1.2.0
+180 silly idealTree +-- @angular/compiler@6.0.2
+180 silly idealTree +-- @angular/core@6.0.2
+180 silly idealTree +-- @angular/forms@6.0.2
+180 silly idealTree +-- @angular/http@6.0.2
+180 silly idealTree +-- @angular/platform-browser-dynamic@6.0.2
+180 silly idealTree +-- @angular/platform-browser@6.0.2
+180 silly idealTree +-- @angular/platform-server@6.0.2
+180 silly idealTree +-- @angular/router@6.0.2
+180 silly idealTree +-- @angular/upgrade@6.0.2
+180 silly idealTree +-- @ngtools/webpack@6.0.1
+180 silly idealTree +-- @schematics/angular@0.6.1
+180 silly idealTree +-- @schematics/update@0.6.1
+180 silly idealTree +-- @types/jasmine@2.8.7
+180 silly idealTree +-- @types/jasminewd2@2.0.3
+180 silly idealTree +-- @types/node@6.0.110
+180 silly idealTree +-- @types/q@0.0.32
+180 silly idealTree +-- @types/selenium-webdriver@2.53.43
+180 silly idealTree +-- abbrev@1.0.9
+180 silly idealTree +-- accepts@1.3.5
+180 silly idealTree +-- acorn-dynamic-import@3.0.0
+180 silly idealTree +-- acorn@5.5.3
+180 silly idealTree +-- adm-zip@0.4.4
+180 silly idealTree +-- after@0.8.2
+180 silly idealTree +-- agent-base@4.2.0
+180 silly idealTree +-- ajv-keywords@3.2.0
+180 silly idealTree +-- ajv@6.4.0
+180 silly idealTree +-- align-text@0.1.4
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- amdefine@1.0.1
+180 silly idealTree +-- angular-in-memory-web-api@0.6.0
+180 silly idealTree +-- ansi-html@0.0.7
+180 silly idealTree +-- ansi-regex@2.1.1
+180 silly idealTree +-- ansi-styles@3.2.1
+180 silly idealTree +-- anymatch@2.0.0
+180 silly idealTree +-- append-transform@0.4.0
+180 silly idealTree +-- aproba@1.2.0
+180 silly idealTree +-- are-we-there-yet@1.1.4
+180 silly idealTree +-- argparse@1.0.10
+180 silly idealTree +-- arr-diff@4.0.0
+180 silly idealTree +-- arr-flatten@1.1.0
+180 silly idealTree +-- arr-union@3.1.0
+180 silly idealTree +-- array-find-index@1.0.2
+180 silly idealTree +-- array-flatten@2.1.1
+180 silly idealTree +-- array-includes@3.0.3
+180 silly idealTree +-- array-slice@0.2.3
+180 silly idealTree +-- array-union@1.0.2
+180 silly idealTree +-- array-uniq@1.0.3
+180 silly idealTree +-- array-unique@0.3.2
+180 silly idealTree +-- arraybuffer.slice@0.0.6
+180 silly idealTree +-- arrify@1.0.1
+180 silly idealTree +-- asap@2.0.6
+180 silly idealTree +-- asn1.js@4.10.1
+180 silly idealTree +-- asn1@0.2.3
+180 silly idealTree +-- assert-plus@1.0.0
+180 silly idealTree +-- assert@1.4.1
+180 silly idealTree +-- assign-symbols@1.0.0
+180 silly idealTree +-- async-each@1.0.1
+180 silly idealTree +-- async-foreach@0.1.3
+180 silly idealTree +-- async@1.5.2
+180 silly idealTree +-- asynckit@0.4.0
+180 silly idealTree +-- atob@2.1.1
+180 silly idealTree +-- autoprefixer@8.5.0
+180 silly idealTree +-- aws-sign2@0.7.0
+180 silly idealTree +-- aws4@1.7.0
+180 silly idealTree +-- babel-code-frame@6.26.0
+180 silly idealTree | +-- ansi-styles@2.2.1
+180 silly idealTree | +-- chalk@1.1.3
+180 silly idealTree | `-- supports-color@2.0.0
+180 silly idealTree +-- babel-generator@6.26.1
+180 silly idealTree +-- babel-messages@6.23.0
+180 silly idealTree +-- babel-runtime@6.26.0
+180 silly idealTree +-- babel-template@6.26.0
+180 silly idealTree +-- babel-traverse@6.26.0
+180 silly idealTree +-- babel-types@6.26.0
+180 silly idealTree +-- babylon@6.18.0
+180 silly idealTree +-- backo2@1.0.2
+180 silly idealTree +-- balanced-match@1.0.0
+180 silly idealTree +-- base@0.11.2
+180 silly idealTree | +-- define-property@1.0.0
+180 silly idealTree | +-- is-accessor-descriptor@1.0.0
+180 silly idealTree | +-- is-data-descriptor@1.0.0
+180 silly idealTree | `-- is-descriptor@1.0.2
+180 silly idealTree +-- base64-arraybuffer@0.1.5
+180 silly idealTree +-- base64-js@1.3.0
+180 silly idealTree +-- base64id@1.0.0
+180 silly idealTree +-- batch@0.6.1
+180 silly idealTree +-- bcrypt-pbkdf@1.0.1
+180 silly idealTree +-- better-assert@1.0.2
+180 silly idealTree +-- big.js@3.2.0
+180 silly idealTree +-- binary-extensions@1.11.0
+180 silly idealTree +-- blob@0.0.4
+180 silly idealTree +-- block-stream@0.0.9
+180 silly idealTree +-- blocking-proxy@1.0.1
+180 silly idealTree | `-- minimist@1.2.0
+180 silly idealTree +-- bluebird@3.5.1
+180 silly idealTree +-- bn.js@4.11.8
+180 silly idealTree +-- body-parser@1.18.2
+180 silly idealTree | `-- qs@6.5.1
+180 silly idealTree +-- bonjour@3.5.0
+180 silly idealTree +-- boolbase@1.0.0
+180 silly idealTree +-- boom@4.3.1
+180 silly idealTree +-- brace-expansion@1.1.11
+180 silly idealTree +-- braces@2.3.2
+180 silly idealTree | `-- extend-shallow@2.0.1
+180 silly idealTree +-- brorand@1.1.0
+180 silly idealTree +-- browserify-aes@1.2.0
+180 silly idealTree +-- browserify-cipher@1.0.1
+180 silly idealTree +-- browserify-des@1.0.1
+180 silly idealTree +-- browserify-rsa@4.0.1
+180 silly idealTree +-- browserify-sign@4.0.4
+180 silly idealTree +-- browserify-zlib@0.2.0
+180 silly idealTree +-- browserslist@3.2.7
+180 silly idealTree +-- buffer-from@1.0.0
+180 silly idealTree +-- buffer-indexof@1.1.1
+180 silly idealTree +-- buffer-xor@1.0.3
+180 silly idealTree +-- buffer@4.9.1
+180 silly idealTree +-- builtin-modules@1.1.1
+180 silly idealTree +-- builtin-status-codes@3.0.0
+180 silly idealTree +-- builtins@1.0.3
+180 silly idealTree +-- bytes@3.0.0
+180 silly idealTree +-- cacache@10.0.4
+180 silly idealTree +-- cache-base@1.0.1
+180 silly idealTree +-- cache-loader@1.2.2
+180 silly idealTree +-- callsite@1.0.0
+180 silly idealTree +-- camel-case@3.0.0
+180 silly idealTree +-- camelcase-keys@2.1.0
+180 silly idealTree | `-- camelcase@2.1.1
+180 silly idealTree +-- camelcase@1.2.1
+180 silly idealTree +-- caniuse-lite@1.0.30000841
+180 silly idealTree +-- caseless@0.12.0
+180 silly idealTree +-- center-align@0.1.3
+180 silly idealTree +-- chalk@2.2.2
+180 silly idealTree | +-- has-flag@2.0.0
+180 silly idealTree | `-- supports-color@4.5.0
+180 silly idealTree +-- chokidar@2.0.3
+180 silly idealTree +-- chownr@1.0.1
+180 silly idealTree +-- chrome-trace-event@0.1.3
+180 silly idealTree +-- cipher-base@1.0.4
+180 silly idealTree +-- circular-dependency-plugin@5.0.2
+180 silly idealTree +-- class-utils@0.3.6
+180 silly idealTree | `-- define-property@0.2.5
+180 silly idealTree +-- clean-css@4.1.11
+180 silly idealTree +-- cliui@2.1.0
+180 silly idealTree | `-- wordwrap@0.0.2
+180 silly idealTree +-- clone-deep@2.0.2
+180 silly idealTree +-- clone@2.1.1
+180 silly idealTree +-- co@4.6.0
+180 silly idealTree +-- code-point-at@1.1.0
+180 silly idealTree +-- collection-visit@1.0.0
+180 silly idealTree +-- color-convert@1.9.1
+180 silly idealTree +-- color-name@1.1.3
+180 silly idealTree +-- colors@1.1.2
+180 silly idealTree +-- combine-lists@1.0.1
+180 silly idealTree +-- combined-stream@1.0.6
+180 silly idealTree +-- commander@2.15.1
+180 silly idealTree +-- commondir@1.0.1
+180 silly idealTree +-- compare-versions@3.2.1
+180 silly idealTree +-- component-bind@1.0.0
+180 silly idealTree +-- component-emitter@1.2.1
+180 silly idealTree +-- component-inherit@0.0.3
+180 silly idealTree +-- compressible@2.0.13
+180 silly idealTree +-- compression@1.7.2
+180 silly idealTree | `-- safe-buffer@5.1.1
+180 silly idealTree +-- concat-map@0.0.1
+180 silly idealTree +-- concat-stream@1.6.2
+180 silly idealTree +-- connect-history-api-fallback@1.5.0
+180 silly idealTree +-- connect@3.6.6
+180 silly idealTree | +-- finalhandler@1.1.0
+180 silly idealTree | `-- statuses@1.3.1
+180 silly idealTree +-- console-browserify@1.1.0
+180 silly idealTree +-- console-control-strings@1.1.0
+180 silly idealTree +-- constants-browserify@1.0.0
+180 silly idealTree +-- content-disposition@0.5.2
+180 silly idealTree +-- content-type@1.0.4
+180 silly idealTree +-- convert-source-map@1.5.1
+180 silly idealTree +-- cookie-signature@1.0.6
+180 silly idealTree +-- cookie@0.3.1
+180 silly idealTree +-- copy-concurrently@1.0.5
+180 silly idealTree +-- copy-descriptor@0.1.1
+180 silly idealTree +-- copy-webpack-plugin@4.5.1
+180 silly idealTree +-- core-js@2.5.6
+180 silly idealTree +-- core-util-is@1.0.2
+180 silly idealTree +-- cosmiconfig@2.2.2
+180 silly idealTree | `-- minimist@1.2.0
+180 silly idealTree +-- create-ecdh@4.0.3
+180 silly idealTree +-- create-hash@1.2.0
+180 silly idealTree +-- create-hmac@1.1.7
+180 silly idealTree +-- cross-spawn@3.0.1
+180 silly idealTree +-- cryptiles@3.1.2
+180 silly idealTree | `-- boom@5.2.0
+180 silly idealTree +-- crypto-browserify@3.12.0
+180 silly idealTree +-- css-parse@1.7.0
+180 silly idealTree +-- css-select@1.2.0
+180 silly idealTree +-- css-what@2.1.0
+180 silly idealTree +-- cuint@0.2.2
+180 silly idealTree +-- currently-unhandled@0.4.1
+180 silly idealTree +-- custom-event@1.0.1
+180 silly idealTree +-- cyclist@0.2.2
+180 silly idealTree +-- d@1.0.0
+180 silly idealTree +-- dashdash@1.14.1
+180 silly idealTree +-- date-now@0.1.4
+180 silly idealTree +-- debug@2.6.9
+180 silly idealTree +-- decamelize@1.2.0
+180 silly idealTree +-- decode-uri-component@0.2.0
+180 silly idealTree +-- deep-equal@1.0.1
+180 silly idealTree +-- deep-is@0.1.3
+180 silly idealTree +-- default-require-extensions@1.0.0
+180 silly idealTree +-- define-properties@1.1.2
+180 silly idealTree +-- define-property@2.0.2
+180 silly idealTree | +-- is-accessor-descriptor@1.0.0
+180 silly idealTree | +-- is-data-descriptor@1.0.0
+180 silly idealTree | `-- is-descriptor@1.0.2
+180 silly idealTree +-- del@3.0.0
+180 silly idealTree | `-- globby@6.1.0
+180 silly idealTree |   `-- pify@2.3.0
+180 silly idealTree +-- delayed-stream@1.0.0
+180 silly idealTree +-- delegates@1.0.0
+180 silly idealTree +-- depd@1.1.2
+180 silly idealTree +-- des.js@1.0.0
+180 silly idealTree +-- destroy@1.0.4
+180 silly idealTree +-- detect-indent@4.0.0
+180 silly idealTree +-- detect-node@2.0.3
+180 silly idealTree +-- di@0.0.1
+180 silly idealTree +-- diff@3.5.0
+180 silly idealTree +-- diffie-hellman@5.0.3
+180 silly idealTree +-- dir-glob@2.0.0
+180 silly idealTree +-- dns-equal@1.0.0
+180 silly idealTree +-- dns-packet@1.3.1
+180 silly idealTree +-- dns-txt@2.0.2
+180 silly idealTree +-- dom-converter@0.1.4
+180 silly idealTree | `-- utila@0.3.3
+180 silly idealTree +-- dom-serialize@2.2.1
+180 silly idealTree +-- dom-serializer@0.1.0
+180 silly idealTree | `-- domelementtype@1.1.3
+180 silly idealTree +-- domain-browser@1.2.0
+180 silly idealTree +-- domelementtype@1.3.0
+180 silly idealTree +-- domhandler@2.1.0
+180 silly idealTree +-- domino@2.0.2
+180 silly idealTree +-- domutils@1.5.1
+180 silly idealTree +-- duplexify@3.6.0
+180 silly idealTree +-- ecc-jsbn@0.1.1
+180 silly idealTree +-- ee-first@1.1.1
+180 silly idealTree +-- ejs@2.6.1
+180 silly idealTree +-- electron-to-chromium@1.3.46
+180 silly idealTree +-- elliptic@6.4.0
+180 silly idealTree +-- emojis-list@2.1.0
+180 silly idealTree +-- encodeurl@1.0.2
+180 silly idealTree +-- end-of-stream@1.4.1
+180 silly idealTree +-- engine.io-client@1.8.3
+180 silly idealTree | +-- debug@2.3.3
+180 silly idealTree | `-- ms@0.7.2
+180 silly idealTree +-- engine.io-parser@1.3.2
+180 silly idealTree +-- engine.io@1.8.3
+180 silly idealTree | +-- accepts@1.3.3
+180 silly idealTree | +-- debug@2.3.3
+180 silly idealTree | `-- ms@0.7.2
+180 silly idealTree +-- enhanced-resolve@4.0.0
+180 silly idealTree +-- ent@2.2.0
+180 silly idealTree +-- entities@1.1.1
+180 silly idealTree +-- errno@0.1.7
+180 silly idealTree +-- error-ex@1.3.1
+180 silly idealTree +-- es-abstract@1.11.0
+180 silly idealTree +-- es-to-primitive@1.1.1
+180 silly idealTree +-- es5-ext@0.10.42
+180 silly idealTree +-- es6-iterator@2.0.3
+180 silly idealTree +-- es6-promise@4.2.4
+180 silly idealTree +-- es6-promisify@5.0.0
+180 silly idealTree +-- es6-symbol@3.1.1
+180 silly idealTree +-- escape-html@1.0.3
+180 silly idealTree +-- escape-string-regexp@1.0.5
+180 silly idealTree +-- escodegen@1.8.1
+180 silly idealTree | `-- source-map@0.2.0
+180 silly idealTree +-- eslint-scope@3.7.1
+180 silly idealTree | `-- estraverse@4.2.0
+180 silly idealTree +-- esprima@2.7.3
+180 silly idealTree +-- esrecurse@4.2.1
+180 silly idealTree | `-- estraverse@4.2.0
+180 silly idealTree +-- estraverse@1.9.3
+180 silly idealTree +-- esutils@2.0.2
+180 silly idealTree +-- etag@1.8.1
+180 silly idealTree +-- eventemitter3@3.1.0
+180 silly idealTree +-- events@1.1.1
+180 silly idealTree +-- eventsource@0.1.6
+180 silly idealTree +-- evp_bytestokey@1.0.3
+180 silly idealTree +-- execa@0.7.0
+180 silly idealTree | `-- cross-spawn@5.1.0
+180 silly idealTree +-- exit@0.1.2
+180 silly idealTree +-- expand-braces@0.1.2
+180 silly idealTree | +-- array-unique@0.2.1
+180 silly idealTree | +-- braces@0.1.5
+180 silly idealTree | +-- expand-range@0.1.1
+180 silly idealTree | +-- is-number@0.1.1
+180 silly idealTree | `-- repeat-string@0.2.2
+180 silly idealTree +-- expand-brackets@2.1.4
+180 silly idealTree | +-- define-property@0.2.5
+180 silly idealTree | `-- extend-shallow@2.0.1
+180 silly idealTree +-- expand-range@1.8.2
+180 silly idealTree | +-- fill-range@2.2.4
+180 silly idealTree | +-- is-number@2.1.0
+180 silly idealTree | +-- isobject@2.1.0
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- express@4.16.3
+180 silly idealTree | +-- array-flatten@1.1.1
+180 silly idealTree | +-- qs@6.5.1
+180 silly idealTree | `-- safe-buffer@5.1.1
+180 silly idealTree +-- extend-shallow@3.0.2
+180 silly idealTree | `-- is-extendable@1.0.1
+180 silly idealTree +-- extend@3.0.1
+180 silly idealTree +-- extglob@2.0.4
+180 silly idealTree | +-- define-property@1.0.0
+180 silly idealTree | +-- extend-shallow@2.0.1
+180 silly idealTree | +-- is-accessor-descriptor@1.0.0
+180 silly idealTree | +-- is-data-descriptor@1.0.0
+180 silly idealTree | `-- is-descriptor@1.0.2
+180 silly idealTree +-- extract-zip@1.6.6
+180 silly idealTree | +-- concat-stream@1.6.0
+180 silly idealTree | `-- mkdirp@0.5.0
+180 silly idealTree +-- extsprintf@1.3.0
+180 silly idealTree +-- fast-deep-equal@1.1.0
+180 silly idealTree +-- fast-json-stable-stringify@2.0.0
+180 silly idealTree +-- fast-levenshtein@2.0.6
+180 silly idealTree +-- faye-websocket@0.10.0
+180 silly idealTree +-- fd-slicer@1.0.1
+180 silly idealTree +-- file-loader@1.1.11
+180 silly idealTree +-- filename-regex@2.0.1
+180 silly idealTree +-- fileset@2.0.3
+180 silly idealTree +-- fill-range@4.0.0
+180 silly idealTree | `-- extend-shallow@2.0.1
+180 silly idealTree +-- finalhandler@1.1.1
+180 silly idealTree +-- find-cache-dir@1.0.0
+180 silly idealTree +-- find-up@2.1.0
+180 silly idealTree +-- flush-write-stream@1.0.3
+180 silly idealTree +-- follow-redirects@1.4.1
+180 silly idealTree | `-- debug@3.1.0
+180 silly idealTree +-- for-in@1.0.2
+180 silly idealTree +-- for-own@1.0.0
+180 silly idealTree +-- foreach@2.0.5
+180 silly idealTree +-- forever-agent@0.6.1
+180 silly idealTree +-- form-data@2.3.2
+180 silly idealTree +-- forwarded@0.1.2
+180 silly idealTree +-- fragment-cache@0.2.1
+180 silly idealTree +-- fresh@0.5.2
+180 silly idealTree +-- from2@2.3.0
+180 silly idealTree +-- fs-access@1.0.1
+180 silly idealTree +-- fs-extra@1.0.0
+180 silly idealTree +-- fs-write-stream-atomic@1.0.10
+180 silly idealTree +-- fs.realpath@1.0.0
+180 silly idealTree +-- fstream@1.0.11
+180 silly idealTree +-- function-bind@1.1.1
+180 silly idealTree +-- gauge@2.7.4
+180 silly idealTree +-- gaze@1.1.2
+180 silly idealTree +-- generate-function@2.0.0
+180 silly idealTree +-- generate-object-property@1.2.0
+180 silly idealTree +-- get-caller-file@1.0.2
+180 silly idealTree +-- get-stdin@4.0.1
+180 silly idealTree +-- get-stream@3.0.0
+180 silly idealTree +-- get-value@2.0.6
+180 silly idealTree +-- getpass@0.1.7
+180 silly idealTree +-- glob-base@0.3.0
+180 silly idealTree | +-- glob-parent@2.0.0
+180 silly idealTree | +-- is-extglob@1.0.0
+180 silly idealTree | `-- is-glob@2.0.1
+180 silly idealTree +-- glob-parent@3.1.0
+180 silly idealTree | `-- is-glob@3.1.0
+180 silly idealTree +-- glob@7.1.2
+180 silly idealTree +-- globals@9.18.0
+180 silly idealTree +-- globby@7.1.1
+180 silly idealTree +-- globule@1.2.0
+180 silly idealTree +-- graceful-fs@4.1.11
+180 silly idealTree +-- handle-thing@1.2.5
+180 silly idealTree +-- handlebars@4.0.11
+180 silly idealTree | +-- source-map@0.4.4
+180 silly idealTree | `-- uglify-js@2.8.29
+180 silly idealTree |   `-- source-map@0.5.7
+180 silly idealTree +-- har-schema@2.0.0
+180 silly idealTree +-- har-validator@5.0.3
+180 silly idealTree | `-- ajv@5.5.2
+180 silly idealTree +-- has-ansi@2.0.0
+180 silly idealTree +-- has-binary@0.1.7
+180 silly idealTree | `-- isarray@0.0.1
+180 silly idealTree +-- has-cors@1.1.0
+180 silly idealTree +-- has-flag@3.0.0
+180 silly idealTree +-- has-symbols@1.0.0
+180 silly idealTree +-- has-unicode@2.0.1
+180 silly idealTree +-- has-value@1.0.0
+180 silly idealTree +-- has-values@1.0.0
+180 silly idealTree | `-- kind-of@4.0.0
+180 silly idealTree +-- has@1.0.1
+180 silly idealTree +-- hash-base@3.0.4
+180 silly idealTree +-- hash.js@1.1.3
+180 silly idealTree +-- hasha@2.2.0
+180 silly idealTree +-- hawk@6.0.2
+180 silly idealTree +-- he@1.1.1
+180 silly idealTree +-- hmac-drbg@1.0.1
+180 silly idealTree +-- hoek@4.2.1
+180 silly idealTree +-- hosted-git-info@2.6.0
+180 silly idealTree +-- hpack.js@2.1.6
+180 silly idealTree +-- html-entities@1.2.1
+180 silly idealTree +-- html-minifier@3.5.15
+180 silly idealTree +-- html-webpack-plugin@3.2.0
+180 silly idealTree | `-- loader-utils@0.2.17
+180 silly idealTree +-- htmlparser2@3.3.0
+180 silly idealTree | +-- domutils@1.1.6
+180 silly idealTree | +-- isarray@0.0.1
+180 silly idealTree | +-- readable-stream@1.0.34
+180 silly idealTree | `-- string_decoder@0.10.31
+180 silly idealTree +-- http-deceiver@1.2.7
+180 silly idealTree +-- http-errors@1.6.3
+180 silly idealTree +-- http-parser-js@0.4.12
+180 silly idealTree +-- http-proxy-middleware@0.18.0
+180 silly idealTree +-- http-proxy@1.17.0
+180 silly idealTree +-- http-signature@1.2.0
+180 silly idealTree +-- https-browserify@1.0.0
+180 silly idealTree +-- https-proxy-agent@2.2.1
+180 silly idealTree | `-- debug@3.1.0
+180 silly idealTree +-- iconv-lite@0.4.19
+180 silly idealTree +-- ieee754@1.1.11
+180 silly idealTree +-- iferr@0.1.5
+180 silly idealTree +-- ignore@3.3.8
+180 silly idealTree +-- image-size@0.5.5
+180 silly idealTree +-- immediate@3.0.6
+180 silly idealTree +-- import-local@1.0.0
+180 silly idealTree +-- imurmurhash@0.1.4
+180 silly idealTree +-- in-publish@2.0.0
+180 silly idealTree +-- indent-string@2.1.0
+180 silly idealTree +-- indexof@0.0.1
+180 silly idealTree +-- inflight@1.0.6
+180 silly idealTree +-- inherits@2.0.3
+180 silly idealTree +-- ini@1.3.5
+180 silly idealTree +-- internal-ip@1.2.0
+180 silly idealTree +-- invariant@2.2.4
+180 silly idealTree +-- invert-kv@1.0.0
+180 silly idealTree +-- ip@1.1.5
+180 silly idealTree +-- ipaddr.js@1.6.0
+180 silly idealTree +-- is-accessor-descriptor@0.1.6
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- is-arrayish@0.2.1
+180 silly idealTree +-- is-binary-path@1.0.1
+180 silly idealTree +-- is-buffer@1.1.6
+180 silly idealTree +-- is-builtin-module@1.0.0
+180 silly idealTree +-- is-callable@1.1.3
+180 silly idealTree +-- is-data-descriptor@0.1.4
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- is-date-object@1.0.1
+180 silly idealTree +-- is-descriptor@0.1.6
+180 silly idealTree | `-- kind-of@5.1.0
+180 silly idealTree +-- is-directory@0.3.1
+180 silly idealTree +-- is-dotfile@1.0.3
+180 silly idealTree +-- is-equal-shallow@0.1.3
+180 silly idealTree +-- is-extendable@0.1.1
+180 silly idealTree +-- is-extglob@2.1.1
+180 silly idealTree +-- is-finite@1.0.2
+180 silly idealTree +-- is-fullwidth-code-point@1.0.0
+180 silly idealTree +-- is-glob@4.0.0
+180 silly idealTree +-- is-my-ip-valid@1.0.0
+180 silly idealTree +-- is-my-json-valid@2.17.2
+180 silly idealTree +-- is-number@3.0.0
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- is-odd@2.0.0
+180 silly idealTree | `-- is-number@4.0.0
+180 silly idealTree +-- is-path-cwd@1.0.0
+180 silly idealTree +-- is-path-in-cwd@1.0.1
+180 silly idealTree +-- is-path-inside@1.0.1
+180 silly idealTree +-- is-plain-object@2.0.4
+180 silly idealTree +-- is-posix-bracket@0.1.1
+180 silly idealTree +-- is-primitive@2.0.0
+180 silly idealTree +-- is-property@1.0.2
+180 silly idealTree +-- is-regex@1.0.4
+180 silly idealTree +-- is-stream@1.1.0
+180 silly idealTree +-- is-symbol@1.0.1
+180 silly idealTree +-- is-typedarray@1.0.0
+180 silly idealTree +-- is-utf8@0.2.1
+180 silly idealTree +-- is-windows@1.0.2
+180 silly idealTree +-- is-wsl@1.1.0
+180 silly idealTree +-- isarray@1.0.0
+180 silly idealTree +-- isbinaryfile@3.0.2
+180 silly idealTree +-- isexe@2.0.0
+180 silly idealTree +-- isobject@3.0.1
+180 silly idealTree +-- isstream@0.1.2
+180 silly idealTree +-- istanbul-api@1.3.1
+180 silly idealTree | `-- async@2.6.0
+180 silly idealTree +-- istanbul-instrumenter-loader@3.0.1
+180 silly idealTree | +-- ajv@5.5.2
+180 silly idealTree | `-- schema-utils@0.3.0
+180 silly idealTree +-- istanbul-lib-coverage@1.2.0
+180 silly idealTree +-- istanbul-lib-hook@1.2.0
+180 silly idealTree +-- istanbul-lib-instrument@1.10.1
+180 silly idealTree +-- istanbul-lib-report@1.1.4
+180 silly idealTree | +-- has-flag@1.0.0
+180 silly idealTree | `-- supports-color@3.2.3
+180 silly idealTree +-- istanbul-lib-source-maps@1.2.4
+180 silly idealTree | `-- debug@3.1.0
+180 silly idealTree +-- istanbul-reports@1.3.0
+180 silly idealTree +-- istanbul@0.4.5
+180 silly idealTree | +-- glob@5.0.15
+180 silly idealTree | +-- has-flag@1.0.0
+180 silly idealTree | +-- resolve@1.1.7
+180 silly idealTree | `-- supports-color@3.2.3
+180 silly idealTree +-- jasmine-core@2.99.1
+180 silly idealTree +-- jasmine-spec-reporter@4.2.1
+180 silly idealTree +-- jasmine@2.8.0
+180 silly idealTree | `-- jasmine-core@2.8.0
+180 silly idealTree +-- jasminewd2@2.2.0
+180 silly idealTree +-- js-base64@2.4.3
+180 silly idealTree +-- js-tokens@3.0.2
+180 silly idealTree +-- js-yaml@3.11.0
+180 silly idealTree | `-- esprima@4.0.0
+180 silly idealTree +-- jsbn@0.1.1
+180 silly idealTree +-- jsesc@1.3.0
+180 silly idealTree +-- json-schema-traverse@0.3.1
+180 silly idealTree +-- json-schema@0.2.3
+180 silly idealTree +-- json-stringify-safe@5.0.1
+180 silly idealTree +-- json3@3.3.2
+180 silly idealTree +-- json5@0.5.1
+180 silly idealTree +-- jsonfile@2.4.0
+180 silly idealTree +-- jsonpointer@4.0.1
+180 silly idealTree +-- jsprim@1.4.1
+180 silly idealTree +-- jszip@3.1.5
+180 silly idealTree | +-- core-js@2.3.0
+180 silly idealTree | +-- es6-promise@3.0.2
+180 silly idealTree | +-- process-nextick-args@1.0.7
+180 silly idealTree | +-- readable-stream@2.0.6
+180 silly idealTree | `-- string_decoder@0.10.31
+180 silly idealTree +-- karma-chrome-launcher@2.2.0
+180 silly idealTree +-- karma-coverage-istanbul-reporter@1.4.2
+180 silly idealTree +-- karma-jasmine-html-reporter@0.2.2
+180 silly idealTree +-- karma-jasmine@1.1.2
+180 silly idealTree +-- karma-phantomjs-launcher@1.0.4
+180 silly idealTree +-- karma-source-map-support@1.3.0
+180 silly idealTree +-- karma@1.7.1
+180 silly idealTree | +-- anymatch@1.3.2
+180 silly idealTree | +-- arr-diff@2.0.0
+180 silly idealTree | +-- array-unique@0.2.1
+180 silly idealTree | +-- braces@1.8.5
+180 silly idealTree | +-- chokidar@1.7.0
+180 silly idealTree | +-- expand-brackets@0.1.5
+180 silly idealTree | +-- extglob@0.3.2
+180 silly idealTree | +-- glob-parent@2.0.0
+180 silly idealTree | +-- is-extglob@1.0.0
+180 silly idealTree | +-- is-glob@2.0.1
+180 silly idealTree | +-- kind-of@3.2.2
+180 silly idealTree | +-- lodash@3.10.1
+180 silly idealTree | `-- micromatch@2.3.11
+180 silly idealTree +-- kew@0.7.0
+180 silly idealTree +-- killable@1.0.0
+180 silly idealTree +-- kind-of@6.0.2
+180 silly idealTree +-- klaw@1.3.1
+180 silly idealTree +-- lazy-cache@1.0.4
+180 silly idealTree +-- lcid@1.0.0
+180 silly idealTree +-- less-loader@4.1.0
+180 silly idealTree +-- less@3.0.4
+180 silly idealTree | `-- source-map@0.6.1
+180 silly idealTree +-- levn@0.3.0
+180 silly idealTree +-- license-webpack-plugin@1.3.1
+180 silly idealTree +-- lie@3.1.1
+180 silly idealTree +-- load-json-file@1.1.0
+180 silly idealTree | `-- pify@2.3.0
+180 silly idealTree +-- loader-runner@2.3.0
+180 silly idealTree +-- loader-utils@1.1.0
+180 silly idealTree +-- locate-path@2.0.0
+180 silly idealTree +-- lodash.assign@4.2.0
+180 silly idealTree +-- lodash.clonedeep@4.5.0
+180 silly idealTree +-- lodash.mergewith@4.6.1
+180 silly idealTree +-- lodash.tail@4.1.1
+180 silly idealTree +-- lodash@4.17.10
+180 silly idealTree +-- log-symbols@2.2.0
+180 silly idealTree +-- log4js@0.6.38
+180 silly idealTree | +-- isarray@0.0.1
+180 silly idealTree | +-- readable-stream@1.0.34
+180 silly idealTree | +-- semver@4.3.6
+180 silly idealTree | `-- string_decoder@0.10.31
+180 silly idealTree +-- loglevel@1.6.1
+180 silly idealTree +-- loglevelnext@1.0.5
+180 silly idealTree +-- longest@1.0.1
+180 silly idealTree +-- loose-envify@1.3.1
+180 silly idealTree +-- loud-rejection@1.6.0
+180 silly idealTree +-- lower-case@1.1.4
+180 silly idealTree +-- lru-cache@4.1.3
+180 silly idealTree +-- make-dir@1.3.0
+180 silly idealTree +-- make-error@1.3.4
+180 silly idealTree +-- map-cache@0.2.2
+180 silly idealTree +-- map-obj@1.0.1
+180 silly idealTree +-- map-visit@1.0.0
+180 silly idealTree +-- math-random@1.0.1
+180 silly idealTree +-- md5.js@1.3.4
+180 silly idealTree +-- media-typer@0.3.0
+180 silly idealTree +-- mem@1.1.0
+180 silly idealTree +-- memory-fs@0.4.1
+180 silly idealTree +-- meow@3.7.0
+180 silly idealTree | `-- minimist@1.2.0
+180 silly idealTree +-- merge-descriptors@1.0.1
+180 silly idealTree +-- methods@1.1.2
+180 silly idealTree +-- micromatch@3.1.10
+180 silly idealTree +-- miller-rabin@4.0.1
+180 silly idealTree +-- mime-db@1.33.0
+180 silly idealTree +-- mime-types@2.1.18
+180 silly idealTree +-- mime@1.6.0
+180 silly idealTree +-- mimic-fn@1.2.0
+180 silly idealTree +-- mini-css-extract-plugin@0.4.0
+180 silly idealTree +-- minimalistic-assert@1.0.1
+180 silly idealTree +-- minimalistic-crypto-utils@1.0.1
+180 silly idealTree +-- minimatch@3.0.4
+180 silly idealTree +-- minimist@0.0.8
+180 silly idealTree +-- mississippi@2.0.0
+180 silly idealTree +-- mixin-deep@1.3.1
+180 silly idealTree | `-- is-extendable@1.0.1
+180 silly idealTree +-- mixin-object@2.0.1
+180 silly idealTree | `-- for-in@0.1.8
+180 silly idealTree +-- mkdirp@0.5.1
+180 silly idealTree +-- move-concurrently@1.0.1
+180 silly idealTree +-- ms@2.0.0
+180 silly idealTree +-- multicast-dns-service-types@1.1.0
+180 silly idealTree +-- multicast-dns@6.2.3
+180 silly idealTree +-- nan@2.10.0
+180 silly idealTree +-- nanomatch@1.2.9
+180 silly idealTree +-- negotiator@0.6.1
+180 silly idealTree +-- neo-async@2.5.1
+180 silly idealTree +-- next-tick@1.0.0
+180 silly idealTree +-- no-case@2.3.2
+180 silly idealTree +-- node-forge@0.7.5
+180 silly idealTree +-- node-gyp@3.6.2
+180 silly idealTree | `-- semver@5.3.0
+180 silly idealTree +-- node-libs-browser@2.1.0
+180 silly idealTree | `-- punycode@1.4.1
+180 silly idealTree +-- node-sass@4.9.0
+180 silly idealTree | +-- ansi-styles@2.2.1
+180 silly idealTree | +-- assert-plus@0.2.0
+180 silly idealTree | +-- aws-sign2@0.6.0
+180 silly idealTree | +-- boom@2.10.1
+180 silly idealTree | +-- caseless@0.11.0
+180 silly idealTree | +-- chalk@1.1.3
+180 silly idealTree | +-- cryptiles@2.0.5
+180 silly idealTree | +-- form-data@2.1.4
+180 silly idealTree | +-- har-validator@2.0.6
+180 silly idealTree | +-- hawk@3.1.3
+180 silly idealTree | +-- hoek@2.16.3
+180 silly idealTree | +-- http-signature@1.1.1
+180 silly idealTree | +-- qs@6.3.2
+180 silly idealTree | +-- request@2.79.0
+180 silly idealTree | +-- sntp@1.0.9
+180 silly idealTree | +-- supports-color@2.0.0
+180 silly idealTree | `-- tunnel-agent@0.4.3
+180 silly idealTree +-- nopt@3.0.6
+180 silly idealTree +-- normalize-package-data@2.4.0
+180 silly idealTree +-- normalize-path@2.1.1
+180 silly idealTree +-- normalize-range@0.1.2
+180 silly idealTree +-- npm-package-arg@6.1.0
+180 silly idealTree +-- npm-registry-client@8.5.1
+180 silly idealTree +-- npm-run-path@2.0.2
+180 silly idealTree +-- npmlog@4.1.2
+180 silly idealTree +-- nth-check@1.0.1
+180 silly idealTree +-- null-check@1.0.0
+180 silly idealTree +-- num2fraction@1.2.2
+180 silly idealTree +-- number-is-nan@1.0.1
+180 silly idealTree +-- oauth-sign@0.8.2
+180 silly idealTree +-- object-assign@4.1.1
+180 silly idealTree +-- object-component@0.0.3
+180 silly idealTree +-- object-copy@0.1.0
+180 silly idealTree | +-- define-property@0.2.5
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- object-keys@1.0.11
+180 silly idealTree +-- object-visit@1.0.1
+180 silly idealTree +-- object.assign@4.1.0
+180 silly idealTree +-- object.getownpropertydescriptors@2.0.3
+180 silly idealTree +-- object.omit@2.0.1
+180 silly idealTree | `-- for-own@0.1.5
+180 silly idealTree +-- object.pick@1.3.0
+180 silly idealTree +-- obuf@1.1.2
+180 silly idealTree +-- on-finished@2.3.0
+180 silly idealTree +-- on-headers@1.0.1
+180 silly idealTree +-- once@1.4.0
+180 silly idealTree +-- opn@5.3.0
+180 silly idealTree +-- optimist@0.6.1
+180 silly idealTree | `-- wordwrap@0.0.3
+180 silly idealTree +-- optionator@0.8.2
+180 silly idealTree +-- options@0.0.6
+180 silly idealTree +-- original@1.0.1
+180 silly idealTree +-- os-browserify@0.3.0
+180 silly idealTree +-- os-homedir@1.0.2
+180 silly idealTree +-- os-locale@1.4.0
+180 silly idealTree +-- os-tmpdir@1.0.2
+180 silly idealTree +-- osenv@0.1.5
+180 silly idealTree +-- p-finally@1.0.0
+180 silly idealTree +-- p-limit@1.2.0
+180 silly idealTree +-- p-locate@2.0.0
+180 silly idealTree +-- p-map@1.2.0
+180 silly idealTree +-- p-try@1.0.0
+180 silly idealTree +-- pako@1.0.6
+180 silly idealTree +-- parallel-transform@1.1.0
+180 silly idealTree +-- param-case@2.1.1
+180 silly idealTree +-- parse-asn1@5.1.1
+180 silly idealTree +-- parse-glob@3.0.4
+180 silly idealTree | +-- is-extglob@1.0.0
+180 silly idealTree | `-- is-glob@2.0.1
+180 silly idealTree +-- parse-json@2.2.0
+180 silly idealTree +-- parse5@4.0.0
+180 silly idealTree +-- parsejson@0.0.3
+180 silly idealTree +-- parseqs@0.0.5
+180 silly idealTree +-- parseuri@0.0.5
+180 silly idealTree +-- parseurl@1.3.2
+180 silly idealTree +-- pascalcase@0.1.1
+180 silly idealTree +-- path-browserify@0.0.0
+180 silly idealTree +-- path-dirname@1.0.2
+180 silly idealTree +-- path-exists@3.0.0
+180 silly idealTree +-- path-is-absolute@1.0.1
+180 silly idealTree +-- path-is-inside@1.0.2
+180 silly idealTree +-- path-key@2.0.1
+180 silly idealTree +-- path-parse@1.0.5
+180 silly idealTree +-- path-to-regexp@0.1.7
+180 silly idealTree +-- path-type@3.0.0
+180 silly idealTree +-- pbkdf2@3.0.16
+180 silly idealTree +-- pend@1.2.0
+180 silly idealTree +-- performance-now@2.1.0
+180 silly idealTree +-- phantomjs-prebuilt@2.1.16
+180 silly idealTree +-- pify@3.0.0
+180 silly idealTree +-- pinkie-promise@2.0.1
+180 silly idealTree +-- pinkie@2.0.4
+180 silly idealTree +-- pkg-dir@2.0.0
+180 silly idealTree +-- portfinder@1.0.13
+180 silly idealTree +-- posix-character-classes@0.1.1
+180 silly idealTree +-- postcss-import@11.1.0
+180 silly idealTree +-- postcss-load-config@1.2.0
+180 silly idealTree +-- postcss-load-options@1.2.0
+180 silly idealTree +-- postcss-load-plugins@2.3.0
+180 silly idealTree +-- postcss-loader@2.1.5
+180 silly idealTree +-- postcss-url@7.3.2
+180 silly idealTree +-- postcss-value-parser@3.3.0
+180 silly idealTree +-- postcss@6.0.22
+180 silly idealTree | +-- chalk@2.4.1
+180 silly idealTree | `-- source-map@0.6.1
+180 silly idealTree +-- prelude-ls@1.1.2
+180 silly idealTree +-- preserve@0.2.0
+180 silly idealTree +-- pretty-error@2.1.1
+180 silly idealTree +-- process-nextick-args@2.0.0
+180 silly idealTree +-- process@0.11.10
+180 silly idealTree +-- progress@1.1.8
+180 silly idealTree +-- promise-inflight@1.0.1
+180 silly idealTree +-- promise@7.3.1
+180 silly idealTree +-- protractor@5.3.2
+180 silly idealTree | +-- adm-zip@0.4.11
+180 silly idealTree | +-- ansi-styles@2.2.1
+180 silly idealTree | +-- chalk@1.1.3
+180 silly idealTree | +-- del@2.2.2
+180 silly idealTree | +-- globby@5.0.0
+180 silly idealTree | +-- minimist@1.2.0
+180 silly idealTree | +-- pify@2.3.0
+180 silly idealTree | +-- source-map-support@0.4.18
+180 silly idealTree | +-- supports-color@2.0.0
+180 silly idealTree | `-- webdriver-manager@12.0.6
+180 silly idealTree +-- proxy-addr@2.0.3
+180 silly idealTree +-- prr@1.0.1
+180 silly idealTree +-- pseudomap@1.0.2
+180 silly idealTree +-- public-encrypt@4.0.2
+180 silly idealTree +-- pump@2.0.1
+180 silly idealTree +-- pumpify@1.5.0
+180 silly idealTree +-- punycode@2.1.0
+180 silly idealTree +-- q@1.4.1
+180 silly idealTree +-- qjobs@1.2.0
+180 silly idealTree +-- qs@6.5.2
+180 silly idealTree +-- querystring-es3@0.2.1
+180 silly idealTree +-- querystring@0.2.0
+180 silly idealTree +-- querystringify@2.0.0
+180 silly idealTree +-- randomatic@3.0.0
+180 silly idealTree | `-- is-number@4.0.0
+180 silly idealTree +-- randombytes@2.0.6
+180 silly idealTree +-- randomfill@1.0.4
+180 silly idealTree +-- range-parser@1.2.0
+180 silly idealTree +-- raw-body@2.3.2
+180 silly idealTree | +-- depd@1.1.1
+180 silly idealTree | +-- http-errors@1.6.2
+180 silly idealTree | `-- setprototypeof@1.0.3
+180 silly idealTree +-- raw-loader@0.5.1
+180 silly idealTree +-- read-cache@1.0.0
+180 silly idealTree | `-- pify@2.3.0
+180 silly idealTree +-- read-pkg-up@1.0.1
+180 silly idealTree | +-- find-up@1.1.2
+180 silly idealTree | `-- path-exists@2.1.0
+180 silly idealTree +-- read-pkg@1.1.0
+180 silly idealTree | +-- path-type@1.1.0
+180 silly idealTree | `-- pify@2.3.0
+180 silly idealTree +-- readable-stream@2.3.6
+180 silly idealTree +-- readdirp@2.1.0
+180 silly idealTree +-- redent@1.0.0
+180 silly idealTree +-- reflect-metadata@0.1.12
+180 silly idealTree +-- regenerator-runtime@0.11.1
+180 silly idealTree +-- regex-cache@0.4.4
+180 silly idealTree +-- regex-not@1.0.2
+180 silly idealTree +-- relateurl@0.2.7
+180 silly idealTree +-- remove-trailing-separator@1.1.0
+180 silly idealTree +-- renderkid@2.0.1
+180 silly idealTree | `-- utila@0.3.3
+180 silly idealTree +-- repeat-element@1.1.2
+180 silly idealTree +-- repeat-string@1.6.1
+180 silly idealTree +-- repeating@2.0.1
+180 silly idealTree +-- request-progress@2.0.1
+180 silly idealTree +-- request@2.86.0
+180 silly idealTree +-- require-directory@2.1.1
+180 silly idealTree +-- require-from-string@1.2.1
+180 silly idealTree +-- require-main-filename@1.0.1
+180 silly idealTree +-- requires-port@1.0.0
+180 silly idealTree +-- resolve-cwd@2.0.0
+180 silly idealTree +-- resolve-from@3.0.0
+180 silly idealTree +-- resolve-url@0.2.1
+180 silly idealTree +-- resolve@1.7.1
+180 silly idealTree +-- ret@0.1.15
+180 silly idealTree +-- retry@0.10.1
+180 silly idealTree +-- right-align@0.1.3
+180 silly idealTree +-- rimraf@2.6.2
+180 silly idealTree +-- ripemd160@2.0.2
+180 silly idealTree +-- run-queue@1.0.3
+180 silly idealTree +-- rxjs@6.1.0
+180 silly idealTree +-- safe-buffer@5.1.2
+180 silly idealTree +-- safe-regex@1.1.0
+180 silly idealTree +-- sass-graph@2.2.4
+180 silly idealTree | +-- camelcase@3.0.0
+180 silly idealTree | +-- cliui@3.2.0
+180 silly idealTree | +-- y18n@3.2.1
+180 silly idealTree | `-- yargs@7.1.0
+180 silly idealTree +-- sass-loader@7.0.1
+180 silly idealTree +-- saucelabs@1.5.0
+180 silly idealTree +-- sax@0.5.8
+180 silly idealTree +-- schema-utils@0.4.5
+180 silly idealTree +-- scss-tokenizer@0.2.3
+180 silly idealTree | `-- source-map@0.4.4
+180 silly idealTree +-- select-hose@2.0.0
+180 silly idealTree +-- selenium-webdriver@3.6.0
+180 silly idealTree | `-- tmp@0.0.30
+180 silly idealTree +-- selfsigned@1.10.3
+180 silly idealTree +-- semver-intersect@1.3.1
+180 silly idealTree +-- semver@5.5.0
+180 silly idealTree +-- send@0.16.2
+180 silly idealTree | `-- mime@1.4.1
+180 silly idealTree +-- serialize-javascript@1.5.0
+180 silly idealTree +-- serve-index@1.9.1
+180 silly idealTree +-- serve-static@1.13.2
+180 silly idealTree +-- set-blocking@2.0.0
+180 silly idealTree +-- set-immediate-shim@1.0.1
+180 silly idealTree +-- set-value@2.0.0
+180 silly idealTree | `-- extend-shallow@2.0.1
+180 silly idealTree +-- setimmediate@1.0.5
+180 silly idealTree +-- setprototypeof@1.1.0
+180 silly idealTree +-- sha.js@2.4.11
+180 silly idealTree +-- shallow-clone@1.0.0
+180 silly idealTree | `-- kind-of@5.1.0
+180 silly idealTree +-- shebang-command@1.2.0
+180 silly idealTree +-- shebang-regex@1.0.0
+180 silly idealTree +-- signal-exit@3.0.2
+180 silly idealTree +-- silent-error@1.1.0
+180 silly idealTree +-- slash@1.0.0
+180 silly idealTree +-- slide@1.1.6
+180 silly idealTree +-- snapdragon-node@2.1.1
+180 silly idealTree | +-- define-property@1.0.0
+180 silly idealTree | +-- is-accessor-descriptor@1.0.0
+180 silly idealTree | +-- is-data-descriptor@1.0.0
+180 silly idealTree | `-- is-descriptor@1.0.2
+180 silly idealTree +-- snapdragon-util@3.0.1
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- snapdragon@0.8.2
+180 silly idealTree | +-- define-property@0.2.5
+180 silly idealTree | `-- extend-shallow@2.0.1
+180 silly idealTree +-- sntp@2.1.0
+180 silly idealTree +-- socket.io-adapter@0.5.0
+180 silly idealTree | +-- debug@2.3.3
+180 silly idealTree | `-- ms@0.7.2
+180 silly idealTree +-- socket.io-client@1.7.3
+180 silly idealTree | +-- debug@2.3.3
+180 silly idealTree | `-- ms@0.7.2
+180 silly idealTree +-- socket.io-parser@2.3.1
+180 silly idealTree | +-- component-emitter@1.1.2
+180 silly idealTree | +-- debug@2.2.0
+180 silly idealTree | +-- isarray@0.0.1
+180 silly idealTree | `-- ms@0.7.1
+180 silly idealTree +-- socket.io@1.7.3
+180 silly idealTree | +-- debug@2.3.3
+180 silly idealTree | +-- ms@0.7.2
+180 silly idealTree | `-- object-assign@4.1.0
+180 silly idealTree +-- sockjs-client@1.1.4
+180 silly idealTree | `-- faye-websocket@0.11.1
+180 silly idealTree +-- sockjs@0.3.19
+180 silly idealTree +-- source-list-map@2.0.0
+180 silly idealTree +-- source-map-resolve@0.5.2
+180 silly idealTree +-- source-map-support@0.5.6
+180 silly idealTree | `-- source-map@0.6.1
+180 silly idealTree +-- source-map-url@0.4.0
+180 silly idealTree +-- source-map@0.5.7
+180 silly idealTree +-- spdx-correct@3.0.0
+180 silly idealTree +-- spdx-exceptions@2.1.0
+180 silly idealTree +-- spdx-expression-parse@3.0.0
+180 silly idealTree +-- spdx-license-ids@3.0.0
+180 silly idealTree +-- spdy-transport@2.1.0
+180 silly idealTree +-- spdy@3.4.7
+180 silly idealTree +-- split-string@3.1.0
+180 silly idealTree +-- sprintf-js@1.0.3
+180 silly idealTree +-- sshpk@1.14.1
+180 silly idealTree +-- ssri@5.3.0
+180 silly idealTree +-- static-extend@0.1.2
+180 silly idealTree | `-- define-property@0.2.5
+180 silly idealTree +-- stats-webpack-plugin@0.6.2
+180 silly idealTree +-- statuses@1.4.0
+180 silly idealTree +-- stdout-stream@1.4.0
+180 silly idealTree +-- stream-browserify@2.0.1
+180 silly idealTree +-- stream-each@1.2.2
+180 silly idealTree +-- stream-http@2.8.2
+180 silly idealTree +-- stream-shift@1.0.0
+180 silly idealTree +-- string_decoder@1.1.1
+180 silly idealTree +-- string-width@1.0.2
+180 silly idealTree +-- stringstream@0.0.5
+180 silly idealTree +-- strip-ansi@3.0.1
+180 silly idealTree +-- strip-bom@2.0.0
+180 silly idealTree +-- strip-eof@1.0.0
+180 silly idealTree +-- strip-indent@1.0.1
+180 silly idealTree +-- style-loader@0.21.0
+180 silly idealTree +-- stylus-loader@3.0.2
+180 silly idealTree +-- stylus@0.54.5
+180 silly idealTree | +-- glob@7.0.6
+180 silly idealTree | `-- source-map@0.1.43
+180 silly idealTree +-- supports-color@5.4.0
+180 silly idealTree +-- symbol-observable@1.2.0
+180 silly idealTree +-- tapable@1.0.0
+180 silly idealTree +-- tar@2.2.1
+180 silly idealTree +-- throttleit@1.0.0
+180 silly idealTree +-- through2@2.0.3
+180 silly idealTree +-- thunky@1.0.2
+180 silly idealTree +-- timers-browserify@2.0.10
+180 silly idealTree +-- tmp@0.0.31
+180 silly idealTree +-- to-array@0.1.4
+180 silly idealTree +-- to-arraybuffer@1.0.1
+180 silly idealTree +-- to-fast-properties@1.0.3
+180 silly idealTree +-- to-object-path@0.3.0
+180 silly idealTree | `-- kind-of@3.2.2
+180 silly idealTree +-- to-regex-range@2.1.1
+180 silly idealTree +-- to-regex@3.0.2
+180 silly idealTree +-- toposort@1.0.7
+180 silly idealTree +-- tough-cookie@2.3.4
+180 silly idealTree | `-- punycode@1.4.1
+180 silly idealTree +-- tree-kill@1.2.0
+180 silly idealTree +-- trim-newlines@1.0.0
+180 silly idealTree +-- trim-right@1.0.1
+180 silly idealTree +-- true-case-path@1.0.2
+180 silly idealTree | `-- glob@6.0.4
+180 silly idealTree +-- ts-node@5.0.1
+180 silly idealTree | +-- chalk@2.4.1
+180 silly idealTree | `-- minimist@1.2.0
+180 silly idealTree +-- tsickle@0.27.5
+180 silly idealTree | +-- minimist@1.2.0
+180 silly idealTree | `-- source-map@0.6.1
+180 silly idealTree +-- tslib@1.9.1
+180 silly idealTree +-- tslint@5.10.0
+180 silly idealTree | `-- chalk@2.4.1
+180 silly idealTree +-- tsutils@2.27.0
+180 silly idealTree +-- tty-browserify@0.0.0
+180 silly idealTree +-- tunnel-agent@0.6.0
+180 silly idealTree +-- tweetnacl@0.14.5
+180 silly idealTree +-- type-check@0.3.2
+180 silly idealTree +-- type-is@1.6.16
+180 silly idealTree +-- typedarray@0.0.6
+180 silly idealTree +-- typescript@2.7.2
+180 silly idealTree +-- uglify-js@3.3.25
+180 silly idealTree | `-- source-map@0.6.1
+180 silly idealTree +-- uglify-to-browserify@1.0.2
+180 silly idealTree +-- uglifyjs-webpack-plugin@1.2.5
+180 silly idealTree | +-- commander@2.13.0
+180 silly idealTree | +-- source-map@0.6.1
+180 silly idealTree | `-- uglify-es@3.3.9
+180 silly idealTree +-- ultron@1.0.2
+180 silly idealTree +-- union-value@1.0.0
+180 silly idealTree | +-- extend-shallow@2.0.1
+180 silly idealTree | `-- set-value@0.4.3
+180 silly idealTree +-- unique-filename@1.1.0
+180 silly idealTree +-- unique-slug@2.0.0
+180 silly idealTree +-- unpipe@1.0.0
+180 silly idealTree +-- unset-value@1.0.0
+180 silly idealTree | +-- has-value@0.3.1
+180 silly idealTree | | `-- isobject@2.1.0
+180 silly idealTree | `-- has-values@0.1.4
+180 silly idealTree +-- upath@1.1.0
+180 silly idealTree +-- upper-case@1.1.3
+180 silly idealTree +-- uri-js@3.0.2
+180 silly idealTree +-- urix@0.1.0
+180 silly idealTree +-- url-join@4.0.0
+180 silly idealTree +-- url-loader@1.0.1
+180 silly idealTree | `-- mime@2.3.1
+180 silly idealTree +-- url-parse@1.4.0
+180 silly idealTree +-- url@0.11.0
+180 silly idealTree | `-- punycode@1.3.2
+180 silly idealTree +-- use@3.1.0
+180 silly idealTree +-- useragent@2.3.0
+180 silly idealTree +-- util-deprecate@1.0.2
+180 silly idealTree +-- util.promisify@1.0.0
+180 silly idealTree +-- util@0.10.3
+180 silly idealTree | `-- inherits@2.0.1
+180 silly idealTree +-- utila@0.4.0
+180 silly idealTree +-- utils-merge@1.0.1
+180 silly idealTree +-- uuid@3.2.1
+180 silly idealTree +-- validate-npm-package-license@3.0.3
+180 silly idealTree +-- validate-npm-package-name@3.0.0
+180 silly idealTree +-- vary@1.1.2
+180 silly idealTree +-- verror@1.10.0
+180 silly idealTree +-- vm-browserify@0.0.4
+180 silly idealTree +-- void-elements@2.0.1
+180 silly idealTree +-- watchpack@1.6.0
+180 silly idealTree +-- wbuf@1.7.3
+180 silly idealTree +-- webdriver-js-extender@1.0.0
+180 silly idealTree | +-- sax@0.6.1
+180 silly idealTree | +-- selenium-webdriver@2.53.3
+180 silly idealTree | +-- tmp@0.0.24
+180 silly idealTree | `-- xml2js@0.4.4
+180 silly idealTree +-- webpack-core@0.6.9
+180 silly idealTree | +-- source-list-map@0.1.8
+180 silly idealTree | `-- source-map@0.4.4
+180 silly idealTree +-- webpack-dev-middleware@3.1.3
+180 silly idealTree | `-- mime@2.3.1
+180 silly idealTree +-- webpack-dev-server@3.1.4
+180 silly idealTree | +-- ansi-regex@3.0.0
+180 silly idealTree | +-- camelcase@4.1.0
+180 silly idealTree | +-- cliui@4.1.0
+180 silly idealTree | | `-- strip-ansi@4.0.0
+180 silly idealTree | +-- debug@3.1.0
+180 silly idealTree | +-- is-fullwidth-code-point@2.0.0
+180 silly idealTree | +-- os-locale@2.1.0
+180 silly idealTree | +-- string-width@2.1.1
+180 silly idealTree | | `-- strip-ansi@4.0.0
+180 silly idealTree | +-- which-module@2.0.0
+180 silly idealTree | +-- y18n@3.2.1
+180 silly idealTree | +-- yargs-parser@9.0.2
+180 silly idealTree | `-- yargs@11.0.0
+180 silly idealTree +-- webpack-log@1.2.0
+180 silly idealTree +-- webpack-merge@4.1.2
+180 silly idealTree +-- webpack-sources@1.1.0
+180 silly idealTree | `-- source-map@0.6.1
+180 silly idealTree +-- webpack-subresource-integrity@1.1.0-rc.4
+180 silly idealTree +-- webpack@4.6.0
+180 silly idealTree +-- websocket-driver@0.7.0
+180 silly idealTree +-- websocket-extensions@0.1.3
+180 silly idealTree +-- when@3.6.4
+180 silly idealTree +-- which-module@1.0.0
+180 silly idealTree +-- which@1.3.0
+180 silly idealTree +-- wide-align@1.1.2
+180 silly idealTree +-- window-size@0.1.0
+180 silly idealTree +-- wordwrap@1.0.0
+180 silly idealTree +-- worker-farm@1.6.0
+180 silly idealTree +-- wrap-ansi@2.1.0
+180 silly idealTree +-- wrappy@1.0.2
+180 silly idealTree +-- ws@1.1.2
+180 silly idealTree +-- wtf-8@1.0.0
+180 silly idealTree +-- xhr2@0.1.4
+180 silly idealTree +-- xml2js@0.4.19
+180 silly idealTree | `-- sax@1.2.4
+180 silly idealTree +-- xmlbuilder@9.0.7
+180 silly idealTree +-- xmlhttprequest-ssl@1.5.3
+180 silly idealTree +-- xtend@4.0.1
+180 silly idealTree +-- xxhashjs@0.2.2
+180 silly idealTree +-- y18n@4.0.0
+180 silly idealTree +-- yallist@2.1.2
+180 silly idealTree +-- yargs-parser@5.0.0
+180 silly idealTree | `-- camelcase@3.0.0
+180 silly idealTree +-- yargs@3.10.0
+180 silly idealTree +-- yauzl@2.4.1
+180 silly idealTree +-- yeast@0.1.2
+180 silly idealTree +-- yn@2.0.0
+180 silly idealTree `-- zone.js@0.8.26
+181 silly generateActionsToTake Starting
+182 silly install generateActionsToTake
+183 silly generateActionsToTake Finishing
+184 silly diffTrees action count 3
+185 silly diffTrees add acorn@5.5.3
+186 silly diffTrees add webpack@4.6.0
+187 silly diffTrees add @angular-devkit/build-angular@0.6.1
+188 silly decomposeActions action count 24
+189 silly decomposeActions fetch acorn@5.5.3
+190 silly decomposeActions extract acorn@5.5.3
+191 silly decomposeActions test acorn@5.5.3
+192 silly decomposeActions preinstall acorn@5.5.3
+193 silly decomposeActions build acorn@5.5.3
+194 silly decomposeActions install acorn@5.5.3
+195 silly decomposeActions postinstall acorn@5.5.3
+196 silly decomposeActions finalize acorn@5.5.3
+197 silly decomposeActions fetch webpack@4.6.0
+198 silly decomposeActions extract webpack@4.6.0
+199 silly decomposeActions test webpack@4.6.0
+200 silly decomposeActions preinstall webpack@4.6.0
+201 silly decomposeActions build webpack@4.6.0
+202 silly decomposeActions install webpack@4.6.0
+203 silly decomposeActions postinstall webpack@4.6.0
+204 silly decomposeActions finalize webpack@4.6.0
+205 silly decomposeActions fetch @angular-devkit/build-angular@0.6.1
+206 silly decomposeActions extract @angular-devkit/build-angular@0.6.1
+207 silly decomposeActions test @angular-devkit/build-angular@0.6.1
+208 silly decomposeActions preinstall @angular-devkit/build-angular@0.6.1
+209 silly decomposeActions build @angular-devkit/build-angular@0.6.1
+210 silly decomposeActions install @angular-devkit/build-angular@0.6.1
+211 silly decomposeActions postinstall @angular-devkit/build-angular@0.6.1
+212 silly decomposeActions finalize @angular-devkit/build-angular@0.6.1
+213 silly runTopLevelLifecycles Starting
+214 silly install runPreinstallTopLevelLifecycles
+215 silly preinstall angular-io-example@1.0.0 /var/node/angular-io-example-8c6777c7
+216 info lifecycle angular-io-example@1.0.0~preinstall: angular-io-example@1.0.0
+217 silly lifecycle angular-io-example@1.0.0~preinstall: no script for preinstall, continuing
+218 silly executeActions Starting
+219 silly install executeActions
+220 silly doSerial global-install 0
+221 silly doParallel fetch 3
+222 verbose correctMkdir /root/.npm/_locks correctMkdir not in flight; initializing
+223 verbose lock using /root/.npm/_locks/staging-f5fdbc5a0431071e.lock for /var/node/node_modules/.staging
+224 silly doParallel extract 3
+225 silly extract acorn@5.5.3
+226 silly extract webpack@4.6.0
+227 silly extract @angular-devkit/build-angular@0.6.1
+228 verbose unbuild node_modules/.staging/@angular-devkit/build-angular-ddbd55b1
+229 verbose unbuild node_modules/.staging/acorn-ee0b7ffa
+230 verbose unbuild node_modules/.staging/webpack-dea82287
+231 silly gentlyRm /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1 is being purged from base /var/node
+232 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1
+233 silly gentlyRm /var/node/node_modules/.staging/webpack-dea82287 is being purged from base /var/node
+234 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/webpack-dea82287
+235 silly gentlyRm /var/node/node_modules/.staging/acorn-ee0b7ffa is being purged from base /var/node
+236 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/acorn-ee0b7ffa
+237 verbose tar unpack /root/.npm/@angular-devkit/build-angular/0.6.1/package.tgz
+238 verbose tar unpacking to /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1
+239 silly gentlyRm /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1 is being purged
+240 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1
+241 verbose tar unpack /root/.npm/acorn/5.5.3/package.tgz
+242 verbose tar unpacking to /var/node/node_modules/.staging/acorn-ee0b7ffa
+243 silly gentlyRm /var/node/node_modules/.staging/acorn-ee0b7ffa is being purged
+244 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/acorn-ee0b7ffa
+245 verbose tar unpack /root/.npm/webpack/4.6.0/package.tgz
+246 verbose tar unpacking to /var/node/node_modules/.staging/webpack-dea82287
+247 silly gentlyRm /var/node/node_modules/.staging/webpack-dea82287 is being purged
+248 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/webpack-dea82287
+249 silly gunzTarPerm modes [ '755', '644' ]
+250 silly gunzTarPerm modes [ '755', '644' ]
+251 silly gunzTarPerm modes [ '755', '644' ]
+252 silly gunzTarPerm extractEntry package.json
+253 silly gunzTarPerm extractEntry package.json
+254 silly gunzTarPerm extractEntry package.json
+255 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+256 silly gunzTarPerm extractEntry AUTHORS
+257 silly gunzTarPerm extractEntry CHANGELOG.md
+258 silly gunzTarPerm extractEntry LICENSE
+259 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+260 silly gunzTarPerm extractEntry README.md
+261 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+262 silly gunzTarPerm extractEntry builders.json
+263 silly gunzTarPerm extractEntry LICENSE
+264 silly gunzTarPerm extractEntry LICENSE
+265 silly gunzTarPerm extractEntry README.md
+266 silly gunzTarPerm extractEntry README.md
+267 silly gunzTarPerm extractEntry plugins/karma.d.ts
+268 silly gunzTarPerm extractEntry bin/webpack.js
+269 silly gunzTarPerm modified mode [ 'bin/webpack.js', 438, 420 ]
+270 silly gunzTarPerm extractEntry yarn-error.log
+271 silly gunzTarPerm extractEntry bin/_acorn.js
+272 silly gunzTarPerm extractEntry buildin/amd-define.js
+273 silly gunzTarPerm modified mode [ 'buildin/amd-define.js', 438, 420 ]
+274 silly gunzTarPerm extractEntry buildin/amd-options.js
+275 silly gunzTarPerm modified mode [ 'buildin/amd-options.js', 438, 420 ]
+276 silly gunzTarPerm extractEntry buildin/global.js
+277 silly gunzTarPerm modified mode [ 'buildin/global.js', 438, 420 ]
+278 silly gunzTarPerm extractEntry plugins/karma.js
+279 silly gunzTarPerm extractEntry src/angular-cli-files/lib/base-href-webpack/base-href-webpack-plugin.d.ts
+280 silly gunzTarPerm extractEntry buildin/harmony-module.js
+281 silly gunzTarPerm modified mode [ 'buildin/harmony-module.js', 438, 420 ]
+282 silly gunzTarPerm extractEntry src/angular-cli-files/lib/base-href-webpack/base-href-webpack-plugin.js
+283 silly gunzTarPerm extractEntry src/angular-cli-files/lib/base-href-webpack/index.d.ts
+284 silly gunzTarPerm extractEntry bin/acorn
+285 silly gunzTarPerm extractEntry bin/run_test262.js
+286 silly gunzTarPerm extractEntry buildin/module.js
+287 silly gunzTarPerm modified mode [ 'buildin/module.js', 438, 420 ]
+288 silly gunzTarPerm extractEntry buildin/system.js
+289 silly gunzTarPerm modified mode [ 'buildin/system.js', 438, 420 ]
+290 silly gunzTarPerm extractEntry bin/test262.whitelist
+291 silly gunzTarPerm extractEntry dist/.keep
+292 silly gunzTarPerm extractEntry dist/acorn_loose.es.js
+293 silly gunzTarPerm extractEntry src/angular-cli-files/lib/base-href-webpack/index.js
+294 silly gunzTarPerm extractEntry src/angular-cli-files/models/build-options.d.ts
+295 silly gunzTarPerm extractEntry hot/dev-server.js
+296 silly gunzTarPerm modified mode [ 'hot/dev-server.js', 438, 420 ]
+297 silly gunzTarPerm extractEntry dist/acorn_loose.js
+298 silly gunzTarPerm extractEntry src/angular-cli-files/models/build-options.js
+299 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/browser.d.ts
+300 silly gunzTarPerm extractEntry hot/emitter.js
+301 silly gunzTarPerm modified mode [ 'hot/emitter.js', 438, 420 ]
+302 silly gunzTarPerm extractEntry hot/log-apply-result.js
+303 silly gunzTarPerm modified mode [ 'hot/log-apply-result.js', 438, 420 ]
+304 silly gunzTarPerm extractEntry dist/acorn.es.js
+305 silly gunzTarPerm extractEntry dist/acorn.js
+306 silly gunzTarPerm extractEntry dist/walk.es.js
+307 silly gunzTarPerm extractEntry dist/walk.js
+308 silly gunzTarPerm extractEntry hot/log.js
+309 silly gunzTarPerm modified mode [ 'hot/log.js', 438, 420 ]
+310 silly gunzTarPerm extractEntry hot/only-dev-server.js
+311 silly gunzTarPerm modified mode [ 'hot/only-dev-server.js', 438, 420 ]
+312 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/browser.js
+313 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/common.d.ts
+314 silly gunzTarPerm extractEntry hot/poll.js
+315 silly gunzTarPerm modified mode [ 'hot/poll.js', 438, 420 ]
+316 silly gunzTarPerm extractEntry hot/signal.js
+317 silly gunzTarPerm modified mode [ 'hot/signal.js', 438, 420 ]
+318 silly gunzTarPerm extractEntry lib/AmdMainTemplatePlugin.js
+319 silly gunzTarPerm modified mode [ 'lib/AmdMainTemplatePlugin.js', 438, 420 ]
+320 silly gunzTarPerm extractEntry lib/APIPlugin.js
+321 silly gunzTarPerm modified mode [ 'lib/APIPlugin.js', 438, 420 ]
+322 silly gunzTarPerm extractEntry lib/AsyncDependenciesBlock.js
+323 silly gunzTarPerm modified mode [ 'lib/AsyncDependenciesBlock.js', 438, 420 ]
+324 silly gunzTarPerm extractEntry lib/AsyncDependencyToInitialChunkError.js
+325 silly gunzTarPerm modified mode [ 'lib/AsyncDependencyToInitialChunkError.js', 438, 420 ]
+326 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/common.js
+327 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/index.d.ts
+328 silly gunzTarPerm extractEntry lib/AutomaticPrefetchPlugin.js
+329 silly gunzTarPerm modified mode [ 'lib/AutomaticPrefetchPlugin.js', 438, 420 ]
+330 silly gunzTarPerm extractEntry lib/BannerPlugin.js
+331 silly gunzTarPerm modified mode [ 'lib/BannerPlugin.js', 438, 420 ]
+332 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/index.js
+333 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/server.d.ts
+334 silly gunzTarPerm extractEntry lib/BasicEvaluatedExpression.js
+335 silly gunzTarPerm modified mode [ 'lib/BasicEvaluatedExpression.js', 438, 420 ]
+336 silly gunzTarPerm extractEntry lib/CachePlugin.js
+337 silly gunzTarPerm modified mode [ 'lib/CachePlugin.js', 438, 420 ]
+338 silly gunzTarPerm extractEntry lib/CaseSensitiveModulesWarning.js
+339 silly gunzTarPerm modified mode [ 'lib/CaseSensitiveModulesWarning.js', 438, 420 ]
+340 silly gunzTarPerm extractEntry lib/Chunk.js
+341 silly gunzTarPerm modified mode [ 'lib/Chunk.js', 438, 420 ]
+342 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/server.js
+343 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/styles.d.ts
+344 silly gunzTarPerm extractEntry lib/ChunkGroup.js
+345 silly gunzTarPerm modified mode [ 'lib/ChunkGroup.js', 438, 420 ]
+346 silly gunzTarPerm extractEntry lib/ChunkRenderError.js
+347 silly gunzTarPerm modified mode [ 'lib/ChunkRenderError.js', 438, 420 ]
+348 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/styles.js
+349 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/test.d.ts
+350 silly gunzTarPerm extractEntry lib/ChunkTemplate.js
+351 silly gunzTarPerm modified mode [ 'lib/ChunkTemplate.js', 438, 420 ]
+352 silly gunzTarPerm extractEntry lib/compareLocations.js
+353 silly gunzTarPerm modified mode [ 'lib/compareLocations.js', 438, 420 ]
+354 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/test.js
+355 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/typescript.d.ts
+356 silly gunzTarPerm extractEntry lib/CompatibilityPlugin.js
+357 silly gunzTarPerm modified mode [ 'lib/CompatibilityPlugin.js', 438, 420 ]
+358 silly gunzTarPerm extractEntry lib/Compilation.js
+359 silly gunzTarPerm modified mode [ 'lib/Compilation.js', 438, 420 ]
+360 silly gunzTarPerm extractEntry lib/Compiler.js
+361 silly gunzTarPerm modified mode [ 'lib/Compiler.js', 438, 420 ]
+362 silly gunzTarPerm extractEntry lib/ConcurrentCompilationError.js
+363 silly gunzTarPerm modified mode [ 'lib/ConcurrentCompilationError.js', 438, 420 ]
+364 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/typescript.js
+365 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/utils.d.ts
+366 silly gunzTarPerm extractEntry lib/ConstPlugin.js
+367 silly gunzTarPerm modified mode [ 'lib/ConstPlugin.js', 438, 420 ]
+368 silly gunzTarPerm extractEntry lib/ContextExclusionPlugin.js
+369 silly gunzTarPerm modified mode [ 'lib/ContextExclusionPlugin.js', 438, 420 ]
+370 silly gunzTarPerm extractEntry lib/ContextModule.js
+371 silly gunzTarPerm modified mode [ 'lib/ContextModule.js', 438, 420 ]
+372 silly gunzTarPerm extractEntry lib/ContextModuleFactory.js
+373 silly gunzTarPerm modified mode [ 'lib/ContextModuleFactory.js', 438, 420 ]
+374 silly gunzTarPerm extractEntry src/angular-cli-files/models/webpack-configs/utils.js
+375 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/bundle-budget.d.ts
+376 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/bundle-budget.js
+377 silly gunzTarPerm extractEntry lib/ContextReplacementPlugin.js
+378 silly gunzTarPerm modified mode [ 'lib/ContextReplacementPlugin.js', 438, 420 ]
+379 silly gunzTarPerm extractEntry lib/debug/ProfilingPlugin.js
+380 silly gunzTarPerm modified mode [ 'lib/debug/ProfilingPlugin.js', 438, 420 ]
+381 silly gunzTarPerm extractEntry lib/DefinePlugin.js
+382 silly gunzTarPerm modified mode [ 'lib/DefinePlugin.js', 438, 420 ]
+383 silly gunzTarPerm extractEntry lib/DelegatedModule.js
+384 silly gunzTarPerm modified mode [ 'lib/DelegatedModule.js', 438, 420 ]
+385 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/cleancss-webpack-plugin.d.ts
+386 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/cleancss-webpack-plugin.js
+387 silly gunzTarPerm extractEntry lib/DelegatedModuleFactoryPlugin.js
+388 silly gunzTarPerm modified mode [ 'lib/DelegatedModuleFactoryPlugin.js', 438, 420 ]
+389 silly gunzTarPerm extractEntry lib/DelegatedPlugin.js
+390 silly gunzTarPerm modified mode [ 'lib/DelegatedPlugin.js', 438, 420 ]
+391 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/index-html-webpack-plugin.d.ts
+392 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/index-html-webpack-plugin.js
+393 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/karma-context.html
+394 silly gunzTarPerm extractEntry lib/dependencies/AMDDefineDependency.js
+395 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDDefineDependency.js', 438, 420 ]
+396 silly gunzTarPerm extractEntry lib/dependencies/AMDDefineDependencyParserPlugin.js
+397 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDDefineDependencyParserPlugin.js',
+397 silly gunzTarPerm   438,
+397 silly gunzTarPerm   420 ]
+398 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/karma-debug.html
+399 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/karma-webpack-failure-cb.d.ts
+400 silly gunzTarPerm extractEntry lib/dependencies/AMDPlugin.js
+401 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDPlugin.js', 438, 420 ]
+402 silly gunzTarPerm extractEntry lib/dependencies/AMDRequireArrayDependency.js
+403 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDRequireArrayDependency.js', 438, 420 ]
+404 silly gunzTarPerm extractEntry lib/dependencies/AMDRequireContextDependency.js
+405 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDRequireContextDependency.js', 438, 420 ]
+406 silly gunzTarPerm extractEntry lib/dependencies/AMDRequireDependenciesBlock.js
+407 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDRequireDependenciesBlock.js', 438, 420 ]
+408 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/karma-webpack-failure-cb.js
+409 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/karma.d.ts
+410 silly gunzTarPerm extractEntry lib/dependencies/AMDRequireDependenciesBlockParserPlugin.js
+411 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDRequireDependenciesBlockParserPlugin.js',
+411 silly gunzTarPerm   438,
+411 silly gunzTarPerm   420 ]
+412 silly gunzTarPerm extractEntry lib/dependencies/AMDRequireDependency.js
+413 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDRequireDependency.js', 438, 420 ]
+414 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/karma.js
+415 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/postcss-cli-resources.d.ts
+416 silly gunzTarPerm extractEntry lib/dependencies/AMDRequireItemDependency.js
+417 silly gunzTarPerm modified mode [ 'lib/dependencies/AMDRequireItemDependency.js', 438, 420 ]
+418 silly gunzTarPerm extractEntry lib/dependencies/CommonJsPlugin.js
+419 silly gunzTarPerm modified mode [ 'lib/dependencies/CommonJsPlugin.js', 438, 420 ]
+420 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/postcss-cli-resources.js
+421 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/raw-css-loader.d.ts
+422 silly gunzTarPerm extractEntry lib/dependencies/CommonJsRequireContextDependency.js
+423 silly gunzTarPerm modified mode [ 'lib/dependencies/CommonJsRequireContextDependency.js',
+423 silly gunzTarPerm   438,
+423 silly gunzTarPerm   420 ]
+424 silly gunzTarPerm extractEntry lib/dependencies/CommonJsRequireDependency.js
+425 silly gunzTarPerm modified mode [ 'lib/dependencies/CommonJsRequireDependency.js', 438, 420 ]
+426 silly gunzTarPerm extractEntry lib/dependencies/CommonJsRequireDependencyParserPlugin.js
+427 silly gunzTarPerm modified mode [ 'lib/dependencies/CommonJsRequireDependencyParserPlugin.js',
+427 silly gunzTarPerm   438,
+427 silly gunzTarPerm   420 ]
+428 silly gunzTarPerm extractEntry lib/dependencies/ConstDependency.js
+429 silly gunzTarPerm modified mode [ 'lib/dependencies/ConstDependency.js', 438, 420 ]
+430 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/raw-css-loader.js
+431 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/scripts-webpack-plugin.d.ts
+432 silly gunzTarPerm extractEntry lib/dependencies/ContextDependency.js
+433 silly gunzTarPerm modified mode [ 'lib/dependencies/ContextDependency.js', 438, 420 ]
+434 silly gunzTarPerm extractEntry lib/dependencies/ContextDependencyHelpers.js
+435 silly gunzTarPerm modified mode [ 'lib/dependencies/ContextDependencyHelpers.js', 438, 420 ]
+436 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/scripts-webpack-plugin.js
+437 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/suppress-entry-chunks-webpack-plugin.d.ts
+438 silly gunzTarPerm extractEntry lib/dependencies/ContextDependencyTemplateAsId.js
+439 silly gunzTarPerm modified mode [ 'lib/dependencies/ContextDependencyTemplateAsId.js', 438, 420 ]
+440 silly gunzTarPerm extractEntry lib/dependencies/ContextDependencyTemplateAsRequireCall.js
+441 silly gunzTarPerm modified mode [ 'lib/dependencies/ContextDependencyTemplateAsRequireCall.js',
+441 silly gunzTarPerm   438,
+441 silly gunzTarPerm   420 ]
+442 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/suppress-entry-chunks-webpack-plugin.js
+443 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/webpack.d.ts
+444 silly gunzTarPerm extractEntry src/angular-cli-files/plugins/webpack.js
+445 silly gunzTarPerm extractEntry lib/dependencies/ContextElementDependency.js
+446 silly gunzTarPerm modified mode [ 'lib/dependencies/ContextElementDependency.js', 438, 420 ]
+447 silly gunzTarPerm extractEntry lib/dependencies/CriticalDependencyWarning.js
+448 silly gunzTarPerm modified mode [ 'lib/dependencies/CriticalDependencyWarning.js', 438, 420 ]
+449 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/bundle-calculator.d.ts
+450 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/bundle-calculator.js
+451 silly gunzTarPerm extractEntry lib/dependencies/DelegatedExportsDependency.js
+452 silly gunzTarPerm modified mode [ 'lib/dependencies/DelegatedExportsDependency.js', 438, 420 ]
+453 silly gunzTarPerm extractEntry lib/dependencies/DelegatedSourceDependency.js
+454 silly gunzTarPerm modified mode [ 'lib/dependencies/DelegatedSourceDependency.js', 438, 420 ]
+455 silly gentlyRm /var/node/node_modules/.staging/acorn-ee0b7ffa/node_modules is being purged
+456 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/acorn-ee0b7ffa/node_modules
+457 silly gunzTarPerm extractEntry lib/dependencies/DependencyReference.js
+458 silly gunzTarPerm modified mode [ 'lib/dependencies/DependencyReference.js', 438, 420 ]
+459 silly gunzTarPerm extractEntry lib/dependencies/DllEntryDependency.js
+460 silly gunzTarPerm modified mode [ 'lib/dependencies/DllEntryDependency.js', 438, 420 ]
+461 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/check-port.d.ts
+462 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/check-port.js
+463 silly gunzTarPerm extractEntry lib/dependencies/getFunctionExpression.js
+464 silly gunzTarPerm modified mode [ 'lib/dependencies/getFunctionExpression.js', 438, 420 ]
+465 silly gunzTarPerm extractEntry lib/dependencies/HarmonyAcceptDependency.js
+466 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyAcceptDependency.js', 438, 420 ]
+467 silly gunzTarPerm extractEntry lib/dependencies/HarmonyAcceptImportDependency.js
+468 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyAcceptImportDependency.js', 438, 420 ]
+469 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/find-up.d.ts
+470 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/find-up.js
+471 silly gunzTarPerm extractEntry lib/dependencies/HarmonyCompatibilityDependency.js
+472 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyCompatibilityDependency.js',
+472 silly gunzTarPerm   438,
+472 silly gunzTarPerm   420 ]
+473 silly gunzTarPerm extractEntry lib/dependencies/HarmonyDetectionParserPlugin.js
+474 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyDetectionParserPlugin.js', 438, 420 ]
+475 silly gunzTarPerm extractEntry lib/dependencies/HarmonyExportDependencyParserPlugin.js
+476 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyExportDependencyParserPlugin.js',
+476 silly gunzTarPerm   438,
+476 silly gunzTarPerm   420 ]
+477 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/is-directory.d.ts
+478 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/is-directory.js
+479 silly gunzTarPerm extractEntry lib/dependencies/HarmonyExportExpressionDependency.js
+480 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyExportExpressionDependency.js',
+480 silly gunzTarPerm   438,
+480 silly gunzTarPerm   420 ]
+481 silly gunzTarPerm extractEntry lib/dependencies/HarmonyExportHeaderDependency.js
+482 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyExportHeaderDependency.js', 438, 420 ]
+483 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/package-chunk-sort.d.ts
+484 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/package-chunk-sort.js
+485 silly gunzTarPerm extractEntry lib/dependencies/HarmonyExportImportedSpecifierDependency.js
+486 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyExportImportedSpecifierDependency.js',
+486 silly gunzTarPerm   438,
+486 silly gunzTarPerm   420 ]
+487 silly gunzTarPerm extractEntry lib/dependencies/HarmonyExportSpecifierDependency.js
+488 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyExportSpecifierDependency.js',
+488 silly gunzTarPerm   438,
+488 silly gunzTarPerm   420 ]
+489 silly gunzTarPerm extractEntry lib/dependencies/HarmonyImportDependency.js
+490 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyImportDependency.js', 438, 420 ]
+491 silly gunzTarPerm extractEntry lib/dependencies/HarmonyImportDependencyParserPlugin.js
+492 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyImportDependencyParserPlugin.js',
+492 silly gunzTarPerm   438,
+492 silly gunzTarPerm   420 ]
+493 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/read-tsconfig.d.ts
+494 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/read-tsconfig.js
+495 silly gunzTarPerm extractEntry lib/dependencies/HarmonyImportSideEffectDependency.js
+496 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyImportSideEffectDependency.js',
+496 silly gunzTarPerm   438,
+496 silly gunzTarPerm   420 ]
+497 silly gunzTarPerm extractEntry lib/dependencies/HarmonyImportSpecifierDependency.js
+498 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyImportSpecifierDependency.js',
+498 silly gunzTarPerm   438,
+498 silly gunzTarPerm   420 ]
+499 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/require-project-module.d.ts
+500 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/require-project-module.js
+501 silly gunzTarPerm extractEntry lib/dependencies/HarmonyInitDependency.js
+502 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyInitDependency.js', 438, 420 ]
+503 silly gunzTarPerm extractEntry lib/dependencies/HarmonyModulesPlugin.js
+504 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyModulesPlugin.js', 438, 420 ]
+505 silly gunzTarPerm extractEntry lib/dependencies/HarmonyTopLevelThisParserPlugin.js
+506 silly gunzTarPerm modified mode [ 'lib/dependencies/HarmonyTopLevelThisParserPlugin.js',
+506 silly gunzTarPerm   438,
+506 silly gunzTarPerm   420 ]
+507 silly gunzTarPerm extractEntry lib/dependencies/ImportContextDependency.js
+508 silly gunzTarPerm modified mode [ 'lib/dependencies/ImportContextDependency.js', 438, 420 ]
+509 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/service-worker/index.d.ts
+510 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/service-worker/index.js
+511 silly gunzTarPerm extractEntry lib/dependencies/ImportDependenciesBlock.js
+512 silly gunzTarPerm modified mode [ 'lib/dependencies/ImportDependenciesBlock.js', 438, 420 ]
+513 silly gunzTarPerm extractEntry lib/dependencies/ImportDependency.js
+514 silly gunzTarPerm modified mode [ 'lib/dependencies/ImportDependency.js', 438, 420 ]
+515 silly gunzTarPerm extractEntry lib/dependencies/ImportEagerDependency.js
+516 silly gunzTarPerm modified mode [ 'lib/dependencies/ImportEagerDependency.js', 438, 420 ]
+517 silly gunzTarPerm extractEntry lib/dependencies/ImportParserPlugin.js
+518 silly gunzTarPerm modified mode [ 'lib/dependencies/ImportParserPlugin.js', 438, 420 ]
+519 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/stats.d.ts
+520 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/stats.js
+521 silly gunzTarPerm extractEntry lib/dependencies/ImportPlugin.js
+522 silly gunzTarPerm modified mode [ 'lib/dependencies/ImportPlugin.js', 438, 420 ]
+523 silly gunzTarPerm extractEntry lib/dependencies/ImportWeakDependency.js
+524 silly gunzTarPerm modified mode [ 'lib/dependencies/ImportWeakDependency.js', 438, 420 ]
+525 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/strip-bom.d.ts
+526 silly gunzTarPerm extractEntry src/angular-cli-files/utilities/strip-bom.js
+527 silly gunzTarPerm extractEntry lib/dependencies/JsonExportsDependency.js
+528 silly gunzTarPerm modified mode [ 'lib/dependencies/JsonExportsDependency.js', 438, 420 ]
+529 silly gunzTarPerm extractEntry lib/dependencies/LoaderDependency.js
+530 silly gunzTarPerm modified mode [ 'lib/dependencies/LoaderDependency.js', 438, 420 ]
+531 silly gunzTarPerm extractEntry src/app-shell/index.d.ts
+532 silly gunzTarPerm extractEntry src/app-shell/index.js
+533 silly gunzTarPerm extractEntry lib/dependencies/LoaderPlugin.js
+534 silly gunzTarPerm modified mode [ 'lib/dependencies/LoaderPlugin.js', 438, 420 ]
+535 silly gunzTarPerm extractEntry lib/dependencies/LocalModule.js
+536 silly gunzTarPerm modified mode [ 'lib/dependencies/LocalModule.js', 438, 420 ]
+537 silly gunzTarPerm extractEntry lib/dependencies/LocalModuleDependency.js
+538 silly gunzTarPerm modified mode [ 'lib/dependencies/LocalModuleDependency.js', 438, 420 ]
+539 silly gunzTarPerm extractEntry lib/dependencies/LocalModulesHelpers.js
+540 silly gunzTarPerm modified mode [ 'lib/dependencies/LocalModulesHelpers.js', 438, 420 ]
+541 silly gunzTarPerm extractEntry src/app-shell/schema.d.ts
+542 silly gunzTarPerm extractEntry src/app-shell/schema.json
+543 silly gunzTarPerm extractEntry lib/dependencies/ModuleDependency.js
+544 silly gunzTarPerm modified mode [ 'lib/dependencies/ModuleDependency.js', 438, 420 ]
+545 silly gunzTarPerm extractEntry lib/dependencies/ModuleDependencyTemplateAsId.js
+546 silly gunzTarPerm modified mode [ 'lib/dependencies/ModuleDependencyTemplateAsId.js', 438, 420 ]
+547 silly gunzTarPerm extractEntry src/browser/index.d.ts
+548 silly gunzTarPerm extractEntry src/browser/index.js
+549 silly gunzTarPerm extractEntry src/browser/schema.d.ts
+550 silly gunzTarPerm extractEntry lib/dependencies/ModuleDependencyTemplateAsRequireId.js
+551 silly gunzTarPerm modified mode [ 'lib/dependencies/ModuleDependencyTemplateAsRequireId.js',
+551 silly gunzTarPerm   438,
+551 silly gunzTarPerm   420 ]
+552 silly gunzTarPerm extractEntry lib/dependencies/ModuleHotAcceptDependency.js
+553 silly gunzTarPerm modified mode [ 'lib/dependencies/ModuleHotAcceptDependency.js', 438, 420 ]
+554 silly gunzTarPerm extractEntry src/browser/schema.json
+555 silly gunzTarPerm extractEntry lib/dependencies/ModuleHotDeclineDependency.js
+556 silly gunzTarPerm modified mode [ 'lib/dependencies/ModuleHotDeclineDependency.js', 438, 420 ]
+557 silly gunzTarPerm extractEntry lib/dependencies/MultiEntryDependency.js
+558 silly gunzTarPerm modified mode [ 'lib/dependencies/MultiEntryDependency.js', 438, 420 ]
+559 silly gunzTarPerm extractEntry src/dev-server/index.d.ts
+560 silly gunzTarPerm extractEntry src/dev-server/index.js
+561 silly gunzTarPerm extractEntry lib/dependencies/NullDependency.js
+562 silly gunzTarPerm modified mode [ 'lib/dependencies/NullDependency.js', 438, 420 ]
+563 silly gunzTarPerm extractEntry lib/dependencies/PrefetchDependency.js
+564 silly gunzTarPerm modified mode [ 'lib/dependencies/PrefetchDependency.js', 438, 420 ]
+565 silly gunzTarPerm extractEntry src/dev-server/schema.json
+566 silly gunzTarPerm extractEntry lib/dependencies/RequireContextDependency.js
+567 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireContextDependency.js', 438, 420 ]
+568 silly gunzTarPerm extractEntry lib/dependencies/RequireContextDependencyParserPlugin.js
+569 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireContextDependencyParserPlugin.js',
+569 silly gunzTarPerm   438,
+569 silly gunzTarPerm   420 ]
+570 silly gunzTarPerm extractEntry src/extract-i18n/index.d.ts
+571 silly gunzTarPerm extractEntry src/extract-i18n/index.js
+572 silly gunzTarPerm extractEntry lib/dependencies/RequireContextPlugin.js
+573 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireContextPlugin.js', 438, 420 ]
+574 silly gunzTarPerm extractEntry lib/dependencies/RequireEnsureDependenciesBlock.js
+575 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireEnsureDependenciesBlock.js',
+575 silly gunzTarPerm   438,
+575 silly gunzTarPerm   420 ]
+576 silly gunzTarPerm extractEntry src/extract-i18n/schema.json
+577 silly gunzTarPerm extractEntry src/index.d.ts
+578 silly gunzTarPerm extractEntry lib/dependencies/RequireEnsureDependenciesBlockParserPlugin.js
+579 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireEnsureDependenciesBlockParserPlugin.js',
+579 silly gunzTarPerm   438,
+579 silly gunzTarPerm   420 ]
+580 silly gunzTarPerm extractEntry lib/dependencies/RequireEnsureDependency.js
+581 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireEnsureDependency.js', 438, 420 ]
+582 silly gunzTarPerm extractEntry lib/dependencies/RequireEnsureItemDependency.js
+583 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireEnsureItemDependency.js', 438, 420 ]
+584 silly gunzTarPerm extractEntry lib/dependencies/RequireEnsurePlugin.js
+585 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireEnsurePlugin.js', 438, 420 ]
+586 silly gunzTarPerm extractEntry src/index.js
+587 silly gunzTarPerm extractEntry src/karma/index.d.ts
+588 silly gunzTarPerm extractEntry lib/dependencies/RequireHeaderDependency.js
+589 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireHeaderDependency.js', 438, 420 ]
+590 silly gunzTarPerm extractEntry lib/dependencies/RequireIncludeDependency.js
+591 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireIncludeDependency.js', 438, 420 ]
+592 silly gunzTarPerm extractEntry src/karma/index.js
+593 silly gunzTarPerm extractEntry src/karma/schema.d.ts
+594 silly gunzTarPerm extractEntry src/karma/schema.json
+595 silly gunzTarPerm extractEntry src/protractor/index.d.ts
+596 silly gunzTarPerm extractEntry lib/dependencies/RequireIncludeDependencyParserPlugin.js
+597 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireIncludeDependencyParserPlugin.js',
+597 silly gunzTarPerm   438,
+597 silly gunzTarPerm   420 ]
+598 silly gunzTarPerm extractEntry lib/dependencies/RequireIncludePlugin.js
+599 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireIncludePlugin.js', 438, 420 ]
+600 silly gunzTarPerm extractEntry lib/dependencies/RequireResolveContextDependency.js
+601 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireResolveContextDependency.js',
+601 silly gunzTarPerm   438,
+601 silly gunzTarPerm   420 ]
+602 silly gunzTarPerm extractEntry lib/dependencies/RequireResolveDependency.js
+603 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireResolveDependency.js', 438, 420 ]
+604 silly gunzTarPerm extractEntry src/protractor/index.js
+605 silly gunzTarPerm extractEntry src/protractor/schema.json
+606 silly gunzTarPerm extractEntry lib/dependencies/RequireResolveDependencyParserPlugin.js
+607 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireResolveDependencyParserPlugin.js',
+607 silly gunzTarPerm   438,
+607 silly gunzTarPerm   420 ]
+608 silly gunzTarPerm extractEntry lib/dependencies/RequireResolveHeaderDependency.js
+609 silly gunzTarPerm modified mode [ 'lib/dependencies/RequireResolveHeaderDependency.js',
+609 silly gunzTarPerm   438,
+609 silly gunzTarPerm   420 ]
+610 silly gunzTarPerm extractEntry src/server/index.d.ts
+611 silly gunzTarPerm extractEntry src/server/index.js
+612 silly gunzTarPerm extractEntry src/server/schema.d.ts
+613 silly gunzTarPerm extractEntry lib/dependencies/SingleEntryDependency.js
+614 silly gunzTarPerm modified mode [ 'lib/dependencies/SingleEntryDependency.js', 438, 420 ]
+615 silly gunzTarPerm extractEntry lib/dependencies/SystemPlugin.js
+616 silly gunzTarPerm modified mode [ 'lib/dependencies/SystemPlugin.js', 438, 420 ]
+617 silly gunzTarPerm extractEntry src/server/schema.json
+618 silly gunzTarPerm extractEntry lib/dependencies/UnsupportedDependency.js
+619 silly gunzTarPerm modified mode [ 'lib/dependencies/UnsupportedDependency.js', 438, 420 ]
+620 silly gunzTarPerm extractEntry lib/dependencies/WebAssemblyImportDependency.js
+621 silly gunzTarPerm modified mode [ 'lib/dependencies/WebAssemblyImportDependency.js', 438, 420 ]
+622 silly gunzTarPerm extractEntry src/tslint/index.d.ts
+623 silly gunzTarPerm extractEntry src/tslint/index.js
+624 silly gunzTarPerm extractEntry lib/dependencies/WebpackMissingModule.js
+625 silly gunzTarPerm modified mode [ 'lib/dependencies/WebpackMissingModule.js', 438, 420 ]
+626 silly gunzTarPerm extractEntry lib/DependenciesBlock.js
+627 silly gunzTarPerm modified mode [ 'lib/DependenciesBlock.js', 438, 420 ]
+628 silly gunzTarPerm extractEntry src/tslint/schema.json
+629 silly gunzTarPerm extractEntry src/utils/add-file-replacements.d.ts
+630 silly gunzTarPerm extractEntry lib/DependenciesBlockVariable.js
+631 silly gunzTarPerm modified mode [ 'lib/DependenciesBlockVariable.js', 438, 420 ]
+632 silly gunzTarPerm extractEntry lib/Dependency.js
+633 silly gunzTarPerm modified mode [ 'lib/Dependency.js', 438, 420 ]
+634 silly gunzTarPerm extractEntry src/utils/add-file-replacements.js
+635 silly gunzTarPerm extractEntry src/utils/index.d.ts
+636 silly gunzTarPerm extractEntry lib/DllEntryPlugin.js
+637 silly gunzTarPerm modified mode [ 'lib/DllEntryPlugin.js', 438, 420 ]
+638 silly gunzTarPerm extractEntry lib/DllModule.js
+639 silly gunzTarPerm modified mode [ 'lib/DllModule.js', 438, 420 ]
+640 silly gunzTarPerm extractEntry src/utils/index.js
+641 silly gunzTarPerm extractEntry src/utils/normalize-asset-patterns.d.ts
+642 silly gunzTarPerm extractEntry src/utils/normalize-asset-patterns.js
+643 silly gunzTarPerm extractEntry lib/DllModuleFactory.js
+644 silly gunzTarPerm modified mode [ 'lib/DllModuleFactory.js', 438, 420 ]
+645 silly gunzTarPerm extractEntry lib/DllPlugin.js
+646 silly gunzTarPerm modified mode [ 'lib/DllPlugin.js', 438, 420 ]
+647 silly gunzTarPerm extractEntry src/utils/run-module-as-observable-fork.d.ts
+648 silly gunzTarPerm extractEntry lib/DllReferencePlugin.js
+649 silly gunzTarPerm modified mode [ 'lib/DllReferencePlugin.js', 438, 420 ]
+650 silly gunzTarPerm extractEntry lib/DynamicEntryPlugin.js
+651 silly gunzTarPerm modified mode [ 'lib/DynamicEntryPlugin.js', 438, 420 ]
+652 silly gunzTarPerm extractEntry src/utils/run-module-as-observable-fork.js
+653 silly gunzTarPerm extractEntry src/utils/run-module-worker.js
+654 silly gunzTarPerm extractEntry lib/EntryModuleNotFoundError.js
+655 silly gunzTarPerm modified mode [ 'lib/EntryModuleNotFoundError.js', 438, 420 ]
+656 silly gunzTarPerm extractEntry lib/EntryOptionPlugin.js
+657 silly gunzTarPerm modified mode [ 'lib/EntryOptionPlugin.js', 438, 420 ]
+658 silly gunzTarPerm extractEntry src/utils/webpack-file-system-host-adapter.d.ts
+659 silly gunzTarPerm extractEntry src/utils/webpack-file-system-host-adapter.js
+660 silly gunzTarPerm extractEntry lib/Entrypoint.js
+661 silly gunzTarPerm modified mode [ 'lib/Entrypoint.js', 438, 420 ]
+662 silly gunzTarPerm extractEntry lib/EnvironmentPlugin.js
+663 silly gunzTarPerm modified mode [ 'lib/EnvironmentPlugin.js', 438, 420 ]
+664 silly gunzTarPerm extractEntry lib/ErrorHelpers.js
+665 silly gunzTarPerm modified mode [ 'lib/ErrorHelpers.js', 438, 420 ]
+666 silly gunzTarPerm extractEntry lib/EvalDevToolModulePlugin.js
+667 silly gunzTarPerm modified mode [ 'lib/EvalDevToolModulePlugin.js', 438, 420 ]
+668 silly gunzTarPerm extractEntry test/utils/index.d.ts
+669 silly gunzTarPerm extractEntry test/utils/index.js
+670 silly gunzTarPerm extractEntry lib/EvalDevToolModuleTemplatePlugin.js
+671 silly gunzTarPerm modified mode [ 'lib/EvalDevToolModuleTemplatePlugin.js', 438, 420 ]
+672 silly gunzTarPerm extractEntry lib/EvalSourceMapDevToolModuleTemplatePlugin.js
+673 silly gunzTarPerm modified mode [ 'lib/EvalSourceMapDevToolModuleTemplatePlugin.js', 438, 420 ]
+674 silly gunzTarPerm extractEntry test/utils/request.d.ts
+675 silly gunzTarPerm extractEntry test/utils/request.js
+676 silly gunzTarPerm extractEntry lib/EvalSourceMapDevToolPlugin.js
+677 silly gunzTarPerm modified mode [ 'lib/EvalSourceMapDevToolPlugin.js', 438, 420 ]
+678 silly gunzTarPerm extractEntry lib/ExportPropertyMainTemplatePlugin.js
+679 silly gunzTarPerm modified mode [ 'lib/ExportPropertyMainTemplatePlugin.js', 438, 420 ]
+680 silly gunzTarPerm extractEntry test/utils/run-target-spec.d.ts
+681 silly gunzTarPerm extractEntry test/utils/run-target-spec.js
+682 silly gunzTarPerm extractEntry lib/ExtendedAPIPlugin.js
+683 silly gunzTarPerm modified mode [ 'lib/ExtendedAPIPlugin.js', 438, 420 ]
+684 silly gunzTarPerm extractEntry lib/ExternalModule.js
+685 silly gunzTarPerm modified mode [ 'lib/ExternalModule.js', 438, 420 ]
+686 silly gunzTarPerm extractEntry lib/ExternalModuleFactoryPlugin.js
+687 silly gunzTarPerm modified mode [ 'lib/ExternalModuleFactoryPlugin.js', 438, 420 ]
+688 silly gunzTarPerm extractEntry lib/ExternalsPlugin.js
+689 silly gunzTarPerm modified mode [ 'lib/ExternalsPlugin.js', 438, 420 ]
+690 silly gunzTarPerm extractEntry test/utils/test-logger.d.ts
+691 silly gunzTarPerm extractEntry test/utils/test-logger.js
+692 silly gunzTarPerm extractEntry test/utils/test-project-host.d.ts
+693 silly gunzTarPerm extractEntry lib/FlagDependencyExportsPlugin.js
+694 silly gunzTarPerm modified mode [ 'lib/FlagDependencyExportsPlugin.js', 438, 420 ]
+695 silly gunzTarPerm extractEntry lib/FlagDependencyUsagePlugin.js
+696 silly gunzTarPerm modified mode [ 'lib/FlagDependencyUsagePlugin.js', 438, 420 ]
+697 silly gunzTarPerm extractEntry test/utils/test-project-host.js
+698 silly gunzTarPerm extractEntry lib/FlagInitialModulesAsUsedPlugin.js
+699 silly gunzTarPerm modified mode [ 'lib/FlagInitialModulesAsUsedPlugin.js', 438, 420 ]
+700 silly gunzTarPerm extractEntry lib/formatLocation.js
+701 silly gunzTarPerm modified mode [ 'lib/formatLocation.js', 438, 420 ]
+702 silly gunzTarPerm extractEntry test/utils/timeouts.d.ts
+703 silly gunzTarPerm extractEntry lib/FunctionModulePlugin.js
+704 silly gunzTarPerm modified mode [ 'lib/FunctionModulePlugin.js', 438, 420 ]
+705 silly gunzTarPerm extractEntry lib/FunctionModuleTemplatePlugin.js
+706 silly gunzTarPerm modified mode [ 'lib/FunctionModuleTemplatePlugin.js', 438, 420 ]
+707 silly gunzTarPerm extractEntry test/utils/timeouts.js
+708 silly gunzTarPerm extractEntry lib/GraphHelpers.js
+709 silly gunzTarPerm modified mode [ 'lib/GraphHelpers.js', 438, 420 ]
+710 silly gunzTarPerm extractEntry lib/HarmonyLinkingError.js
+711 silly gunzTarPerm modified mode [ 'lib/HarmonyLinkingError.js', 438, 420 ]
+712 silly gunzTarPerm extractEntry lib/HashedModuleIdsPlugin.js
+713 silly gunzTarPerm modified mode [ 'lib/HashedModuleIdsPlugin.js', 438, 420 ]
+714 silly gunzTarPerm extractEntry lib/HotModuleReplacement.runtime.js
+715 silly gunzTarPerm modified mode [ 'lib/HotModuleReplacement.runtime.js', 438, 420 ]
+716 silly gunzTarPerm extractEntry lib/HotModuleReplacementPlugin.js
+717 silly gunzTarPerm modified mode [ 'lib/HotModuleReplacementPlugin.js', 438, 420 ]
+718 silly gunzTarPerm extractEntry lib/HotUpdateChunk.js
+719 silly gunzTarPerm modified mode [ 'lib/HotUpdateChunk.js', 438, 420 ]
+720 silly gunzTarPerm extractEntry lib/HotUpdateChunkTemplate.js
+721 silly gunzTarPerm modified mode [ 'lib/HotUpdateChunkTemplate.js', 438, 420 ]
+722 silly gunzTarPerm extractEntry lib/IgnorePlugin.js
+723 silly gunzTarPerm modified mode [ 'lib/IgnorePlugin.js', 438, 420 ]
+724 silly gunzTarPerm extractEntry lib/JavascriptGenerator.js
+725 silly gunzTarPerm modified mode [ 'lib/JavascriptGenerator.js', 438, 420 ]
+726 silly gunzTarPerm extractEntry lib/JavascriptModulesPlugin.js
+727 silly gunzTarPerm modified mode [ 'lib/JavascriptModulesPlugin.js', 438, 420 ]
+728 silly gunzTarPerm extractEntry lib/JsonGenerator.js
+729 silly gunzTarPerm modified mode [ 'lib/JsonGenerator.js', 438, 420 ]
+730 silly gunzTarPerm extractEntry lib/JsonModulesPlugin.js
+731 silly gunzTarPerm modified mode [ 'lib/JsonModulesPlugin.js', 438, 420 ]
+732 silly gunzTarPerm extractEntry lib/JsonParser.js
+733 silly gunzTarPerm modified mode [ 'lib/JsonParser.js', 438, 420 ]
+734 silly gunzTarPerm extractEntry lib/LibManifestPlugin.js
+735 silly gunzTarPerm modified mode [ 'lib/LibManifestPlugin.js', 438, 420 ]
+736 silly gunzTarPerm extractEntry lib/LibraryTemplatePlugin.js
+737 silly gunzTarPerm modified mode [ 'lib/LibraryTemplatePlugin.js', 438, 420 ]
+738 silly gunzTarPerm extractEntry lib/LoaderOptionsPlugin.js
+739 silly gunzTarPerm modified mode [ 'lib/LoaderOptionsPlugin.js', 438, 420 ]
+740 silly gunzTarPerm extractEntry lib/LoaderTargetPlugin.js
+741 silly gunzTarPerm modified mode [ 'lib/LoaderTargetPlugin.js', 438, 420 ]
+742 silly gunzTarPerm extractEntry lib/MainTemplate.js
+743 silly gunzTarPerm modified mode [ 'lib/MainTemplate.js', 438, 420 ]
+744 silly gunzTarPerm extractEntry lib/MemoryOutputFileSystem.js
+745 silly gunzTarPerm modified mode [ 'lib/MemoryOutputFileSystem.js', 438, 420 ]
+746 silly gunzTarPerm extractEntry lib/Module.js
+747 silly gunzTarPerm modified mode [ 'lib/Module.js', 438, 420 ]
+748 silly gunzTarPerm extractEntry lib/ModuleBuildError.js
+749 silly gunzTarPerm modified mode [ 'lib/ModuleBuildError.js', 438, 420 ]
+750 silly gunzTarPerm extractEntry lib/ModuleDependencyError.js
+751 silly gunzTarPerm modified mode [ 'lib/ModuleDependencyError.js', 438, 420 ]
+752 silly gunzTarPerm extractEntry lib/ModuleDependencyWarning.js
+753 silly gunzTarPerm modified mode [ 'lib/ModuleDependencyWarning.js', 438, 420 ]
+754 silly gunzTarPerm extractEntry lib/ModuleError.js
+755 silly gunzTarPerm modified mode [ 'lib/ModuleError.js', 438, 420 ]
+756 silly gunzTarPerm extractEntry lib/ModuleFilenameHelpers.js
+757 silly gunzTarPerm modified mode [ 'lib/ModuleFilenameHelpers.js', 438, 420 ]
+758 silly gunzTarPerm extractEntry lib/ModuleNotFoundError.js
+759 silly gunzTarPerm modified mode [ 'lib/ModuleNotFoundError.js', 438, 420 ]
+760 silly gunzTarPerm extractEntry lib/ModuleParseError.js
+761 silly gunzTarPerm modified mode [ 'lib/ModuleParseError.js', 438, 420 ]
+762 silly gunzTarPerm extractEntry lib/ModuleReason.js
+763 silly gunzTarPerm modified mode [ 'lib/ModuleReason.js', 438, 420 ]
+764 silly gunzTarPerm extractEntry lib/ModuleTemplate.js
+765 silly gunzTarPerm modified mode [ 'lib/ModuleTemplate.js', 438, 420 ]
+766 silly gunzTarPerm extractEntry lib/ModuleWarning.js
+767 silly gunzTarPerm modified mode [ 'lib/ModuleWarning.js', 438, 420 ]
+768 silly gunzTarPerm extractEntry lib/MultiCompiler.js
+769 silly gunzTarPerm modified mode [ 'lib/MultiCompiler.js', 438, 420 ]
+770 silly gunzTarPerm extractEntry lib/MultiEntryPlugin.js
+771 silly gunzTarPerm modified mode [ 'lib/MultiEntryPlugin.js', 438, 420 ]
+772 silly gunzTarPerm extractEntry lib/MultiModule.js
+773 silly gunzTarPerm modified mode [ 'lib/MultiModule.js', 438, 420 ]
+774 silly gunzTarPerm extractEntry lib/MultiModuleFactory.js
+775 silly gunzTarPerm modified mode [ 'lib/MultiModuleFactory.js', 438, 420 ]
+776 silly gunzTarPerm extractEntry lib/MultiStats.js
+777 silly gunzTarPerm modified mode [ 'lib/MultiStats.js', 438, 420 ]
+778 silly gunzTarPerm extractEntry lib/MultiWatching.js
+779 silly gunzTarPerm modified mode [ 'lib/MultiWatching.js', 438, 420 ]
+780 silly gunzTarPerm extractEntry lib/NamedChunksPlugin.js
+781 silly gunzTarPerm modified mode [ 'lib/NamedChunksPlugin.js', 438, 420 ]
+782 silly gunzTarPerm extractEntry lib/NamedModulesPlugin.js
+783 silly gunzTarPerm modified mode [ 'lib/NamedModulesPlugin.js', 438, 420 ]
+784 silly gunzTarPerm extractEntry lib/node/NodeChunkTemplatePlugin.js
+785 silly gunzTarPerm modified mode [ 'lib/node/NodeChunkTemplatePlugin.js', 438, 420 ]
+786 silly gunzTarPerm extractEntry lib/node/NodeEnvironmentPlugin.js
+787 silly gunzTarPerm modified mode [ 'lib/node/NodeEnvironmentPlugin.js', 438, 420 ]
+788 silly gunzTarPerm extractEntry lib/node/NodeHotUpdateChunkTemplatePlugin.js
+789 silly gunzTarPerm modified mode [ 'lib/node/NodeHotUpdateChunkTemplatePlugin.js', 438, 420 ]
+790 silly gunzTarPerm extractEntry lib/node/NodeMainTemplate.runtime.js
+791 silly gunzTarPerm modified mode [ 'lib/node/NodeMainTemplate.runtime.js', 438, 420 ]
+792 silly gunzTarPerm extractEntry lib/node/NodeMainTemplateAsync.runtime.js
+793 silly gunzTarPerm modified mode [ 'lib/node/NodeMainTemplateAsync.runtime.js', 438, 420 ]
+794 silly gunzTarPerm extractEntry lib/node/NodeMainTemplatePlugin.js
+795 silly gunzTarPerm modified mode [ 'lib/node/NodeMainTemplatePlugin.js', 438, 420 ]
+796 silly gunzTarPerm extractEntry lib/node/NodeOutputFileSystem.js
+797 silly gunzTarPerm modified mode [ 'lib/node/NodeOutputFileSystem.js', 438, 420 ]
+798 silly gunzTarPerm extractEntry lib/node/NodeSourcePlugin.js
+799 silly gunzTarPerm modified mode [ 'lib/node/NodeSourcePlugin.js', 438, 420 ]
+800 silly gunzTarPerm extractEntry lib/node/NodeTargetPlugin.js
+801 silly gunzTarPerm modified mode [ 'lib/node/NodeTargetPlugin.js', 438, 420 ]
+802 silly gunzTarPerm extractEntry lib/node/NodeTemplatePlugin.js
+803 silly gunzTarPerm modified mode [ 'lib/node/NodeTemplatePlugin.js', 438, 420 ]
+804 silly gunzTarPerm extractEntry lib/node/NodeWatchFileSystem.js
+805 silly gunzTarPerm modified mode [ 'lib/node/NodeWatchFileSystem.js', 438, 420 ]
+806 silly gunzTarPerm extractEntry lib/node/ReadFileCompileWasmMainTemplatePlugin.js
+807 silly gunzTarPerm modified mode [ 'lib/node/ReadFileCompileWasmMainTemplatePlugin.js', 438, 420 ]
+808 silly gunzTarPerm extractEntry lib/node/ReadFileCompileWasmTemplatePlugin.js
+809 silly gunzTarPerm modified mode [ 'lib/node/ReadFileCompileWasmTemplatePlugin.js', 438, 420 ]
+810 silly gunzTarPerm extractEntry lib/NodeStuffPlugin.js
+811 silly gunzTarPerm modified mode [ 'lib/NodeStuffPlugin.js', 438, 420 ]
+812 silly gunzTarPerm extractEntry lib/NoEmitOnErrorsPlugin.js
+813 silly gunzTarPerm modified mode [ 'lib/NoEmitOnErrorsPlugin.js', 438, 420 ]
+814 silly gunzTarPerm extractEntry lib/NoModeWarning.js
+815 silly gunzTarPerm modified mode [ 'lib/NoModeWarning.js', 438, 420 ]
+816 silly gunzTarPerm extractEntry lib/NormalModule.js
+817 silly gunzTarPerm modified mode [ 'lib/NormalModule.js', 438, 420 ]
+818 silly gunzTarPerm extractEntry lib/NormalModuleFactory.js
+819 silly gunzTarPerm modified mode [ 'lib/NormalModuleFactory.js', 438, 420 ]
+820 silly gunzTarPerm extractEntry lib/NormalModuleReplacementPlugin.js
+821 silly gunzTarPerm modified mode [ 'lib/NormalModuleReplacementPlugin.js', 438, 420 ]
+822 silly gunzTarPerm extractEntry lib/NullFactory.js
+823 silly gunzTarPerm modified mode [ 'lib/NullFactory.js', 438, 420 ]
+824 silly gunzTarPerm extractEntry lib/optimize/AggressiveMergingPlugin.js
+825 silly gunzTarPerm modified mode [ 'lib/optimize/AggressiveMergingPlugin.js', 438, 420 ]
+826 silly gunzTarPerm extractEntry lib/optimize/AggressiveSplittingPlugin.js
+827 silly gunzTarPerm modified mode [ 'lib/optimize/AggressiveSplittingPlugin.js', 438, 420 ]
+828 silly gunzTarPerm extractEntry lib/optimize/ChunkModuleIdRangePlugin.js
+829 silly gunzTarPerm modified mode [ 'lib/optimize/ChunkModuleIdRangePlugin.js', 438, 420 ]
+830 silly gunzTarPerm extractEntry lib/optimize/ConcatenatedModule.js
+831 silly gunzTarPerm modified mode [ 'lib/optimize/ConcatenatedModule.js', 438, 420 ]
+832 silly gunzTarPerm extractEntry lib/optimize/EnsureChunkConditionsPlugin.js
+833 silly gunzTarPerm modified mode [ 'lib/optimize/EnsureChunkConditionsPlugin.js', 438, 420 ]
+834 silly gunzTarPerm extractEntry lib/optimize/FlagIncludedChunksPlugin.js
+835 silly gunzTarPerm modified mode [ 'lib/optimize/FlagIncludedChunksPlugin.js', 438, 420 ]
+836 silly gunzTarPerm extractEntry lib/optimize/LimitChunkCountPlugin.js
+837 silly gunzTarPerm modified mode [ 'lib/optimize/LimitChunkCountPlugin.js', 438, 420 ]
+838 silly gunzTarPerm extractEntry lib/optimize/MergeDuplicateChunksPlugin.js
+839 silly gunzTarPerm modified mode [ 'lib/optimize/MergeDuplicateChunksPlugin.js', 438, 420 ]
+840 silly gunzTarPerm extractEntry lib/optimize/MinChunkSizePlugin.js
+841 silly gunzTarPerm modified mode [ 'lib/optimize/MinChunkSizePlugin.js', 438, 420 ]
+842 silly gunzTarPerm extractEntry lib/optimize/ModuleConcatenationPlugin.js
+843 silly gunzTarPerm modified mode [ 'lib/optimize/ModuleConcatenationPlugin.js', 438, 420 ]
+844 silly gunzTarPerm extractEntry lib/optimize/OccurrenceOrderPlugin.js
+845 silly gunzTarPerm modified mode [ 'lib/optimize/OccurrenceOrderPlugin.js', 438, 420 ]
+846 silly gunzTarPerm extractEntry lib/optimize/RemoveEmptyChunksPlugin.js
+847 silly gunzTarPerm modified mode [ 'lib/optimize/RemoveEmptyChunksPlugin.js', 438, 420 ]
+848 silly gunzTarPerm extractEntry lib/optimize/RemoveParentModulesPlugin.js
+849 silly gunzTarPerm modified mode [ 'lib/optimize/RemoveParentModulesPlugin.js', 438, 420 ]
+850 silly gunzTarPerm extractEntry lib/optimize/RuntimeChunkPlugin.js
+851 silly gunzTarPerm modified mode [ 'lib/optimize/RuntimeChunkPlugin.js', 438, 420 ]
+852 silly gunzTarPerm extractEntry lib/optimize/SideEffectsFlagPlugin.js
+853 silly gunzTarPerm modified mode [ 'lib/optimize/SideEffectsFlagPlugin.js', 438, 420 ]
+854 silly gunzTarPerm extractEntry lib/optimize/SplitChunksPlugin.js
+855 silly gunzTarPerm modified mode [ 'lib/optimize/SplitChunksPlugin.js', 438, 420 ]
+856 silly gunzTarPerm extractEntry lib/OptionsApply.js
+857 silly gunzTarPerm modified mode [ 'lib/OptionsApply.js', 438, 420 ]
+858 silly gunzTarPerm extractEntry lib/OptionsDefaulter.js
+859 silly gunzTarPerm modified mode [ 'lib/OptionsDefaulter.js', 438, 420 ]
+860 silly gunzTarPerm extractEntry lib/Parser.js
+861 silly gunzTarPerm modified mode [ 'lib/Parser.js', 438, 420 ]
+862 silly gunzTarPerm extractEntry lib/ParserHelpers.js
+863 silly gunzTarPerm modified mode [ 'lib/ParserHelpers.js', 438, 420 ]
+864 silly gunzTarPerm extractEntry lib/performance/AssetsOverSizeLimitWarning.js
+865 silly gunzTarPerm modified mode [ 'lib/performance/AssetsOverSizeLimitWarning.js', 438, 420 ]
+866 silly gunzTarPerm extractEntry lib/performance/EntrypointsOverSizeLimitWarning.js
+867 silly gunzTarPerm modified mode [ 'lib/performance/EntrypointsOverSizeLimitWarning.js',
+867 silly gunzTarPerm   438,
+867 silly gunzTarPerm   420 ]
+868 silly gunzTarPerm extractEntry lib/performance/NoAsyncChunksWarning.js
+869 silly gunzTarPerm modified mode [ 'lib/performance/NoAsyncChunksWarning.js', 438, 420 ]
+870 silly gunzTarPerm extractEntry lib/performance/SizeLimitsPlugin.js
+871 silly gunzTarPerm modified mode [ 'lib/performance/SizeLimitsPlugin.js', 438, 420 ]
+872 silly gunzTarPerm extractEntry lib/PrefetchPlugin.js
+873 silly gunzTarPerm modified mode [ 'lib/PrefetchPlugin.js', 438, 420 ]
+874 silly gunzTarPerm extractEntry lib/ProgressPlugin.js
+875 silly gunzTarPerm modified mode [ 'lib/ProgressPlugin.js', 438, 420 ]
+876 silly gunzTarPerm extractEntry lib/ProvidePlugin.js
+877 silly gunzTarPerm modified mode [ 'lib/ProvidePlugin.js', 438, 420 ]
+878 silly gunzTarPerm extractEntry lib/RawModule.js
+879 silly gunzTarPerm modified mode [ 'lib/RawModule.js', 438, 420 ]
+880 silly gunzTarPerm extractEntry lib/RecordIdsPlugin.js
+881 silly gunzTarPerm modified mode [ 'lib/RecordIdsPlugin.js', 438, 420 ]
+882 silly gunzTarPerm extractEntry lib/RemovedPluginError.js
+883 silly gunzTarPerm modified mode [ 'lib/RemovedPluginError.js', 438, 420 ]
+884 silly gunzTarPerm extractEntry lib/RequestShortener.js
+885 silly gunzTarPerm modified mode [ 'lib/RequestShortener.js', 438, 420 ]
+886 silly gunzTarPerm extractEntry lib/RequireJsStuffPlugin.js
+887 silly gunzTarPerm modified mode [ 'lib/RequireJsStuffPlugin.js', 438, 420 ]
+888 silly gunzTarPerm extractEntry lib/ResolverFactory.js
+889 silly gunzTarPerm modified mode [ 'lib/ResolverFactory.js', 438, 420 ]
+890 silly gunzTarPerm extractEntry lib/RuleSet.js
+891 silly gunzTarPerm modified mode [ 'lib/RuleSet.js', 438, 420 ]
+892 silly gunzTarPerm extractEntry lib/RuntimeTemplate.js
+893 silly gunzTarPerm modified mode [ 'lib/RuntimeTemplate.js', 438, 420 ]
+894 silly gunzTarPerm extractEntry lib/SetVarMainTemplatePlugin.js
+895 silly gunzTarPerm modified mode [ 'lib/SetVarMainTemplatePlugin.js', 438, 420 ]
+896 silly gunzTarPerm extractEntry lib/SingleEntryPlugin.js
+897 silly gunzTarPerm modified mode [ 'lib/SingleEntryPlugin.js', 438, 420 ]
+898 silly gunzTarPerm extractEntry lib/SizeFormatHelpers.js
+899 silly gunzTarPerm modified mode [ 'lib/SizeFormatHelpers.js', 438, 420 ]
+900 silly gunzTarPerm extractEntry lib/SourceMapDevToolModuleOptionsPlugin.js
+901 silly gunzTarPerm modified mode [ 'lib/SourceMapDevToolModuleOptionsPlugin.js', 438, 420 ]
+902 silly gunzTarPerm extractEntry lib/SourceMapDevToolPlugin.js
+903 silly gunzTarPerm modified mode [ 'lib/SourceMapDevToolPlugin.js', 438, 420 ]
+904 silly gunzTarPerm extractEntry lib/Stats.js
+905 silly gunzTarPerm modified mode [ 'lib/Stats.js', 438, 420 ]
+906 silly gunzTarPerm extractEntry lib/Template.js
+907 silly gunzTarPerm modified mode [ 'lib/Template.js', 438, 420 ]
+908 silly gunzTarPerm extractEntry lib/TemplatedPathPlugin.js
+909 silly gunzTarPerm modified mode [ 'lib/TemplatedPathPlugin.js', 438, 420 ]
+910 silly gunzTarPerm extractEntry lib/UmdMainTemplatePlugin.js
+911 silly gunzTarPerm modified mode [ 'lib/UmdMainTemplatePlugin.js', 438, 420 ]
+912 silly gunzTarPerm extractEntry lib/UnsupportedFeatureWarning.js
+913 silly gunzTarPerm modified mode [ 'lib/UnsupportedFeatureWarning.js', 438, 420 ]
+914 silly gunzTarPerm extractEntry lib/UseStrictPlugin.js
+915 silly gunzTarPerm modified mode [ 'lib/UseStrictPlugin.js', 438, 420 ]
+916 silly gunzTarPerm extractEntry lib/util/cachedMerge.js
+917 silly gunzTarPerm modified mode [ 'lib/util/cachedMerge.js', 438, 420 ]
+918 silly gunzTarPerm extractEntry lib/util/createHash.js
+919 silly gunzTarPerm modified mode [ 'lib/util/createHash.js', 438, 420 ]
+920 silly gunzTarPerm extractEntry lib/util/identifier.js
+921 silly gunzTarPerm modified mode [ 'lib/util/identifier.js', 438, 420 ]
+922 silly gunzTarPerm extractEntry lib/util/objectToMap.js
+923 silly gunzTarPerm modified mode [ 'lib/util/objectToMap.js', 438, 420 ]
+924 silly gunzTarPerm extractEntry lib/util/Queue.js
+925 silly gunzTarPerm modified mode [ 'lib/util/Queue.js', 438, 420 ]
+926 silly gunzTarPerm extractEntry lib/util/Semaphore.js
+927 silly gunzTarPerm modified mode [ 'lib/util/Semaphore.js', 438, 420 ]
+928 silly gunzTarPerm extractEntry lib/util/SetHelpers.js
+929 silly gunzTarPerm modified mode [ 'lib/util/SetHelpers.js', 438, 420 ]
+930 silly gunzTarPerm extractEntry lib/util/SortableSet.js
+931 silly gunzTarPerm modified mode [ 'lib/util/SortableSet.js', 438, 420 ]
+932 silly gunzTarPerm extractEntry lib/util/StackedSetMap.js
+933 silly gunzTarPerm modified mode [ 'lib/util/StackedSetMap.js', 438, 420 ]
+934 silly gunzTarPerm extractEntry lib/util/TrackingSet.js
+935 silly gunzTarPerm modified mode [ 'lib/util/TrackingSet.js', 438, 420 ]
+936 silly gunzTarPerm extractEntry lib/validateSchema.js
+937 silly gunzTarPerm modified mode [ 'lib/validateSchema.js', 438, 420 ]
+938 silly gunzTarPerm extractEntry lib/WarnCaseSensitiveModulesPlugin.js
+939 silly gunzTarPerm modified mode [ 'lib/WarnCaseSensitiveModulesPlugin.js', 438, 420 ]
+940 silly gunzTarPerm extractEntry lib/WarnNoModeSetPlugin.js
+941 silly gunzTarPerm modified mode [ 'lib/WarnNoModeSetPlugin.js', 438, 420 ]
+942 silly gunzTarPerm extractEntry lib/wasm/WasmModuleTemplatePlugin.js
+943 silly gunzTarPerm modified mode [ 'lib/wasm/WasmModuleTemplatePlugin.js', 438, 420 ]
+944 silly gunzTarPerm extractEntry lib/WatchIgnorePlugin.js
+945 silly gunzTarPerm modified mode [ 'lib/WatchIgnorePlugin.js', 438, 420 ]
+946 silly gunzTarPerm extractEntry lib/Watching.js
+947 silly gunzTarPerm modified mode [ 'lib/Watching.js', 438, 420 ]
+948 silly gunzTarPerm extractEntry lib/web/FetchCompileWasmMainTemplatePlugin.js
+949 silly gunzTarPerm modified mode [ 'lib/web/FetchCompileWasmMainTemplatePlugin.js', 438, 420 ]
+950 silly gunzTarPerm extractEntry lib/web/FetchCompileWasmTemplatePlugin.js
+951 silly gunzTarPerm modified mode [ 'lib/web/FetchCompileWasmTemplatePlugin.js', 438, 420 ]
+952 silly gunzTarPerm extractEntry lib/web/JsonpChunkTemplatePlugin.js
+953 silly gunzTarPerm modified mode [ 'lib/web/JsonpChunkTemplatePlugin.js', 438, 420 ]
+954 silly gunzTarPerm extractEntry lib/web/JsonpExportMainTemplatePlugin.js
+955 silly gunzTarPerm modified mode [ 'lib/web/JsonpExportMainTemplatePlugin.js', 438, 420 ]
+956 silly gunzTarPerm extractEntry lib/web/JsonpHotUpdateChunkTemplatePlugin.js
+957 silly gunzTarPerm modified mode [ 'lib/web/JsonpHotUpdateChunkTemplatePlugin.js', 438, 420 ]
+958 silly gunzTarPerm extractEntry lib/web/JsonpMainTemplate.runtime.js
+959 silly gunzTarPerm modified mode [ 'lib/web/JsonpMainTemplate.runtime.js', 438, 420 ]
+960 silly gunzTarPerm extractEntry lib/web/JsonpMainTemplatePlugin.js
+961 silly gunzTarPerm modified mode [ 'lib/web/JsonpMainTemplatePlugin.js', 438, 420 ]
+962 silly gunzTarPerm extractEntry lib/web/JsonpTemplatePlugin.js
+963 silly gunzTarPerm modified mode [ 'lib/web/JsonpTemplatePlugin.js', 438, 420 ]
+964 silly gunzTarPerm extractEntry lib/web/WebEnvironmentPlugin.js
+965 silly gunzTarPerm modified mode [ 'lib/web/WebEnvironmentPlugin.js', 438, 420 ]
+966 silly gunzTarPerm extractEntry lib/WebAssemblyGenerator.js
+967 silly gunzTarPerm modified mode [ 'lib/WebAssemblyGenerator.js', 438, 420 ]
+968 silly gunzTarPerm extractEntry lib/WebAssemblyModulesPlugin.js
+969 silly gunzTarPerm modified mode [ 'lib/WebAssemblyModulesPlugin.js', 438, 420 ]
+970 silly gunzTarPerm extractEntry lib/WebAssemblyParser.js
+971 silly gunzTarPerm modified mode [ 'lib/WebAssemblyParser.js', 438, 420 ]
+972 silly gunzTarPerm extractEntry lib/webpack.js
+973 silly gunzTarPerm modified mode [ 'lib/webpack.js', 438, 420 ]
+974 silly gunzTarPerm extractEntry lib/webpack.web.js
+975 silly gunzTarPerm modified mode [ 'lib/webpack.web.js', 438, 420 ]
+976 silly gunzTarPerm extractEntry lib/WebpackError.js
+977 silly gunzTarPerm modified mode [ 'lib/WebpackError.js', 438, 420 ]
+978 silly gunzTarPerm extractEntry lib/WebpackOptionsApply.js
+979 silly gunzTarPerm modified mode [ 'lib/WebpackOptionsApply.js', 438, 420 ]
+980 silly gunzTarPerm extractEntry lib/WebpackOptionsDefaulter.js
+981 silly gunzTarPerm modified mode [ 'lib/WebpackOptionsDefaulter.js', 438, 420 ]
+982 silly gunzTarPerm extractEntry lib/WebpackOptionsValidationError.js
+983 silly gunzTarPerm modified mode [ 'lib/WebpackOptionsValidationError.js', 438, 420 ]
+984 silly gunzTarPerm extractEntry lib/webworker/WebWorkerChunkTemplatePlugin.js
+985 silly gunzTarPerm modified mode [ 'lib/webworker/WebWorkerChunkTemplatePlugin.js', 438, 420 ]
+986 silly gunzTarPerm extractEntry lib/webworker/WebWorkerHotUpdateChunkTemplatePlugin.js
+987 silly gunzTarPerm modified mode [ 'lib/webworker/WebWorkerHotUpdateChunkTemplatePlugin.js',
+987 silly gunzTarPerm   438,
+987 silly gunzTarPerm   420 ]
+988 silly gunzTarPerm extractEntry lib/webworker/WebWorkerMainTemplate.runtime.js
+989 silly gunzTarPerm modified mode [ 'lib/webworker/WebWorkerMainTemplate.runtime.js', 438, 420 ]
+990 silly gunzTarPerm extractEntry lib/webworker/WebWorkerMainTemplatePlugin.js
+991 silly gunzTarPerm modified mode [ 'lib/webworker/WebWorkerMainTemplatePlugin.js', 438, 420 ]
+992 silly gunzTarPerm extractEntry lib/webworker/WebWorkerTemplatePlugin.js
+993 silly gunzTarPerm modified mode [ 'lib/webworker/WebWorkerTemplatePlugin.js', 438, 420 ]
+994 silly gunzTarPerm extractEntry schemas/ajv.absolutePath.js
+995 silly gunzTarPerm modified mode [ 'schemas/ajv.absolutePath.js', 438, 420 ]
+996 silly gunzTarPerm extractEntry schemas/plugins/BannerPlugin.json
+997 silly gunzTarPerm modified mode [ 'schemas/plugins/BannerPlugin.json', 438, 420 ]
+998 silly gunzTarPerm extractEntry schemas/plugins/debug/ProfilingPlugin.json
+999 silly gunzTarPerm modified mode [ 'schemas/plugins/debug/ProfilingPlugin.json', 438, 420 ]
+1000 silly gunzTarPerm extractEntry schemas/plugins/DllPlugin.json
+1001 silly gunzTarPerm modified mode [ 'schemas/plugins/DllPlugin.json', 438, 420 ]
+1002 silly gunzTarPerm extractEntry schemas/plugins/DllReferencePlugin.json
+1003 silly gunzTarPerm modified mode [ 'schemas/plugins/DllReferencePlugin.json', 438, 420 ]
+1004 silly gunzTarPerm extractEntry schemas/plugins/HashedModuleIdsPlugin.json
+1005 silly gunzTarPerm modified mode [ 'schemas/plugins/HashedModuleIdsPlugin.json', 438, 420 ]
+1006 silly gunzTarPerm extractEntry schemas/plugins/LoaderOptionsPlugin.json
+1007 silly gunzTarPerm modified mode [ 'schemas/plugins/LoaderOptionsPlugin.json', 438, 420 ]
+1008 silly gunzTarPerm extractEntry schemas/plugins/optimize/AggressiveSplittingPlugin.json
+1009 silly gunzTarPerm modified mode [ 'schemas/plugins/optimize/AggressiveSplittingPlugin.json',
+1009 silly gunzTarPerm   438,
+1009 silly gunzTarPerm   420 ]
+1010 silly gunzTarPerm extractEntry schemas/plugins/optimize/LimitChunkCountPlugin.json
+1011 silly gunzTarPerm modified mode [ 'schemas/plugins/optimize/LimitChunkCountPlugin.json',
+1011 silly gunzTarPerm   438,
+1011 silly gunzTarPerm   420 ]
+1012 silly gunzTarPerm extractEntry schemas/plugins/optimize/MinChunkSizePlugin.json
+1013 silly gunzTarPerm modified mode [ 'schemas/plugins/optimize/MinChunkSizePlugin.json', 438, 420 ]
+1014 silly gunzTarPerm extractEntry schemas/plugins/SourceMapDevToolPlugin.json
+1015 silly gunzTarPerm modified mode [ 'schemas/plugins/SourceMapDevToolPlugin.json', 438, 420 ]
+1016 silly gunzTarPerm extractEntry schemas/plugins/WatchIgnorePlugin.json
+1017 silly gunzTarPerm modified mode [ 'schemas/plugins/WatchIgnorePlugin.json', 438, 420 ]
+1018 silly gunzTarPerm extractEntry schemas/WebpackOptions.json
+1019 silly gunzTarPerm modified mode [ 'schemas/WebpackOptions.json', 438, 420 ]
+1020 silly gunzTarPerm extractEntry web_modules/node-libs-browser.js
+1021 silly gunzTarPerm modified mode [ 'web_modules/node-libs-browser.js', 438, 420 ]
+1022 silly gentlyRm /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1/node_modules is being purged
+1023 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1/node_modules
+1024 silly gentlyRm /var/node/node_modules/.staging/webpack-dea82287/node_modules is being purged
+1025 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.staging/webpack-dea82287/node_modules
+1026 silly doParallel preinstall 3
+1027 silly preinstall acorn@5.5.3 /var/node/node_modules/.staging/acorn-ee0b7ffa
+1028 info lifecycle acorn@5.5.3~preinstall: acorn@5.5.3
+1029 silly preinstall webpack@4.6.0 /var/node/node_modules/.staging/webpack-dea82287
+1030 info lifecycle webpack@4.6.0~preinstall: webpack@4.6.0
+1031 silly preinstall @angular-devkit/build-angular@0.6.1 /var/node/node_modules/.staging/@angular-devkit/build-angular-ddbd55b1
+1032 info lifecycle @angular-devkit/build-angular@0.6.1~preinstall: @angular-devkit/build-angular@0.6.1
+1033 silly lifecycle webpack@4.6.0~preinstall: no script for preinstall, continuing
+1034 silly lifecycle acorn@5.5.3~preinstall: no script for preinstall, continuing
+1035 silly lifecycle @angular-devkit/build-angular@0.6.1~preinstall: no script for preinstall, continuing
+1036 silly doReverseSerial remove 0
+1037 silly doSerial move 0
+1038 silly doSerial finalize 3
+1039 silly finalize /var/node/node_modules/acorn
+1040 silly finalize /var/node/node_modules/webpack
+1041 silly finalize /var/node/node_modules/@angular-devkit/build-angular
+1042 silly doSerial build 3
+1043 silly build acorn@5.5.3
+1044 info linkStuff acorn@5.5.3
+1045 silly linkStuff acorn@5.5.3 has /var/node/node_modules as its parent node_modules
+1046 verbose linkBins acorn@5.5.3
+1047 verbose link bins [ { acorn: './bin/acorn' },
+1047 verbose link bins   '/var/node/node_modules/.bin',
+1047 verbose link bins   false ]
+1048 verbose linkMans acorn@5.5.3
+1049 silly gentlyRm /var/node/node_modules/.bin/acorn is being purged
+1050 verbose gentlyRm don't care about contents; nuking /var/node/node_modules/.bin/acorn
+1051 verbose unlock done using /root/.npm/_locks/staging-f5fdbc5a0431071e.lock for /var/node/node_modules/.staging
+1052 silly rollbackFailedOptional Starting
+1053 silly rollbackFailedOptional Finishing
+1054 silly runTopLevelLifecycles Finishing
+1055 silly install printInstalled
+1056 warn optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.1.2 (node_modules/chokidar/node_modules/fsevents):
+1057 warn notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+1058 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Valid OS:    darwin
+1058 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Valid Arch:  any
+1058 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Actual OS:   linux
+1058 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Actual Arch: x64
+1059 warn optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/@angular/compiler-cli/node_modules/chokidar/node_modules/fsevents):
+1060 warn notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+1061 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Valid OS:    darwin
+1061 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Valid Arch:  any
+1061 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Actual OS:   linux
+1061 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Actual Arch: x64
+1062 warn optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/karma/node_modules/chokidar/node_modules/fsevents):
+1063 warn notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+1064 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Valid OS:    darwin
+1064 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Valid Arch:  any
+1064 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Actual OS:   linux
+1064 verbose notsup SKIPPING OPTIONAL DEPENDENCY: Actual Arch: x64
+1065 verbose stack Error: EROFS: read-only file system, symlink '../acorn/bin/acorn' -> '/var/node/node_modules/.bin/acorn'
+1065 verbose stack     at Error (native)
+1066 verbose cwd /var/node
+1067 error Linux 3.10.0-862.2.3.el7.x86_64
+1068 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+1069 error node v6.14.2
+1070 error npm  v3.10.10
+1071 error path ../acorn/bin/acorn
+1072 error code EROFS
+1073 error errno -30
+1074 error syscall symlink
+1075 error rofs EROFS: read-only file system, symlink '../acorn/bin/acorn' -> '/var/node/node_modules/.bin/acorn'
+1076 error rofs This is most likely not a problem with npm itself
+1076 error rofs and is related to the file system being read-only.
+1076 error rofs
+1076 error rofs Often virtualized file systems, or other file systems
+1076 error rofs that don't support symlinks, give this error.
+1077 verbose exit [ -30, true ]
