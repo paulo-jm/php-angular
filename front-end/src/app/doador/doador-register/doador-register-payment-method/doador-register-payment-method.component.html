@@ -13,9 +13,9 @@
 <div class="row">
   <div class="col">
 
-    <div *ngIf="!formGroup?.controls?.paymentMethods?.controls?.length > 0">Não existe meios de pagamentos cadastrados.</div>
+    <div *ngIf="!(formGroup?.get('paymentMethods')?.controls?.length > 0)">Não existe meios de pagamentos cadastrados.</div>
 
-    <table *ngIf="formGroup?.controls?.paymentMethods?.controls?.length > 0" class="mat-table col">
+    <table *ngIf="formGroup?.get('paymentMethods')?.controls?.length > 0" class="mat-table col">
       <thead>
         <tr class="mat-header-row">
           <th class="mat-header-cell"> Nome metodo pagamento </th>
@@ -24,7 +24,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="mat-row" *ngFor="let item of formGroup.controls.paymentMethods.controls; let i = index">
+        <tr class="mat-row" *ngFor="let item of formGroup?.get('paymentMethods')?.controls; let i = index">
           <td class="mat-cell">{{item.controls.paymentMethodName.value}}</td>
           <td class="mat-cell">{{item.controls.paymentMethodType.value.paymentMethodTypeName}}</td>
           <td class="mat-cell">

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { Apadrinhado } from '../apadrinhado-model/apadrinhado.model';
 import { GenericListComponent } from '../../../util/crud/generic-list-component';
-import { ApadrinhadoDao } from '../apadrinhado-dao/Apadrinhado.dao';
+import { ApadrinhadoDao } from '../apadrinhado-dao/apadrinhado.dao';
 
 @Component({
   selector: 'app-apadrinhado-list',

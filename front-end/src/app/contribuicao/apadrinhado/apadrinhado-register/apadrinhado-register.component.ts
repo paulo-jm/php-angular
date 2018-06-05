@@ -3,13 +3,12 @@ import { MatDialog, MatSnackBar } from '@angular/material';
 import { Contribuicao } from '../../contribuicao/contribuicao-model/contribuicao.model';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { GenericRegisterComponent } from '../../../util/crud/generic-register-component';
-import { ApadrinhadoDao } from '../apadrinhado-dao/Apadrinhado.dao';
+import { ApadrinhadoDao } from '../apadrinhado-dao/apadrinhado.dao';
 import { ContribuicaoDao } from '../../contribuicao/contribuicao-dao/contribuicao.dao';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Paginator } from '../../../util/paginator/paginator-model/paginator.model';
 import { Apadrinhado } from '../apadrinhado-model/apadrinhado.model';
-import { truncate } from 'fs';
 
 @Component({
   selector: 'app-apadrinhado-register',

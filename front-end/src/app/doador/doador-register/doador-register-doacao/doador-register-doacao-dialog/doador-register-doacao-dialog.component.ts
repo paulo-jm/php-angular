@@ -10,7 +10,7 @@ import { PaymentMethod } from '../../../../payment-method/payment-method.model';
 })
 export class DoadorRegisterDoacaoDialogComponent implements OnInit {
 
-  private formGroup: FormGroup;
+  public formGroup: FormGroup;
 
   public paymentMethods: PaymentMethod[];
 

@@ -36,7 +36,7 @@ import { ContribuicaoDao } from './contribuicao/contribuicao-dao/contribuicao.da
 import { ApadrinhadoComponent } from './apadrinhado/apadrinhado.component';
 import { ApadrinhadoListComponent } from './apadrinhado/apadrinhado-list/apadrinhado-list.component';
 import { ApadrinhadoRegisterComponent } from './apadrinhado/apadrinhado-register/apadrinhado-register.component';
-import { ApadrinhadoDao } from './apadrinhado/apadrinhado-dao/Apadrinhado.dao';
+import { ApadrinhadoDao } from './apadrinhado/apadrinhado-dao/apadrinhado.dao';
 
 @NgModule({
   imports: [

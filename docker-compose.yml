@@ -1,5 +1,15 @@
 version: '3'
 services:
+  front-end:
+    image: httpd:2.4
+    depends_on:
+      - back-end
+    links:
+      - back-end:back-end
+    ports:
+      - "8100:80"
+    volumes:
+      - ./front-end/dist/:/usr/local/apache2/htdocs/
   back-end:
     build: .
     depends_on:
@@ -12,16 +22,14 @@ services:
       - ./back-end:/var/www
   db_mysql:
     image: mysql:5.7
-    container_name: assistence_db_mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=assisten_sistema
-      - MYSQL_USER=assisten
-      - MYSQL_PASSWORD=assisten
+      - MYSQL_ROOT_PASSWORD=dianted@root.trono238
+      - MYSQL_DATABASE=db_diantetr
+      - MYSQL_USER=diantetr
+      - MYSQL_PASSWORD=dianted@trono238
     restart: always
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: assistence_phpmyadmin
     depends_on:
       - db_mysql
     links: 
@@ -29,8 +37,8 @@ services:
     ports:
       - 8120:80
     environment:
-      MYSQL_USER: assisten
-      MYSQL_PASSWORD: assisten
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: diantetr
+      MYSQL_PASSWORD: dianted@trono238
+      MYSQL_ROOT_PASSWORD: dianted@root.trono238
       PMA_HOST: db_mysql
     restart: always
