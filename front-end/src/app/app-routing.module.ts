@@ -20,7 +20,7 @@ import { LogoutComponent } from './security/authentication/logout/logout.compone
 import { LoginComponent } from './security/authentication/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'doador', pathMatch: 'full' },
+  { path: '', redirectTo: 'security', pathMatch: 'full' },
   {
     path: 'security', component: AuthenticationComponent,
     children: [

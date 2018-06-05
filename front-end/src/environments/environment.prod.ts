@@ -5,19 +5,19 @@ export const environment = {
       endopoints: [
         {
           resource: 'paginate',
-          path: "http://http://vps8011.publiccloud.com.br:8110/doador/paginate",
+          path: "http://vps8011.publiccloud.com.br:8110/doador/paginate",
         },
         {
           resource: 'findById',
-          path: "http://http://vps8011.publiccloud.com.br:8110/doador/findById/",
+          path: "http://vps8011.publiccloud.com.br:8110/doador/findById/",
         },
         {
           resource: 'create',
-          path: "http://http://vps8011.publiccloud.com.br:8110/doador/create",
+          path: "http://vps8011.publiccloud.com.br:8110/doador/create",
         },
         {
           resource: 'update',
-          path: "http://http://vps8011.publiccloud.com.br:8110/doador/update/",
+          path: "http://vps8011.publiccloud.com.br:8110/doador/update/",
         },
       ]
     },
@@ -25,19 +25,19 @@ export const environment = {
       endopoints: [
         {
           resource: 'paginate',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/paginate",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/paginate",
         },
         {
           resource: 'findById',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/findById/",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/findById/",
         },
         {
           resource: 'create',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/create",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/create",
         },
         {
           resource: 'update',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/update/",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/contribuicao/update/",
         },
       ]
     },
@@ -45,19 +45,19 @@ export const environment = {
       endopoints: [
         {
           resource: 'paginate',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/paginate",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/paginate",
         },
         {
           resource: 'findById',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/findById/",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/findById/",
         },
         {
           resource: 'create',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/create",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/create",
         },
         {
           resource: 'update',
-          path: "http://http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/update/",
+          path: "http://vps8011.publiccloud.com.br:8110/contribuicao/apadrinhado/update/",
         },
       ]
     },
@@ -68,11 +68,11 @@ export const environment = {
       endopoints: [
         {
           resource: 'login',
-          path: "http://http://vps8011.publiccloud.com.br:8110/authentication/login",
+          path: "http://vps8011.publiccloud.com.br:8110/authentication/login",
         },
         {
           resource: 'logout',
-          path: "http://http://vps8011.publiccloud.com.br:8110/authentication/logout",
+          path: "http://vps8011.publiccloud.com.br:8110/authentication/logout",
         }
       ]
     },
