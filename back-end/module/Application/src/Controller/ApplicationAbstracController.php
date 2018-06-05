@@ -121,7 +121,10 @@ abstract class ApplicationAbstracController extends AbstractActionController {
                 $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_400);
                 return new JsonModel($this->form->getMessages());
             }
-        } else if(!$request->isOptions()) {
+        } else if($request->isOptions()) {
+            $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
+            return $this->getResponse();
+        } else {
             $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_405);
             return $this->getResponse();
         }

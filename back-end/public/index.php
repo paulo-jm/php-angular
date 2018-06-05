@@ -1,7 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: http://vps8011.publiccloud.com.br');
-header("Access-Control-Allow-Credentials: true");
-
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
