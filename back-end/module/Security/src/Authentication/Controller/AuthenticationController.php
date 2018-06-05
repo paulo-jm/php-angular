@@ -64,7 +64,7 @@ class AuthenticationController extends AbstractActionController {
                 $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_400);
                 return new JsonModel($this->form->getMessages());
             }
-        } else {
+        } else if(!$request->isOptions()) {
             $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_405);
             return $this->getResponse();
         }
@@ -80,7 +80,7 @@ class AuthenticationController extends AbstractActionController {
             } catch (\Exception $ex) {
                 $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_412);
             }
-        } else {
+        } else if(!$request->isOptions()) {
             $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_405);
         }
         return $this->getResponse();
