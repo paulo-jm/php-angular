@@ -9,12 +9,12 @@ export class LayoutNavigationComponent implements OnInit {
 
   public menus = [
     {
-      'title': 'Contribuição',
+      'title': 'Cadastro',
       'active': true,
       'path': '',
       'children': [
         {
-          'title': 'Contribuição',
+          'title': 'Projeto',
           'active': true,
           'path': '/contribuicao/contribuicao'
         },
@@ -43,7 +43,7 @@ export class LayoutNavigationComponent implements OnInit {
     {
       'title': 'Logout',
       'active': false,
-      'path': '/security/'
+      'path': '/security/logout'
     }
   ];
 

@@ -35,13 +35,17 @@ abstract class ApplicationAbstracController extends AbstractActionController {
 
     public function paginateAction() {
 
-        $filter = $this->params()->fromQuery('filter', 1);
-        $sort = $this->params()->fromQuery('sort', 1);
-        $order = $this->params()->fromQuery('order', 1);
+        $filter = $this->params()->fromQuery('filter');
+        $sort = $this->params()->fromQuery('sort', "desc");
+        $column = $this->params()->fromQuery('column', "id");
         $page = $this->params()->fromQuery('page', 1);
         $limit = $this->params()->fromQuery('limit', 10);
 
-        $query = $this->getPaginateQuery($filter, $sort, $order);
+        if(!empty($filter)){
+            $filter = Json::decode($filter, Json::TYPE_ARRAY);
+        }
+        
+        $query = $this->getPaginateQuery($filter, $column, $sort);
 
         $adapter = new DoctrineAdapter(new ORMPaginator($query, false));
         $paginator = new Paginator($adapter);
@@ -67,7 +71,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
             return $this->getResponse();
         }
 
-        $jsonModel = new JsonModel(getEntities($contribuicao));
+        $jsonModel = new JsonModel($this->getEntities($contribuicao));
         return $jsonModel;
     }
 
@@ -112,7 +116,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
                                     'Location' => $this->getLocation($entity),
                                 )
                 );
-                return $this->getResponse();
+                return new JsonModel(json_decode(json_encode($this->getEntity($entity)), TRUE));
             } else {
                 $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_400);
                 return new JsonModel($this->form->getMessages());
@@ -149,7 +153,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
                 $this->entityManager->flush();
 
                 $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
-                return $this->getResponse();
+                return new JsonModel(json_decode(json_encode($this->getEntity($entity)), TRUE));
             } else {
                 $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_400);
                 return new JsonModel($this->form->getMessages());

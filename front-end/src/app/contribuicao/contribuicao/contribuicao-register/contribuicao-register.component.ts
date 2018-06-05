@@ -4,7 +4,7 @@ import { GenericRegisterComponent } from '../../../util/crud/generic-register-co
 import { ContribuicaoDao } from '../contribuicao-dao/contribuicao.dao';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-contribuicao-register',
@@ -20,6 +20,7 @@ export class ContribuicaoRegisterComponent extends GenericRegisterComponent<Cont
     private _formBuilder: FormBuilder,
     private _dao: ContribuicaoDao,
     public dialog: MatDialog,
+    public snackBar: MatSnackBar,
   ) {
     super();
   }
@@ -28,17 +29,21 @@ export class ContribuicaoRegisterComponent extends GenericRegisterComponent<Cont
     return this._activateRouter.snapshot.params['id'];
   }
 
-  afterCreated(): void { }
+  afterCreated(): void {
+    this.snackBar.open('Projeto salvo com sucesso.', 'Ver todos')
+      .onAction().subscribe(() => {
+        this._router.navigate(['/contribuicao/contribuicao/list']);
 
-  berforeCreat(): void {
-    this._router.navigate(['/contribuicao/contribuicao/list']);
+      });
   }
+
+  berforeCreat(): void { }
 
   createForm(): FormGroup {
     return this._formBuilder.group({
       id: this._formBuilder.control('', []),
       nome: this._formBuilder.control('', [Validators.required]),
-      tipo : this._formBuilder.control('', [Validators.required]),
+      tipo: this._formBuilder.control('', [Validators.required]),
       ativo: this._formBuilder.control(true, []),
     });
   }

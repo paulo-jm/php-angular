@@ -6,12 +6,14 @@ import { FormGroup, FormArray } from '@angular/forms/src/model';
 
 import { Observable } from 'rxjs';
 
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 
 import { GenericRegisterComponent } from '../../util/crud/generic-register-component';
-import { DoadorDao } from './doador-register.dao';
-import { Doador } from '../doador.model';
 import { DoadorRegisterPaymentMethodDialogComponent } from './doador-register-payment-method/doador-register-payment-method-dialog/doador-register-payment-method-dialog.component';
+import { DoadorDao } from '../doador-dao/doador.dao';
+import { Doador } from '../doador-model/doador.model';
+
+
 
 @Component({
   selector: 'app-doador-register',
@@ -19,8 +21,8 @@ import { DoadorRegisterPaymentMethodDialogComponent } from './doador-register-pa
 })
 export class DoadorRegisterComponent extends GenericRegisterComponent<Doador> {
 
-  public tabInfBasicas: boolean = false;
-  public tabMeioPagamento: boolean = true;
+  public tabInfBasicas: boolean = true;
+  public tabMeioPagamento: boolean = false;
   public tabDoacao: boolean = false;
 
   constructor(
@@ -29,6 +31,7 @@ export class DoadorRegisterComponent extends GenericRegisterComponent<Doador> {
     private _formBuilder: FormBuilder,
     private _dao: DoadorDao,
     public dialog: MatDialog,
+    public snackBar: MatSnackBar
   ) {
     super();
   }
@@ -38,11 +41,15 @@ export class DoadorRegisterComponent extends GenericRegisterComponent<Doador> {
   }
 
   getPathId(): number {
-    return null;
+    return this._activateRouter.snapshot.params['id'];
   }
 
   afterCreated(): void {
-    this._router.navigate(['/doador/list']);
+    this.snackBar.open('Doador salvo com sucesso.', 'Ver todos')
+      .onAction().subscribe(() => {
+        this._router.navigate(['/doador/list']);
+
+      });
   }
 
   berforeCreat(): void { }
@@ -50,15 +57,12 @@ export class DoadorRegisterComponent extends GenericRegisterComponent<Doador> {
   createForm(): FormGroup {
     return this._formBuilder.group({
       id: this._formBuilder.control('', []),
-      name: this._formBuilder.control('', [Validators.required]),
-      phone: this._formBuilder.control('', []),
-      paymentMethods: this._formBuilder.array([]),
-      donations: this._formBuilder.array([]),
+      nome: this._formBuilder.control('', [Validators.required]),
+      telefone: this._formBuilder.control('', [])
     });
   }
 
   ativarTab(tab: string) {
-    console.log(tab);
     this.tabInfBasicas = false;
     this.tabMeioPagamento = false;
     this.tabDoacao = false;
@@ -78,6 +82,11 @@ export class DoadorRegisterComponent extends GenericRegisterComponent<Doador> {
         break;
     }
 
+  }
+
+  isUserSaved() : boolean {
+    console.log(this.form.controls.id.value);
+    return this.form.controls.id.value !== "";
   }
 
   init(): void {

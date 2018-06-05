@@ -1,12 +1,13 @@
+<mat-progress-bar class="mat-elevation-z2" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 <mat-card class="mat-elevation-z2">
 
   <div class="row">
       <div class="col">
-          <mat-card-title>Contribuição</mat-card-title>
+          <mat-card-title>Projeto</mat-card-title>
       </div>
       <div class="col">
           <div class="float-right">
-              <button [routerLink]="['/contribuicao/contribuicao/register']" mat-raised-button color="primary">Novo Doador</button>
+              <button [routerLink]="['/contribuicao/contribuicao/register']" mat-raised-button color="primary">Novo Projeto</button>
           </div>
       </div>
   </div>
@@ -20,13 +21,13 @@
             <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
         </ng-container>
         
-        <ng-container matColumnDef="name">
+        <ng-container matColumnDef="nome">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Nome</mat-header-cell>
             <mat-cell *matCellDef="let item">{{item.nome}}</mat-cell>
         </ng-container>
        
-        <ng-container matColumnDef="type">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Tipo contribuição</mat-header-cell>
+        <ng-container matColumnDef="tipo">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Tipo</mat-header-cell>
             <mat-cell *matCellDef="let item">{{item.tipo}}</mat-cell>
         </ng-container>
 

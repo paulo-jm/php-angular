@@ -32,6 +32,11 @@ class DoadorForm extends Form {
             'name' => 'nome',
             'type' => 'Text',
         ));
+        
+        $this->add(array(
+            'name' => 'telefone',
+            'type' => 'Text',
+        ));
 
     }
 }

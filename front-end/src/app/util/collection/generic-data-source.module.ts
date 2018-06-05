@@ -30,8 +30,10 @@ export class GenericDataSourceModule<T extends Entity> extends DataSource<T> {
     /** Stream that emits when a new filter string is set on the data source. */
     private readonly _filter = new BehaviorSubject<string>('');
 
-    get loading() { return  this.loadingSubject.asObservable(); }
-    private loadingSubject = new BehaviorSubject<boolean>(false);
+    get loading() {
+        console.log(this._dao.loading);
+        return this._dao.loading;
+    }
 
     /**
      * The filtered set of data that has been matched by the filter string, or all the data if there
@@ -78,7 +80,7 @@ export class GenericDataSourceModule<T extends Entity> extends DataSource<T> {
     }
     private _paginator: MatPaginator | null;
 
-    constructor(private _dao: GenericDao<T>, paginator : MatPaginator , sort: MatSort ) {
+    constructor(private _dao: GenericDao<T>, paginator: MatPaginator, sort: MatSort) {
         super();
         this._data = new BehaviorSubject<T[]>([]);
         this.paginator = paginator;
@@ -119,13 +121,12 @@ export class GenericDataSourceModule<T extends Entity> extends DataSource<T> {
       * as provided.
       */
     _paginate() {
-        this.loadingSubject.next(true);
-        return this._dao.paginate(this.filter, this._sort.direction, this._sort.active, this.paginator.pageIndex, this.paginator.pageSize)
+
+        return this._dao.paginate(this.filter, this._sort.active, this._sort.direction, this.paginator.pageIndex, this.paginator.pageSize)
             .subscribe(result => {
-                console.log(result);
                 this._renderData.next(result.data);
                 this._updatePaginator(result);
-                this.loadingSubject.next(false);
+
             });
     }
 
@@ -159,7 +160,6 @@ export class GenericDataSourceModule<T extends Entity> extends DataSource<T> {
      */
     disconnect() {
         this._data.complete();
-        this.loadingSubject.complete();
     }
 
 }

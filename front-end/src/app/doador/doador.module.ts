@@ -19,7 +19,9 @@ import {
  MatAutocompleteModule, 
  MatDatepickerModule,
  MatSelectModule,
- MatListModule } 
+ MatListModule,
+ MatProgressBarModule,
+ MatProgressSpinnerModule } 
 from '@angular/material';
 
 import { CrudModule } from '../util/crud/crud.module';
@@ -28,7 +30,7 @@ import { DeleteDialogComponent } from '../util/crud/delete-dialog/delete-dialog.
 import { DoadorListComponent } from './doador-list/doador-list.component';
 import { DoadorRegisterComponent } from './doador-register/doador-register.component';
 import { DoadorComponent } from './doador.component';
-import { DoadorDao } from './doador-register/doador-register.dao';
+import { DoadorDao } from './doador-dao/doador.dao';
 import { DoadorRegisterPaymentMethodComponent } from './doador-register/doador-register-payment-method/doador-register-payment-method.component';
 import { DoadorRegisterPaymentMethodDialogComponent } from './doador-register/doador-register-payment-method/doador-register-payment-method-dialog/doador-register-payment-method-dialog.component';
 import { DoadorRegisterDoacaoComponent } from './doador-register/doador-register-doacao/doador-register-doacao.component';
@@ -58,6 +60,8 @@ import { LayoutModule } from '../layout/layout.module';
     MatDialogModule,
     MatIconModule,
     MatListModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
 
     CrudModule,
 

@@ -16,13 +16,17 @@ import { ContribuicaoRegisterComponent } from './contribuicao/contribuicao/contr
 import { ApadrinhadoComponent } from './contribuicao/apadrinhado/apadrinhado.component';
 import { ApadrinhadoListComponent } from './contribuicao/apadrinhado/apadrinhado-list/apadrinhado-list.component';
 import { ApadrinhadoRegisterComponent } from './contribuicao/apadrinhado/apadrinhado-register/apadrinhado-register.component';
+import { LogoutComponent } from './security/authentication/logout/logout.component';
+import { LoginComponent } from './security/authentication/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'doador', pathMatch: 'full' },
   {
     path: 'security', component: AuthenticationComponent,
     children: [
-      { path: 'authentication ', component: AuthenticationComponent }
+      { path: '', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'logout', component: LogoutComponent },
     ]
   },
   {

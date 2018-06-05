@@ -23,6 +23,14 @@ class DoadorPersistInputFilter implements InputFilterAwareInterface {
     public function getInputFilter(): InputFilterInterface {
 
         $this->inputFilter->add(array(
+            'name' => 'id',
+            'required' => false,
+            'filters' => array(
+                array('name' => 'Int'),
+            ),
+        ));
+
+        $this->inputFilter->add(array(
             'name' => 'nome',
             'required' => true,
             'filters' => array(
@@ -40,7 +48,7 @@ class DoadorPersistInputFilter implements InputFilterAwareInterface {
                 ),
             ),
         ));
-        
+
         $this->inputFilter->add(array(
             'name' => 'telefone',
             'required' => true,
@@ -59,9 +67,8 @@ class DoadorPersistInputFilter implements InputFilterAwareInterface {
                 ),
             ),
         ));
-        
+
         return $this->inputFilter;
-        
     }
 
     public function setInputFilter(InputFilterInterface $inputFilter): InputFilterAwareInterface {

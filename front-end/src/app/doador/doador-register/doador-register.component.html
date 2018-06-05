@@ -21,8 +21,8 @@
 
                     <mat-nav-list>
                         <a (click)="ativarTab('inf-basicas')" mat-list-item [ngClass]="{'mat-list-item-focus': tabInfBasicas}">Informações Basicas</a>
-                        <a (click)="ativarTab('meio-pagamento')" mat-list-item [ngClass]="{'mat-list-item-focus': tabMeioPagamento}">Meios de Pagamento</a>
-                        <a (click)="ativarTab('doacao')" mat-list-item [ngClass]="{'mat-list-item-focus': tabDoacao}">Doações</a>
+                        <a *ngIf="isUserSaved()" (click)="ativarTab('meio-pagamento')"  mat-list-item [ngClass]="{'mat-list-item-focus': tabMeioPagamento}">Meios de Pagamento</a>
+                        <a *ngIf="isUserSaved()" (click)="ativarTab('doacao')" mat-list-item [ngClass]="{'mat-list-item-focus': tabDoacao}">Doações</a>
                     </mat-nav-list>
 
                 </div>
@@ -36,11 +36,11 @@
                         <div class="row">
 
                             <mat-form-field class="col">
-                                <input formControlName="name"  matInput placeholder="Nome">
+                                <input formControlName="nome"  matInput placeholder="Nome">
                             </mat-form-field>
 
-                            <mat-form-field class="col-2">
-                                <input formControlName="phone"  matInput placeholder="Telefone">
+                            <mat-form-field class="col-3">
+                                <input formControlName="telefone"  matInput placeholder="Telefone">
                             </mat-form-field>
                         </div>
                     </div>

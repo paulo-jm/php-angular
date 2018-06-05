@@ -34,13 +34,29 @@ class ContribuicaoController extends ApplicationAbstracController {
         return $this->entityManager->getRepository('Contribuicao\Mapping\Entity\Contribuicao');
     }
 
-    protected function getPaginateQuery($filter, $sort, $order) {
+    protected function getPaginateQuery($filter, $column, $sort) {
           
         $queryBuilder = $this->entityManager->createQueryBuilder();
-
+        
         $queryBuilder->select('p')
-            ->from(\Contribuicao\Mapping\Entity\Contribuicao::class, 'p');
+            ->from(\Contribuicao\Mapping\Entity\Contribuicao::class, 'p')
+            ->orderBy("p.{$column}", $sort)
+            ->where('1 = 1');
+            
+            if(is_array($filter)) {
+                if(array_key_exists("nome",$filter) && !empty($filter['nome'])){
+                   $queryBuilder->andWhere("p.nome like '%{$filter['nome']}%'");
+                }
 
+                if(array_key_exists("ativo",$filter) && !empty($filter['ativo'])){
+                   $queryBuilder->andWhere("p.ativo = {$filter['ativo']}");
+                }
+
+                if(array_key_exists("tipo",$filter) && !empty($filter['tipo'])){
+                   $queryBuilder->andWhere("p.tipo = '{$filter['tipo']}'");
+                }
+            }
+        
         return $queryBuilder->getQuery();
         
     }

@@ -32,7 +32,8 @@
         "psr-4": {
             "Application\\": "module/Application/src/",
             "Doador\\": "module/Doador/src/",
-            "Contribuicao\\": "module/Contribuicao/src/"            
+            "Contribuicao\\": "module/Contribuicao/src/",
+            "Security\\": "module/Security/src/"
         }
     },
     "autoload-dev": {

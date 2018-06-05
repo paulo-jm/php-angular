@@ -1,31 +1,40 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Entity } from '../mapping/entity';
 
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { map, tap, finalize } from 'rxjs/operators';
 import { Paginator } from '../paginator/paginator-model/paginator.model';
 
 export abstract class GenericDao<T extends Entity> {
 
+    get loading() { return  this.loadingSubject.asObservable(); }
+    private loadingSubject = new BehaviorSubject<boolean>(false);
+
     constructor(protected endopoints, protected _http: HttpClient) { }
 
-    paginate(filter = '', sort: string = null, order: string = null, page: number = null, limit: number = null): Observable<Paginator<T>> {
+    paginate(filter : any = null, column: string = null, sort: string = null, page: number = null, limit: number = null): Observable<Paginator<T>> {
 
         let endopoint = this.endopoints.filter(
             item => item.resource === 'paginate')[0];
 
         page = page | 1;
         limit = limit | 10;
+        filter = JSON.stringify(filter);
+        column = column ? column : "" ;
+        sort = sort ? sort : "" ;
 
+        this.loadingSubject.next(true);
         return this._http.get(endopoint.path, {
+            withCredentials : true,
             params: new HttpParams()
                 .set('filter', filter)
+                .set('column', column)
                 .set('sort', sort)
-                .set('order', order)
                 .set('page', page.toString())
                 .set('limit', limit.toString())
         }).pipe(
-            map(response => response as Paginator<T>)
+            map(response => response as Paginator<T>),
+            finalize(() => {this.loadingSubject.next(false);})
         );
 
     }
@@ -36,10 +45,11 @@ export abstract class GenericDao<T extends Entity> {
             item => item.resource === 'findById')[0];
 
         let urlResouce = endopoint.path;
-
-        return this._http.get(`${urlResouce}${id}`)
+        this.loadingSubject.next(true);
+        return this._http.get(`${urlResouce}${id}`,{withCredentials : true})
             .pipe(
-                map(response => response as T)
+                map(response => response as T),
+                finalize(() => {this.loadingSubject.next(false);})
             );
 
     }
@@ -48,10 +58,11 @@ export abstract class GenericDao<T extends Entity> {
 
         let endopoint = this.endopoints.filter(
             item => item.resource === 'create')[0];
-
-        return this._http.post(endopoint.path, entity)
+        this.loadingSubject.next(true);
+        return this._http.post(endopoint.path, entity, {withCredentials : true})
             .pipe(
-                map(response => response as T)
+                map(response => response as T),
+                finalize(() => {this.loadingSubject.next(false);})
             );
 
     }
@@ -62,10 +73,11 @@ export abstract class GenericDao<T extends Entity> {
             item => item.resource === 'update')[0];
 
         let urlResouce = endopoint.path;
-
-        return this._http.put(`${urlResouce}${id}`, entity)
+        this.loadingSubject.next(true);
+        return this._http.put(`${urlResouce}${id}`, entity, {withCredentials : true})
             .pipe(
-                map(response => response as T)
+                map(response => response as T),
+                finalize(() => {this.loadingSubject.next(false);})
             );
 
     }

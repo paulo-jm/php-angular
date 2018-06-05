@@ -20,7 +20,8 @@ import {
  MatDatepickerModule,
  MatSelectModule,
  MatListModule, 
- MatProgressSpinnerModule} 
+ MatProgressSpinnerModule,
+ MatProgressBarModule} 
 from '@angular/material';
 
 import { CrudModule } from '../util/crud/crud.module';
@@ -60,6 +61,7 @@ import { ApadrinhadoDao } from './apadrinhado/apadrinhado-dao/Apadrinhado.dao';
     MatDialogModule,
     MatIconModule,
     MatListModule,
+    MatProgressBarModule,
     MatProgressSpinnerModule,
 
     CrudModule,

@@ -8,11 +8,13 @@ import { FormGroup } from '@angular/forms/src/model';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 import { MatDialog, MatSort, MatPaginator } from '@angular/material';
 import { GenericCrudComponent } from './generic-grud-component';
-import { ViewChild } from '@angular/core';
+import { ViewChild, OnInit } from '@angular/core';
 
-export abstract class GenericListComponent<T extends Entity> extends GenericCrudComponent<T> {
+export abstract class GenericListComponent<T extends Entity> extends GenericCrudComponent<T> implements OnInit {
 
   private dataSource;
+
+  public loading: boolean;
 
   @ViewChild(MatPaginator) public paginator: MatPaginator;
 
@@ -25,13 +27,13 @@ export abstract class GenericListComponent<T extends Entity> extends GenericCrud
   delete(entity: T) {
     const dialogRef = this.dialog.open(DeleteDialogComponent);
     dialogRef.afterClosed().subscribe(result => {
-    /*  if (result) {
-        this.getDao()
-          .delete(entity)
-          .subscribe(() => {
-            console.log('sucesso');
-          });
-      }*/
+      /*  if (result) {
+          this.getDao()
+            .delete(entity)
+            .subscribe(() => {
+              console.log('sucesso');
+            });
+        }*/
     });
   }
 
@@ -42,8 +44,17 @@ export abstract class GenericListComponent<T extends Entity> extends GenericCrud
         this.paginator,
         this.sort
       );
+      this.handlerLoading();
     }
     return this.dataSource;
+  }
+
+  handlerLoading(): void {
+    this.dataSource.loading.subscribe((result) => this.loading = result);
+  }
+
+  ngOnInit(): void {
+
   }
 
 }

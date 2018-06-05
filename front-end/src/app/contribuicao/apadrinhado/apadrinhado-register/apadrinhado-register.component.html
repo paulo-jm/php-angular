@@ -1,13 +1,14 @@
+<mat-progress-bar class="mat-elevation-z2" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 <mat-card class="mat-elevation-z2">
 
   <div class="row">
     <div class="col">
-      <mat-card-title>Nota de Corretagem</mat-card-title>
+      <mat-card-title>Apadrinhado</mat-card-title>
     </div>
     <div class="col">
       <div class="float-right">
-        <button [disabled]="!form.valid" (click)="create(form.value)" mat-raised-button color="primary">Salvar</button>
-        <button [routerLink]="['/operational/brokerage-note/list']" mat-raised-button>Voltar</button>
+        <button [disabled]="!form.valid || loading" (click)="create(form.value)" mat-raised-button color="primary">Salvar</button>
+        <button [routerLink]="['/contribuicao/apadrinhado/list']" mat-raised-button>Voltar</button>
       </div>
     </div>
   </div>

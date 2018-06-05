@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { Contribuicao } from '../../contribuicao/contribuicao-model/contribuicao.model';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { GenericRegisterComponent } from '../../../util/crud/generic-register-component';
@@ -9,6 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Paginator } from '../../../util/paginator/paginator-model/paginator.model';
 import { Apadrinhado } from '../apadrinhado-model/apadrinhado.model';
+import { truncate } from 'fs';
 
 @Component({
   selector: 'app-apadrinhado-register',
@@ -25,7 +26,8 @@ export class ApadrinhadoRegisterComponent
     private _contribuicaoDao: ContribuicaoDao,
     private _router: Router,
     private _activateRouter: ActivatedRoute,
-    private _formBuilder: FormBuilder
+    private _formBuilder: FormBuilder,
+    public snackBar: MatSnackBar,
   ) {
     super();
   }
@@ -35,7 +37,11 @@ export class ApadrinhadoRegisterComponent
   }
 
   afterCreated(): void {
-    this._router.navigate(['/contribuicao/apadrinhado/list']);
+    this.snackBar.open('Apadrinhado salvo com sucesso.', 'Ver todos')
+      .onAction().subscribe(() => {
+        this._router.navigate(['/contribuicao/apadrinhado/list']);
+
+      });
   }
 
   berforeCreat(): void { }
@@ -69,8 +75,8 @@ export class ApadrinhadoRegisterComponent
     return contribuicao ? `${contribuicao.nome}` : null;
   }
 
-  searchAllContribuicoes(query) {
-    this._contribuicaoDao.paginate(query, 'nome', 'desc', 1, 10).subscribe(result => {
+  searchAllContribuicoes(query) { 
+    this._contribuicaoDao.paginate({"nome" : query, "tipo": "A", "ativo": true}, 'nome', 'desc', 1, 10).subscribe(result => {
       this.contribuicoes.next(result.data);
     });
   }

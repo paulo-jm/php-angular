@@ -8,80 +8,56 @@ namespace Doador\Controller;
  * and open the template in the editor.
  */
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\JsonModel;
-use Zend\Json\Json;
-use Zend\Http\Response as HttpResponse;
+use Zend\Form\Form;
 use Doctrine\ORM\EntityManager;
-use Doador\Mapping\Entity\Doador;
-use Doador\InputFilter\DoadorPersistInputFilter;
+use Application\Controller\ApplicationAbstracController;
 
 /**
  * Description of DoadorController
  *
  * @author Paulo Jose Moreira
  */
-class DoadorController extends AbstractActionController {
+class DoadorController extends ApplicationAbstracController {
 
-    private $entityManager;
+    protected $entityManager;
+    protected $form;
 
-    public function __construct(EntityManager $entityManager) {
-        $this->entityManager = $entityManager;
+    public function __construct(EntityManager $entityManager, Form $form) {
+        parent::__construct($entityManager, $form);
     }
 
-    public function createAction() {
-
-        $inputFilter = new DoadorPersistInputFilter();
-        $form = new \Doador\Form\DoadorForm($this->entityManager);
-
-        $request = $this->getRequest();
-        if ($request->isPost()) {
-            
-            $form->setInputFilter($inputFilter->getInputFilter());
-            $body = $request->getContent();
-            if (!empty($body)) {
-                $object = Json::decode($body, Json::TYPE_ARRAY);
-                $form->setData($object);
-            }
-            
-            if ($form->isValid()) {
-                $doador = $form->getData();
-
-                $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_201);
-                return $this->getResponse();
-            } else {
-                $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_400);
-                $messages = $form->getMessages();
-                return new JsonModel($messages);
-            }
-            
-        } else if($request->is) {
-            $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_405);
-            return $this->getResponse();
-        }
-        
+    protected function getLocation($entity) {
+        return $this->url()->fromRoute('doador', ['action' => 'findById', 'id' => $entity->getId()]);
     }
 
-    public function findAllAction() {
+    protected function getRepository() {
+        return $this->entityManager->getRepository('Doador\Mapping\Entity\Doador');
+    }
 
-        $doadores = $this->entityManager->getRepository(Doador::class)->findAll();
+    protected function getPaginateQuery($filter, $column, $sort) {
 
-        if (empty($doadores)) {
-            $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_204);
-            return new JsonModel();
+        $queryBuilder = $this->entityManager->createQueryBuilder();
+
+        $queryBuilder->select('d')
+                ->from(\Doador\Mapping\Entity\Doador::class, 'd')
+                ->orderBy("d.{$column}", $sort)
+                ->where('1 = 1');
+
+        if (is_array($filter)) {
+            if (array_key_exists("nome", $filter) && !empty($filter['nome'])) {
+                $queryBuilder->andWhere("d.nome like '%{$filter['nome']}%'");
+            }
         }
 
-        $jsonModel = new JsonModel($doadores);
-        return $jsonModel;
-        
+        return $queryBuilder->getQuery();
+    }
+    
+    protected function getEntity($entity) {
+       return \Doador\Mapping\Converter\DoadorConverter::fromEntity($entity);
     }
 
-    public function updateAction() {
-        
-    }
-
-    public function inactiveAction() {
-        
+    protected function getEntities($paginator) {
+        return \Doador\Mapping\Converter\DoadorConverter::fromEntities($paginator);
     }
 
 }

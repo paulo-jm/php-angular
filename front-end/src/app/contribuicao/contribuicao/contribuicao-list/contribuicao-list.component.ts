@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material';
 })
 export class ContribuicaoListComponent extends GenericListComponent<Contribuicao> {
 
-  displayedColumns = ["id", "name", "type", "action"];
+  displayedColumns = ["id", "nome", "tipo", "action"];
 
   constructor(
     public dialog: MatDialog,

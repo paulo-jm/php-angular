@@ -1,12 +1,13 @@
+<mat-progress-bar class="mat-elevation-z2" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 <mat-card class="mat-elevation-z2">
 
   <div class="row">
     <div class="col">
-      <mat-card-title>Contribuição</mat-card-title>
+      <mat-card-title>Projeto</mat-card-title>
     </div>
     <div class="col">
       <div class="float-right">
-        <button [disabled]="!form.valid" (click)="create(form.value)" mat-raised-button color="primary">Salvar</button>
+        <button [disabled]="!form.valid || loading" (click)="create(form.value)" mat-raised-button color="primary">Salvar</button>
         <button [routerLink]="['/contribuicao/contribuicao/list']" mat-raised-button>Voltar</button>
       </div>
     </div>
@@ -18,7 +19,7 @@
       <div class="row">
 
         <mat-form-field class="col-3">
-          <mat-select placeholder="Tipo de Contribuição" formControlName="tipo">
+          <mat-select placeholder="Tipo de projeto" formControlName="tipo">
             <mat-option *ngFor="let tipo of tiposContribuicao" [value]="tipo.value">
               {{ tipo.label }}
             </mat-option>

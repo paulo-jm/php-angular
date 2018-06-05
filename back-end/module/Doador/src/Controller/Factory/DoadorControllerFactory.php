@@ -10,18 +10,24 @@ namespace Doador\Controller\Factory;
 
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
-
 use Doador\Controller\DoadorController;
+
 /**
  * Description of DoadorController
  *
  * @author Paulo Jose Moreira
  */
 class DoadorControllerFactory implements FactoryInterface {
-   
-    public function __invoke(ContainerInterface $container, $requestedName, Array $options = null) {    
+
+    public function __invoke(ContainerInterface $container, $requestedName, Array $options = null) {
+
         $entityManager = $container->get('doctrine.entitymanager.orm_default');
-        return new DoadorController($entityManager);
+
+        $inputFilter = new \Doador\InputFilter\DoadorPersistInputFilter($entityManager);
+        $form = new \Doador\Form\DoadorForm($entityManager);
+        $form->setInputFilter($inputFilter->getInputFilter());
+
+        return new DoadorController($entityManager, $form);
     }
-    
+
 }

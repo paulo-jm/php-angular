@@ -11,8 +11,13 @@ import {
   MatButtonModule,
   MatInputModule,
   MatExpansionModule,
-  MatIconModule
- } from '@angular/material';
+  MatIconModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule
+} from '@angular/material';
+import { AuthenticationService } from './authentication/authentication-service/authentication.service';
+import { LogoutComponent } from './authentication/logout/logout.component';
+import { LoginComponent } from './authentication/login/login.component';
 
 @NgModule({
   imports: [
@@ -26,15 +31,19 @@ import {
     MatButtonModule,
     MatInputModule,
     MatExpansionModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
     MatIconModule
-    
+
   ],
   providers: [
-    HttpClientModule,
+    HttpClientModule, AuthenticationService
   ],
   entryComponents: [],
   declarations: [
-    AuthenticationComponent
-  ] 
+    AuthenticationComponent,
+    LogoutComponent,
+    LoginComponent
+  ]
 })
 export class SecurityModule { }

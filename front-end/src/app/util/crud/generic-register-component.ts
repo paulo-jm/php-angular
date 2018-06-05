@@ -13,23 +13,29 @@ export abstract class GenericRegisterComponent<T extends Entity>
 
     public form: FormGroup;
 
+    public loading: boolean;
+
     create(entity: T) {
         this.berforeCreat();
 
         if (this.getPathId()) {
             this.getDao().update(this.getPathId(), entity).subscribe(
-                () => {
+                (result) => {
+                    this.form = this.createForm();
+                    this.form.setValue(result);
                     this.afterCreated();
                 }
             );
         } else {
             this.getDao().create(entity).subscribe(
-                () => {
+                (result) => {
+                    this.form = this.createForm();
+                    console.log(result)
+                    this.form.setValue(result);
                     this.afterCreated();
                 }
             );
         }
-
 
     }
 
@@ -58,7 +64,7 @@ export abstract class GenericRegisterComponent<T extends Entity>
         const id: number = this.getPathId();
 
         this.form = this.createForm();
-
+        this.handlerLoading();
         if (id) {
             this.findById(id).subscribe(
                 (result) => {
@@ -71,5 +77,9 @@ export abstract class GenericRegisterComponent<T extends Entity>
 
         this.init();
     }
+
+    handlerLoading(): void {
+        this.getDao().loading.subscribe((result) => this.loading = result);
+      }
 
 }
