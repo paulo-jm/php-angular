@@ -66,6 +66,7 @@ class AuthenticationController extends AbstractActionController {
             }
         } 
         
+        $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
         return $this->getResponse();
     }
 
@@ -81,6 +82,7 @@ class AuthenticationController extends AbstractActionController {
             }
         }
         
+        $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
         return $this->getResponse();
     }
 

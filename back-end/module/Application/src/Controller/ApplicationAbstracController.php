@@ -93,6 +93,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
             return new JsonModel($this->form->getMessages());
         }
 
+        $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
         return $this->getResponse();
     }
 
@@ -125,6 +126,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
             }
         }
         
+        $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
         return $this->getResponse();
     }
 
@@ -160,7 +162,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
                 return new JsonModel($this->form->getMessages());
             }
         }
-        
+        $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
         return $this->getResponse();
     }
 
@@ -184,7 +186,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
             $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
             return $this->getResponse();
         }
-        
+        $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
         return $this->getResponse();
     }
 
@@ -209,6 +211,7 @@ abstract class ApplicationAbstracController extends AbstractActionController {
             return $this->getResponse();
         }
         
+        $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
         return $this->getResponse();
     }
 
