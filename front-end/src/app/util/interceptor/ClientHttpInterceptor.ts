@@ -1,4 +1,4 @@
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpSentEvent, HttpUserEvent, HttpHeaderResponse } from "@angular/common/http";
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpSentEvent, HttpUserEvent, HttpHeaderResponse, HttpProgressEvent, HttpResponse } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 export class ClientHttpInterceptor implements HttpInterceptor {
@@ -9,7 +9,7 @@ export class ClientHttpInterceptor implements HttpInterceptor {
             withCredentials : true,
             headers: req.headers.set('Content-Type', 'application/json') 
         });
-        console.log("intercept")
+
         return next.handle(newRequest);
     }
 }
