@@ -65,6 +65,8 @@ class AuthenticationController extends AbstractActionController {
                 return new JsonModel($this->form->getMessages());
             }
         } 
+        
+        return $this->getResponse();
     }
 
     public function logoutAction() {
@@ -78,6 +80,8 @@ class AuthenticationController extends AbstractActionController {
                 $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_412);
             }
         }
+        
+        return $this->getResponse();
     }
 
 }

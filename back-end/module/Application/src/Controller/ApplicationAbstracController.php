@@ -41,17 +41,17 @@ abstract class ApplicationAbstracController extends AbstractActionController {
         $page = $this->params()->fromQuery('page', 1);
         $limit = $this->params()->fromQuery('limit', 10);
 
-        if(!empty($filter)){
+        if (!empty($filter)) {
             $filter = Json::decode($filter, Json::TYPE_ARRAY);
         }
-        
+
         $query = $this->getPaginateQuery($filter, $column, $sort);
 
         $adapter = new DoctrineAdapter(new ORMPaginator($query, false));
         $paginator = new Paginator($adapter);
         $paginator->setDefaultItemCountPerPage($limit);
         $paginator->setCurrentPageNumber($page);
-        
+
         return new JsonModel([
             'total' => $paginator->getTotalItemCount(),
             'totalPerPage' => $paginator->getItemCountPerPage(),
@@ -92,6 +92,8 @@ abstract class ApplicationAbstracController extends AbstractActionController {
             $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_422);
             return new JsonModel($this->form->getMessages());
         }
+
+        return $this->getResponse();
     }
 
     public function createAction() {
@@ -122,6 +124,8 @@ abstract class ApplicationAbstracController extends AbstractActionController {
                 return new JsonModel($this->form->getMessages());
             }
         }
+        
+        return $this->getResponse();
     }
 
     public function updateAction() {
@@ -156,6 +160,8 @@ abstract class ApplicationAbstracController extends AbstractActionController {
                 return new JsonModel($this->form->getMessages());
             }
         }
+        
+        return $this->getResponse();
     }
 
     public function inactiveAction() {
@@ -177,7 +183,9 @@ abstract class ApplicationAbstracController extends AbstractActionController {
 
             $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
             return $this->getResponse();
-        } 
+        }
+        
+        return $this->getResponse();
     }
 
     public function activeAction() {
@@ -199,7 +207,9 @@ abstract class ApplicationAbstracController extends AbstractActionController {
 
             $this->getResponse()->setStatusCode(HttpResponse::STATUS_CODE_200);
             return $this->getResponse();
-        } 
+        }
+        
+        return $this->getResponse();
     }
 
     protected function getEntities($paginator) {
@@ -207,12 +217,12 @@ abstract class ApplicationAbstracController extends AbstractActionController {
         foreach ($paginator as $item) {
             array_push($data, $item);
         }
-        
+
         return $data;
     }
-    
+
     protected function getEntity($entity) {
-       return $entity;
+        return $entity;
     }
 
     abstract protected function getLocation($entity);
