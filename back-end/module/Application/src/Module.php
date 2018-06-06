@@ -27,11 +27,6 @@ class Module {
         // makes the SessionManager the 'default' one to avoid passing the 
         // session manager as a dependency to other models.
         $sessionManager = $serviceManager->get(\Zend\Session\SessionManager::class);
-        
-        $headers = $event->getResponse()->getHeaders();
-        $headers->addHeaderLine('Access-Control-Allow-Origin: *');
-        $headers->addHeaderLine('Access-Control-Allow-Methods: PUT, GET, POST, PATCH, DELETE, OPTIONS');
-        $headers->addHeaderLine('Access-Control-Allow-Headers: Authorization, Origin, X-Requested-With, Content-Type, Accept');
     }
 
 }

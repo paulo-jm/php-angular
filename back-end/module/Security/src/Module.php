@@ -42,7 +42,7 @@ class Module implements ConfigProviderInterface {
 
         $sessionManager = $event->getApplication()->getServiceManager()->get('Zend\Session\SessionManager');
 
-      //  $this->forgetInvalidSession($sessionManager);
+        $this->forgetInvalidSession($sessionManager);
     }
 
     protected function forgetInvalidSession($sessionManager) {

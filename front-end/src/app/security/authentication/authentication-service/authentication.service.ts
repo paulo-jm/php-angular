@@ -27,9 +27,7 @@ export class AuthenticationService {
         let endopoint = environment.endopoint.security.endopoints.filter(
             item => item.resource === 'login')[0];
 
-        return this.http.post<any>(endopoint.path, { usuario: username, senha: password }, {
-            withCredentials: true
-        })
+        return this.http.post<any>(endopoint.path, { usuario: username, senha: password })
             .pipe(
                 tap(() => {
                     this.logged.next(true);
@@ -42,7 +40,7 @@ export class AuthenticationService {
         let endopoint = environment.endopoint.security.endopoints.filter(
             item => item.resource === 'logout')[0];
 
-        return this.http.post<any>(endopoint.path, null, {withCredentials : true})
+        return this.http.post<any>(endopoint.path, null)
             .pipe(
                 tap(() => {
                     this.logged.next(false);

@@ -14,6 +14,8 @@ import { ContribuicaoModule } from './contribuicao/contribuicao.module';
 import { ApplicationErroHandler } from './util/handler/application-erro.handler';
 import { UtilModule } from './util/util.module';
 import { AuthenticationService } from './security/authentication/authentication-service/authentication.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ClientHttpInterceptor } from './util/interceptor/ClientHttpInterceptor';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,8 @@ import { AuthenticationService } from './security/authentication/authentication-
     SecurityModule
   ],
   providers: [
-    {
-      provide: ErrorHandler, useClass: ApplicationErroHandler
-    }
+    { provide: ErrorHandler, useClass: ApplicationErroHandler },
+    { provide: HTTP_INTERCEPTORS, useClass: ClientHttpInterceptor, multi: true }
 
   ],
   bootstrap: [AppComponent]
