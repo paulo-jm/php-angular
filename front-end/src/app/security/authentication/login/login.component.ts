@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
         finalize(() => { this.isEntering = false; })
       )
       .subscribe((response) => {
-        this._router.navigate(['/']);
+        this._router.navigate(['/doador']);
       })
 
   }
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
     this._authService.IsLogged.subscribe((result) => {
       if (result) {
-        this._router.navigate(['/']);
+        this._router.navigate(['/doador']);
       }
     });
 
